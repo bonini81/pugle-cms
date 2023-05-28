@@ -19,17 +19,19 @@ const ImageComponent = (
     <img 
     src={logo.src}
     alt={logo.alt}
+    width={logo.width}
+    height={logo.height}
     />
 );
 
     return (
     <header>
        <Container>
-        <aside className='logo-image-specs'>
+        <figure className='logo-image-specs'>
         <a>
             {ImageComponent}
         </a>
-        </aside>
+        </figure>
          Hello World!</Container>
     </header>);
 }

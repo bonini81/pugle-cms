@@ -9,7 +9,9 @@ function App() {
   const headerProps = {
     logo: {
       src: logo, 
-      alt: "Freelance Front End Developer"
+      alt: "Freelance Front End Developer",
+      width: 170,
+      height: 90,
     }
   }
 
