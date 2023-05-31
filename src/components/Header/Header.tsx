@@ -1,5 +1,7 @@
 import Container from '@mui/material/Container';
 import './Header.scss';
+import HeaderMenu from './HeaderMenu';
+
 export interface PugleHeaderProps {
     logo: Partial<LogoProps>;
 }
@@ -26,13 +28,16 @@ const ImageComponent = (
 
     return (
     <header>
-       <Container>
+       <Container className='container-header-styles'>
         <figure className='logo-image-specs'>
-        <a>
+        <a href='https://google.com'>
             {ImageComponent}
         </a>
         </figure>
-         Hello World!</Container>
+         <aside className='menu-wrapper-styles'>
+    <HeaderMenu />
+         </aside>
+         </Container>
     </header>);
 }
 
