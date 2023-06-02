@@ -35,7 +35,7 @@
       "ecmaVersion": "latest",
       "sourceType": "module",
       "project": "./tsconfig.json",
-      "tsconfigRootDir": "./"
+      "tsconfigRootDir": "./my-app"
     },
     "plugins": [
       "prettier",
