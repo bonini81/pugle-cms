@@ -1,9 +1,7 @@
-import PcLinks from './PcLinks';
+import PcLinks from "./PcLinks";
 
 const HeaderMenu = () => {
-    return (
-    <PcLinks />
-    );
-}
+  return <PcLinks />;
+};
 
 export default HeaderMenu;
