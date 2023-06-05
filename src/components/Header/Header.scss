@@ -1,7 +1,28 @@
+.container-header-wrapper {
+   display: flex;
+
+}
+
+.menu-wrapper-styles {
+   width: 100%;
+   display: inline-flex;
+}
+
+.menu-wrapper-styles ul > li {
+   width: auto;
+}
+
 .container-header-styles {
    border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 figure.logo-image-specs {
    text-align: left;
+   width: 30%;
+}
+
+
+.orientation-menu-desktop {
+   
+   color: #000;
 }
