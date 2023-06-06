@@ -6,6 +6,8 @@
 .menu-wrapper-styles {
    width: 100%;
    display: inline-flex;
+   justify-content: end;
+   align-items: center;
 }
 
 .menu-wrapper-styles ul > li {

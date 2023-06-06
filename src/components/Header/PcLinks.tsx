@@ -1,14 +1,16 @@
+/* eslint-disable no-restricted-imports */
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 
 import "./Header.scss";
+import menuLinks from "../../data/menuLinks.json";
 
 const PcLinks = () => {
   return (
     <List className="menu-wrapper-styles">
-      <ListItem>Profile</ListItem>
-      <ListItem>My account</ListItem>
-      <ListItem>Logout</ListItem>
+      {menuLinks.map((link, index) => {
+        return <ListItem>{link.menu}</ListItem>;
+      })}
     </List>
   );
 };
