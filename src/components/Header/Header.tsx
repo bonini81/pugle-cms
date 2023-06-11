@@ -27,15 +27,15 @@ const Header = (props: PugleHeaderProps): JSX.Element => {
   );
 
   return (
-    <header>
-      <Container >
+    <header className="header-wrapper-shadow">
+      <Container>
         <div className="container-header-wrapper">
-        <figure className="logo-image-specs">
-          <a href="https://google.com">{ImageComponent}</a>
-        </figure>
-        <aside className="menu-wrapper-styles">
-          <HeaderMenu />
-        </aside>
+          <figure className="logo-image-specs">
+            <a href="https://google.com">{ImageComponent}</a>
+          </figure>
+          <aside className="aside-menu-styles">
+            <HeaderMenu />
+          </aside>
         </div>
       </Container>
     </header>

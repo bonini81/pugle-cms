@@ -3,9 +3,9 @@ import PcLinks from "./PcLinks";
 
 const HeaderMenu = () => {
   return (
-    <div className="orientation-menu-desktop">
+    <nav className="orientation-menu-desktop">
       <PcLinks />
-    </div>
+    </nav>
   );
 };
 

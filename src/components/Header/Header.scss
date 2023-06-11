@@ -1,12 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+
 .container-header-wrapper {
    display: flex;
-
+   justify-content: space-between;
+   font-family: "Roboto", sans-serif;
 }
 
 .menu-wrapper-styles {
    width: 100%;
    display: inline-flex;
-   justify-content: end;
    align-items: center;
 }
 
@@ -14,17 +17,44 @@
    width: auto;
 }
 
+a.a-link-item {
+   color: #5f5f5f;
+   font-weight: 600;
+   text-decoration: none; 
+}
+
+a.a-link-item:hover {
+   color: #2489ce;
+   font-weight: 600;
+   font-weight: bold;
+   text-decoration: underline;
+}
+
 .container-header-styles {
    border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 figure.logo-image-specs {
-   text-align: left;
-   width: 30%;
+   width: auto;
 }
 
 
 .orientation-menu-desktop {
-   
    color: #000;
+   display: flex;
+   align-content: center;
+}
+
+.aside-menu-styles {
+  display: flex;
+  text-align: right;
+}
+
+li.li-list-styles {
+   width: auto;
+}
+
+
+header.header-wrapper-shadow {
+   border-bottom: 1px solid rgba(0,0,0,.1);
 }
