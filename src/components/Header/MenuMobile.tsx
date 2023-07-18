@@ -34,7 +34,7 @@ const MenuMobile = () => {
         <List className="burger-wrapper-styles">
           {menuLinks.map((link, index) => {
             return (
-              <ListItem className="li-list-styles">
+              <ListItem key={index} className="li-list-styles">
                 <Link href={link.url} className="a-link-item">
                   {link.menu}
                 </Link>
