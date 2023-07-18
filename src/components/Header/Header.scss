@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 
 .container-header-wrapper {
    display: flex;
    justify-content: space-between;
-   font-family: "Roboto", sans-serif;
 }
 
 .menu-wrapper-styles {
@@ -20,13 +19,14 @@
 
 a.a-link-item {
    color: #5f5f5f;
-   font-weight: 600;
    text-decoration: none; 
+   text-transform: uppercase;
+   font-size: 13px;
+   font-family: "Oswald", sans-serif;
 }
 
-a.a-link-item:hover {
+a.a-link-item:hover, a.a-link-item:active {
    color: #2489ce;
-   font-weight: 600;
    font-weight: bold;
    text-decoration: underline;
 }
@@ -58,6 +58,7 @@ li.li-list-styles {
 
 header.header-wrapper-shadow {
    border-bottom: 1px solid rgba(0,0,0,.1);
+   margin-bottom: 20px;
 }
 
    button.mobile-menu-wrapper {
