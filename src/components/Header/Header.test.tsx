@@ -19,5 +19,3 @@ test("Alt Copy in Header Logo", () => {
     screen.getByAltText("Freelance Front End Developer")
   ).toBeInTheDocument();
 });
-
-// export {};
