@@ -48,6 +48,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ##GIT Commands!
 
 #GitHub Commands
+Main branch is called master
 1. Push local branch
 git push origin feature/co-header
 

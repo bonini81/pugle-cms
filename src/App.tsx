@@ -1,5 +1,6 @@
 import "./App.css";
 import logo from "./assets/header/freelance-desarrolloweb-seo.jpg";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </div>
+      <Footer />
     </div>
   );
 }
