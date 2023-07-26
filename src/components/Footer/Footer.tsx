@@ -2,36 +2,50 @@ import Container from "@mui/material/Container";
 
 import "./Footer.scss";
 
-const Footer = () => {
+export interface PugleFooterProps {
+  copyright: string;
+}
+
+
+const Footer = (props: PugleFooterProps) => {
+  const { copyright } = props;
   return (
     <footer>
-      <Container>
-        <section className="main-footer-wrapper">
+      <section className="main-footer-wrapper">
+        <Container>
           <div className="footer-widget-area">
             <ul>
-              <li>Hello</li>
+              <li>
+                <a href="https://pugle.net/">Hello</a>
+              </li>
             </ul>
           </div>
 
           <div className="footer-widget-area">
             <ul>
-              <li>Hello</li>
+              <li>
+                <a href="https://pugle.net/">Hello</a>
+              </li>
             </ul>
           </div>
 
           <div className="footer-widget-area">
             <ul>
-              <li>Hello</li>
+              <li>
+                <a href="https://pugle.net/">Hello</a>
+              </li>
             </ul>
           </div>
           <div className="footer-widget-area">
             <address>hello</address>
           </div>
-        </section>
-        <article>
-          <div className="sub-footer-area">Copyright Pugle.net 2020</div>
-        </article>
-      </Container>
+        </Container>
+      </section>
+      <article className="wrapper-sub-footer">
+        <Container>
+          <div className="sub-footer-area">{copyright}</div>
+        </Container>
+      </article>
     </footer>
   );
 };

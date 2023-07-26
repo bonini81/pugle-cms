@@ -13,6 +13,7 @@ function App() {
     },
   };
 
+
   return (
     <div className="App">
       <Header {...headerProps} />
@@ -25,7 +26,7 @@ function App() {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </div>
-      <Footer />
+      <Footer copyright="Copyright Pugle.net 2020" />
     </div>
   );
 }
