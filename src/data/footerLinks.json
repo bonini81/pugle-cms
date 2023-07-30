@@ -1,24 +1,55 @@
 {
+    "titles":  {
+        "title1": "Nuestros Servicios",
+        "title2": "Nuestro Canal",
+        "title3": "Blog"
+    }, 
+
     "widget1": [
         {
             "menu": "Desarrollo Web",
             "url": "https://pugle.net/consultor-freelance/"
         },
         {
-            "menu": "Desarrollo Web",
+            "menu": "Publicidad en Google",
             "url": "https://pugle.net/consultor-freelance/"
         }
     ],
     "widget2": [
         {
-            "menu": "Desarrollo Web",
+            "menu": "Charla de ASO (Optimización en las AppStores)",
             "url": "https://pugle.net/consultor-freelance/"
         },
         {
-            "menu": "Desarrollo Web",
+            "menu": "Caso de Estudio E-Commerce: Fonexion",
             "url": "https://pugle.net/consultor-freelance/"
         }
-    ]
+    ],
+
+    "widget3": [
+        {
+            "menu": "Charla de ASO (Optimización en las AppStores)",
+            "url": "https://pugle.net/consultor-freelance/"
+        },
+        {
+            "menu": "Caso de Estudio E-Commerce: Fonexion",
+            "url": "https://pugle.net/consultor-freelance/"
+        }
+    ],
+    "address":
+        {
+            "title": "¿Dónde Estamos?",
+            "address": "Diego de Robles y Av Pampite, esquina, Cumbaya 170901, Coworking Impaqto Cumbaya "
+        },
+    "contact":
+        {
+            "title": "Datos de Contacto",
+            "subTitle": "Celular: ",
+            "subTitle2": "Email: ",
+            "celular": "0969078192",
+            "email": "info@pugle.net"
+        },
     
-    
+   
+        "copyright": "Copyright Pugle.net 2023"
 }

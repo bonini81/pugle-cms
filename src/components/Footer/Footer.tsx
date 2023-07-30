@@ -1,43 +1,61 @@
 import Container from "@mui/material/Container";
 
 import "./Footer.scss";
+// eslint-disable-next-line no-restricted-imports
+import footerLinks from "../../data/footerLinks.json";
 
 export interface PugleFooterProps {
   copyright: string;
 }
 
-
-const Footer = (props: PugleFooterProps) => {
+const Footer = (props: PugleFooterProps): JSX.Element => {
   const { copyright } = props;
+  const { widget1, widget2, widget3, address, titles } = footerLinks;
   return (
     <footer>
       <section className="main-footer-wrapper">
-        <Container>
+        <Container className="container-footer-wrap">
           <div className="footer-widget-area">
+            <h3>{titles.title1}</h3>
             <ul>
-              <li>
-                <a href="https://pugle.net/">Hello</a>
-              </li>
+              {widget1.map((link, index) => {
+                return (
+                  <li key={index}>
+                    <a href={link.url}>{link.menu}</a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
           <div className="footer-widget-area">
+            <h3>{titles.title2}</h3>
             <ul>
-              <li>
-                <a href="https://pugle.net/">Hello</a>
-              </li>
+              {widget2.map((link, index) => {
+                return (
+                  <li key={index}>
+                    <a href={link.url}>{link.menu}</a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
           <div className="footer-widget-area">
+            <h3>{titles.title3}</h3>
             <ul>
-              <li>
-                <a href="https://pugle.net/">Hello</a>
-              </li>
+              {widget3.map((link, index) => {
+                return (
+                  <li key={index}>
+                    <a href={link.url}>{link.menu}</a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="footer-widget-area">
-            <address>hello</address>
+            <h3>{address.title}</h3>
+            <address>{address.address}</address>
           </div>
         </Container>
       </section>
