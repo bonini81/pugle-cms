@@ -1,8 +1,11 @@
 import "./App.css";
 import logo from "./assets/header/freelance-desarrolloweb-seo.jpg";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
+import footerText from "./data/footerLinks.json";
 
 function App() {
+  const { copyright } = footerText;
   const headerProps = {
     logo: {
       src: logo,
@@ -24,6 +27,7 @@ function App() {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </div>
+      <Footer copyright={copyright} />
     </div>
   );
 }

@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+footer {
+    font-family: "Oswald", sans-serif;
+    color: #bcbcbc;
+    margin-top: 20px;
+}
+
+
+
+.main-footer-wrapper {
+ background-color: #2c2c2c;
+ padding: 32px 0px;
+ display: flex;
+ flex-direction: row;
+}
+
+.container-footer-wrap {
+    display: flex !important;
+}
+
+
+.footer-widget-area {
+    width: 25%;
+}
+.footer-widget-area > h4 {
+    color: #fff;
+}
+
+.footer-widget-area a {
+    color: #bcbcbc;
+}
+
+.footer-widget-area a:hover {
+    color: #fff;
+}
+
+.footer-widget-area ul li {
+    list-style: none;
+}
+
+.footer-widget-area address {
+    padding-left: 40px;
+}
+
+article.wrapper-sub-footer {
+    background-color: #d9d9d8;
+    color: #707070;
+    padding: 10px 0px;
+}
+
+p.p-tag-space {
+    margin: 0px;
+}
+
+
+@media(max-width: 800px) {
+    
+    .container-footer-wrap {
+        display: block !important;
+    }
+    .footer-widget-area {
+        width: 100%;
+    }
+}
