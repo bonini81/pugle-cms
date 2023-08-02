@@ -54,4 +54,5 @@ git push origin feature/co-header
 
 2. 
 
-
+ // const colorButton = screen.getByRole("button", {name: "Change to blue"});
+// expect().toHaveStyle({ backgroundColor: "red" });

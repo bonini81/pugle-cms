@@ -10,13 +10,13 @@ export interface PugleFooterProps {
 
 const Footer = (props: PugleFooterProps): JSX.Element => {
   const { copyright } = props;
-  const { widget1, widget2, widget3, address, titles } = footerLinks;
+  const { widget1, widget2, widget3, address, titles, contact } = footerLinks;
   return (
     <footer>
       <section className="main-footer-wrapper">
         <Container className="container-footer-wrap">
           <div className="footer-widget-area">
-            <h3>{titles.title1}</h3>
+            <h4>{titles.title1}</h4>
             <ul>
               {widget1.map((link, index) => {
                 return (
@@ -29,7 +29,7 @@ const Footer = (props: PugleFooterProps): JSX.Element => {
           </div>
 
           <div className="footer-widget-area">
-            <h3>{titles.title2}</h3>
+            <h4>{titles.title2}</h4>
             <ul>
               {widget2.map((link, index) => {
                 return (
@@ -42,7 +42,7 @@ const Footer = (props: PugleFooterProps): JSX.Element => {
           </div>
 
           <div className="footer-widget-area">
-            <h3>{titles.title3}</h3>
+            <h4>{titles.title3}</h4>
             <ul>
               {widget3.map((link, index) => {
                 return (
@@ -54,8 +54,16 @@ const Footer = (props: PugleFooterProps): JSX.Element => {
             </ul>
           </div>
           <div className="footer-widget-area">
-            <h3>{address.title}</h3>
+            <h4>{address.title}</h4>
             <address>{address.address}</address>
+            <h4>{contact.title}</h4>
+            <p className="p-tag-space">
+              <strong>{contact.subTitle}:</strong> {contact.celular}
+            </p>
+            <p className="p-tag-space">
+              <strong>{contact.subTitle2}</strong>
+              {contact.email}
+            </p>
           </div>
         </Container>
       </section>

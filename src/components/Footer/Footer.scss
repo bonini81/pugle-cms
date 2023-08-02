@@ -3,6 +3,7 @@
 footer {
     font-family: "Oswald", sans-serif;
     color: #bcbcbc;
+    margin-top: 20px;
 }
 
 
@@ -22,7 +23,7 @@ footer {
 .footer-widget-area {
     width: 25%;
 }
-.footer-widget-area > h3 {
+.footer-widget-area > h4 {
     color: #fff;
 }
 
@@ -46,4 +47,19 @@ article.wrapper-sub-footer {
     background-color: #d9d9d8;
     color: #707070;
     padding: 10px 0px;
+}
+
+p.p-tag-space {
+    margin: 0px;
+}
+
+
+@media(max-width: 800px) {
+    
+    .container-footer-wrap {
+        display: block !important;
+    }
+    .footer-widget-area {
+        width: 100%;
+    }
 }
