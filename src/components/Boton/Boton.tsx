@@ -11,20 +11,20 @@ export interface PugleButtonProps
     | "TouchRippleProps"
     | "tabIndex"
     | "focusVisibleClassName"
+    | "shape"
   > {
   fullwidth?: boolean;
   disableRipple?: boolean;
+  variant: "contained" | "text" | "outlined";
   children: any;
-  shape?: "square" | "rounded";
   className?: Partial<ClassNameProps>;
 }
 
 /**
  *
- * @param {
- * props.variant (nolinks)
- * Example: <EvaHeader variant="nolinks" />
- * }
+ * @param variant either Text button or contained with background color
+ *
+  
  * @returns No links in header in Desktop and Mobile
  *
  * @param {
@@ -37,13 +37,34 @@ export interface PugleButtonProps
 interface ClassNameProps {
   root: string;
 }
-const Boton = ({ children, shape, className, ...props }: PugleButtonProps) => {
+const Boton = ({
+  children,
+  variant,
+  className,
+  ...props
+}: PugleButtonProps) => {
+  let variantClassName = "";
+
+  switch (variant) {
+    case "contained":
+      variantClassName = "button-contained-styles";
+      break;
+    case "text":
+      variantClassName = "button-text-styles";
+      break;
+    case "outlined":
+      variantClassName = "button-outlined-styles";
+      break;
+    default:
+      variantClassName = "";
+  }
+
   return (
     <Button
       fullWidth
       disableRipple
       {...props}
-      className={`${"button-main-styles"} ${className?.root}`}
+      className={`${variantClassName} ${className?.root}`}
     >
       {children}
     </Button>

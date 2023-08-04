@@ -27,7 +27,9 @@ function App() {
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
-        <Buttton variant="contained">Click Me Biatch</Buttton>
+        <div style={{ display: "center", width: 150, margin: "25px" }}>
+          <Buttton variant="contained">Click Me Biatch</Buttton>
+        </div>
       </div>
       <Footer copyright={copyright} />
     </div>
