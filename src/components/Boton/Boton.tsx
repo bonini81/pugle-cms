@@ -18,20 +18,14 @@ export interface PugleButtonProps
   variant: "contained" | "text" | "outlined";
   children: any;
   className?: Partial<ClassNameProps>;
+  "data-testid": string;
 }
 
 /**
  *
  * @param variant either Text button or contained with background color
  *
-  
- * @returns No links in header in Desktop and Mobile
- *
- * @param {
- * props.variant (links)
- * Example: <EvaHeader variant="links" />
- * }
- * @returns Header menu with links and button in header in Desktop and Mobile
+ * @param className.root For custom class once the button is instantiated
  *
  */
 interface ClassNameProps {
@@ -42,7 +36,7 @@ const Boton = ({
   variant,
   className,
   ...props
-}: PugleButtonProps) => {
+}: PugleButtonProps): JSX.Element => {
   let variantClassName = "";
 
   switch (variant) {
