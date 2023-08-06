@@ -1,5 +1,8 @@
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 import "./App.css";
 import logo from "./assets/header/freelance-desarrolloweb-seo.jpg";
+import Buttton from "./components/Boton";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import footerText from "./data/footerLinks.json";
@@ -26,6 +29,15 @@ function App() {
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
+        <div style={{ display: "center", width: 200, margin: "25px" }}>
+          <Buttton
+            variant="contained"
+            data-testid="homeButton"
+            endIcon={<ArrowForwardIosIcon />}
+          >
+            Call to Action
+          </Buttton>
+        </div>
       </div>
       <Footer copyright={copyright} />
     </div>

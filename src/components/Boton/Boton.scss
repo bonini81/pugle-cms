@@ -1,0 +1,28 @@
+@import "../../scss/variables.scss";
+
+button.button-contained-styles {
+    background-color: $primary-color-blue;
+    color: $white;
+    border-radius: 8px;
+    &:hover {
+        background-color: $grey-main;
+        color: $white;
+    }
+}
+
+button.button-text-styles {
+    color: $primary-color-blue;
+    &:hover {
+        color: $grey-main;  
+    }
+}
+
+button.button-outlined-styles {
+    border: 2px solid $primary-color-blue;
+    color: $primary-color-blue;
+    border-radius: 8px;
+    &:hover {
+        border: 2px solid $grey-main;
+        color: $grey-main;
+    }
+}

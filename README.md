@@ -56,3 +56,14 @@ git push origin feature/co-header
 
  // const colorButton = screen.getByRole("button", {name: "Change to blue"});
 // expect().toHaveStyle({ backgroundColor: "red" });
+
+test("Contained to have Corporate Blue Color", () => {
+  const { getByRole, debug } = render(
+    <Boton data-testid="testBoton" variant="contained">
+      {buttonText}
+    </Boton>
+  );
+  debug();
+  const colorButton = getByRole("button");
+  expect(colorButton).toHaveStyle("backgroundColor: red");
+});
