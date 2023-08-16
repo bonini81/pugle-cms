@@ -6,6 +6,7 @@
     background-size: cover;
     height: 600px;
     width: 100%;
+    font-family: $main-font-oswald;
 }
 
 .copy-text-styles {
@@ -13,9 +14,14 @@
     height: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 7%;
 }
 
 .subtitle-text-padding {
     margin: 0px;
+}
+
+.icon-container-center {
+    text-align: center;
 }

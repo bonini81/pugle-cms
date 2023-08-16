@@ -1,3 +1,5 @@
+import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
+
 import "./Hero.scss";
 
 const Hero = () => {
@@ -10,9 +12,12 @@ const Hero = () => {
         <h1 className="title-text-size">
           Desarrollador Front End con React y Wordpress y SEO
         </h1>
-        <h3 className="subtitle-text-padding">
+        <h4 className="subtitle-text-padding">
           Desarrollo de Applicaciones Web, Paginas Web y Tiendas Online a medida
-        </h3>
+        </h4>
+        <figure className="icon-container-center">
+          <ExpandCircleDownIcon fontSize="large" />
+        </figure>
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-
+@import "../../scss/variables.scss";
 
 .container-header-wrapper {
    display: flex;
@@ -22,7 +21,7 @@ a.a-link-item {
    text-decoration: none; 
    text-transform: uppercase;
    font-size: 13px;
-   font-family: "Oswald", sans-serif;
+   font-family: $main-font-oswald;;
 }
 
 a.a-link-item:hover, a.a-link-item:active {
