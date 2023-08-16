@@ -1,45 +1,10 @@
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
 import "./App.css";
-import logo from "./assets/header/freelance-desarrolloweb-seo.jpg";
-import Buttton from "./components/Boton";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import footerText from "./data/footerLinks.json";
+import Home from "./pages/Home";
 
 function App() {
-  const { copyright } = footerText;
-  const headerProps = {
-    logo: {
-      src: logo,
-      alt: "Freelance Front End Developer",
-      width: 170,
-      height: 90,
-    },
-  };
-
   return (
     <div className="App">
-      <Header {...headerProps} />
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-        <div style={{ display: "center", width: 200, margin: "25px" }}>
-          <Buttton
-            variant="contained"
-            data-testid="homeButton"
-            endIcon={<ArrowForwardIosIcon />}
-          >
-            Call to Action
-          </Buttton>
-        </div>
-      </div>
-      <Footer copyright={copyright} />
+      <Home />
     </div>
   );
 }

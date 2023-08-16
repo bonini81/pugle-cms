@@ -1,0 +1,17 @@
+@import "../../scss/variables.scss";
+
+.hero-background-image {
+    background-image: url("/assets/hero/heroPic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+}
+
+.copy-text-styles {
+    color: $white;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
