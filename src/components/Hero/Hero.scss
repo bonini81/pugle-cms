@@ -25,3 +25,22 @@
 .icon-container-center {
     text-align: center;
 }
+
+@media(max-width: 800px) {
+
+    .hero-background-image {
+        background-image: url("/assets/hero/HeroHome-Mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+    }
+    
+    .copy-text-styles {
+        padding-top: 3%;
+       padding-left: 30px;
+       padding-right: 30px;
+       height: auto;
+    }
+ 
+ }

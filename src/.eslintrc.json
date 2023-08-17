@@ -134,20 +134,7 @@
       ],
       "no-param-reassign": "off",
       "global-require": "off",
-      "no-use-before-define": "off",
-      "no-restricted-imports": [
-        "error",
-        {
-          "paths": [
-            "@mui/material"
-          ],
-          "patterns": [
-            "@mui/*/*/*",
-            ",!@mui/material/test-utils/*",
-            "../../*"
-          ]
-        }
-      ]
+      "no-use-before-define": "off"
     }
   }
   

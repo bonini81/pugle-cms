@@ -6,9 +6,11 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import footerText from "../data/footerLinks.json";
+import heroText from "../data/heroText.json";
 
-const Home = () => {
+const Home = (): JSX.Element => {
   const { copyright } = footerText;
+  const { subtitle1, subtitle2, title1 } = heroText.titleInfo;
   const headerProps = {
     logo: {
       src: logo,
@@ -20,7 +22,12 @@ const Home = () => {
   return (
     <>
       <Header {...headerProps} />
-      <Hero />
+      <Hero
+        subtitle1={subtitle1}
+        title1={title1}
+        subtitle2={subtitle2}
+        data-testid="homeHero"
+      />
       <div style={{ display: "center", width: 200, margin: "25px" }}>
         <Buttton
           variant="contained"
