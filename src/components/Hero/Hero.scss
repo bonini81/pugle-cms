@@ -1,0 +1,46 @@
+@import "../../scss/variables.scss";
+
+.hero-background-image {
+    background-image: url("/assets/hero/heroPic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    font-family: $main-font-oswald;
+}
+
+.copy-text-styles {
+    color: $white;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 7%;
+}
+
+.subtitle-text-padding {
+    margin: 0px;
+}
+
+.icon-container-center {
+    text-align: center;
+}
+
+@media(max-width: 800px) {
+
+    .hero-background-image {
+        background-image: url("/assets/hero/HeroHome-Mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+    }
+    
+    .copy-text-styles {
+        padding-top: 3%;
+       padding-left: 30px;
+       padding-right: 30px;
+       height: auto;
+    }
+ 
+ }

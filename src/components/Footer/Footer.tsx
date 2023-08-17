@@ -1,7 +1,6 @@
 import Container from "@mui/material/Container";
 
 import "./Footer.scss";
-// eslint-disable-next-line no-restricted-imports
 import footerLinks from "../../data/footerLinks.json";
 
 export interface PugleFooterProps {
