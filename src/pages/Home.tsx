@@ -2,6 +2,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import logo from "../assets/header/freelance-desarrolloweb-seo.jpg";
 import Buttton from "../components/Boton";
+import Cards from "../components/Cards";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -28,6 +29,7 @@ const Home = (): JSX.Element => {
         subtitle2={subtitle2}
         data-testid="homeHero"
       />
+      <Cards cardTitle="ReactJS Developer" cardContent="fsdfsadfsd sfsdfsdfsadfadsf" data-testid="homeCard" />
       <div style={{ display: "center", width: 200, margin: "25px" }}>
         <Buttton
           variant="contained"
