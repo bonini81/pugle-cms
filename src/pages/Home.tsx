@@ -1,5 +1,7 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import CodeIcon from "@mui/icons-material/Code";
 
+import "../scss/Home.scss";
 import logo from "../assets/header/freelance-desarrolloweb-seo.jpg";
 import Buttton from "../components/Boton";
 import Cards from "../components/Cards";
@@ -29,7 +31,14 @@ const Home = (): JSX.Element => {
         subtitle2={subtitle2}
         data-testid="homeHero"
       />
-      <Cards cardTitle="ReactJS Developer" cardContent="fsdfsadfsd sfsdfsdfsadfadsf" data-testid="homeCard" />
+      <div className="cards-space-above">
+        <Cards
+          icon={<CodeIcon fontSize="large" />}
+          cardTitle="ReactJS Developer"
+          cardContent="fsdfsadfsd sfsdfsdfsadfadsf"
+          data-testid="homeCard"
+        />
+      </div>
       <div style={{ display: "center", width: 200, margin: "25px" }}>
         <Buttton
           variant="contained"
