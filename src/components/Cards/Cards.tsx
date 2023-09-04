@@ -8,26 +8,55 @@ import Typography from "@mui/material/Typography";
 import "./Cards.scss";
 
 export interface PugleCardProps {
-  icon?: ReactNode;
+  graphic?: ReactNode;
   cardTitle: string;
   cardContent: string;
   "data-testid": string;
+  cta?: boolean;
+  colorVariant?: "primary" | "grey" | "white";
 }
 
-const Cards = ({ cardTitle, icon, cardContent, ...props }: PugleCardProps) => {
+const Cards = ({
+  cardTitle,
+  graphic,
+  cardContent,
+  colorVariant,
+  cta,
+  ...props
+}: PugleCardProps) => {
+  let variantClassName = "";
+
+  switch (colorVariant) {
+    case "primary":
+      variantClassName = "card-content-color__primary";
+      break;
+    case "grey":
+      variantClassName = "card-content-color__grey";
+      break;
+    case "white":
+      variantClassName = "card-content-color__white";
+      break;
+    default:
+      variantClassName = "card-content-color__primary";
+  }
+
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <div className="icon-center-styles">{icon}</div>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-           {cardTitle}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {cardContent}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      {graphic}
+      <CardContent>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          className={variantClassName}
+        >
+          {cardTitle}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {cardContent}
+        </Typography>
+      </CardContent>
+      {cta ? <CardActionArea>CTA</CardActionArea> : ""}
     </Card>
   );
 };

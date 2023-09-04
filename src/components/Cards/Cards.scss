@@ -1,0 +1,14 @@
+@import "../../scss/variables.scss";
+
+.card-content-color {
+    font-family: $main-font-oswald !important;
+   &__primary {
+    color: $primary-color-blue;
+   }
+   &__grey {
+    color: $grey-main;
+   }
+   &__white {
+    color: $white;
+   }
+}

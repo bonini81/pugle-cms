@@ -33,10 +33,11 @@ const Home = (): JSX.Element => {
       />
       <div className="cards-space-above">
         <Cards
-          icon={<CodeIcon fontSize="large" />}
+          graphic={<CodeIcon fontSize="large" />}
           cardTitle="ReactJS Developer"
           cardContent="fsdfsadfsd sfsdfsdfsadfadsf"
           data-testid="homeCard"
+          colorVariant="primary"
         />
       </div>
       <div style={{ display: "center", width: 200, margin: "25px" }}>

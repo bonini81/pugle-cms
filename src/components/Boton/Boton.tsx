@@ -19,7 +19,8 @@ export interface PugleButtonProps
   children: any;
   className?: Partial<ClassNameProps>;
   "data-testid": string;
-}
+  colorVariant?: "primary" | "grey" | "white";
+ }
 
 /**
  *
