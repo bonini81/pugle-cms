@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import { CardActionArea } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 import "./Cards.scss";
@@ -14,6 +13,7 @@ export interface PugleCardProps {
   "data-testid": string;
   cta?: boolean;
   colorVariant?: "primary" | "grey" | "white";
+  onClick?: () => void;
 }
 
 const Cards = ({
@@ -22,6 +22,7 @@ const Cards = ({
   cardContent,
   colorVariant,
   cta,
+  onClick,
   ...props
 }: PugleCardProps) => {
   let variantClassName = "";
@@ -42,13 +43,14 @@ const Cards = ({
 
   return (
     <Card sx={{ maxWidth: 345 }}>
-      {graphic}
+      {graphic ? <div className="graphic-div-paddings">{graphic}</div> : ""}
       <CardContent>
         <Typography
           gutterBottom
           variant="h5"
           component="div"
           className={variantClassName}
+          data-testid={props["data-testid"]}
         >
           {cardTitle}
         </Typography>
@@ -56,7 +58,13 @@ const Cards = ({
           {cardContent}
         </Typography>
       </CardContent>
-      {cta ? <CardActionArea>CTA</CardActionArea> : ""}
+      {cta ? (
+        <CardActionArea className="cta-div-paddings" onClick={onClick}>
+          Ver más
+        </CardActionArea>
+      ) : (
+        ""
+      )}
     </Card>
   );
 };

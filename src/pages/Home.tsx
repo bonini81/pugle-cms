@@ -22,6 +22,10 @@ const Home = (): JSX.Element => {
       height: 90,
     },
   };
+
+  const handleClick = () => {
+    console.log("Hello AI tools");
+  };
   return (
     <>
       <Header {...headerProps} />
@@ -33,11 +37,13 @@ const Home = (): JSX.Element => {
       />
       <div className="cards-space-above">
         <Cards
-          graphic={<CodeIcon fontSize="large" />}
+          graphic={<CodeIcon style={{ fontSize: "3rem" }} />}
           cardTitle="ReactJS Developer"
           cardContent="fsdfsadfsd sfsdfsdfsadfadsf"
           data-testid="homeCard"
           colorVariant="primary"
+          cta
+          onClick={handleClick}
         />
       </div>
       <div style={{ display: "center", width: 200, margin: "25px" }}>
