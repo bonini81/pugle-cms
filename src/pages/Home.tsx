@@ -1,7 +1,10 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import CodeIcon from "@mui/icons-material/Code";
 
+import "../scss/Home.scss";
 import logo from "../assets/header/freelance-desarrolloweb-seo.jpg";
 import Buttton from "../components/Boton";
+import Cards from "../components/Cards";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -19,6 +22,10 @@ const Home = (): JSX.Element => {
       height: 90,
     },
   };
+
+  const handleClick = () => {
+    console.log("Hello AI tools");
+  };
   return (
     <>
       <Header {...headerProps} />
@@ -28,6 +35,17 @@ const Home = (): JSX.Element => {
         subtitle2={subtitle2}
         data-testid="homeHero"
       />
+      <div className="cards-space-above">
+        <Cards
+          graphic={<CodeIcon style={{ fontSize: "3rem" }} />}
+          cardTitle="ReactJS Developer"
+          cardContent="fsdfsadfsd sfsdfsdfsadfadsf"
+          data-testid="homeCard"
+          colorVariant="primary"
+          cta
+          onClick={handleClick}
+        />
+      </div>
       <div style={{ display: "center", width: 200, margin: "25px" }}>
         <Buttton
           variant="contained"

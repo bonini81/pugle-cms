@@ -1,0 +1,25 @@
+@import "../../scss/variables.scss";
+
+.card-content-color {
+    font-family: $main-font-oswald !important;
+   &__primary {
+    color: $primary-color-blue;
+   }
+   &__grey {
+    color: $grey-main;
+   }
+   &__white {
+    color: $white;
+   }
+}
+
+.graphic-div-paddings {
+    padding-top: 16px;
+}
+
+button.cta-div-paddings {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1em;
+    
+}
