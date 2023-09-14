@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Frontend",
+        "description": "Más de 10 años maquetando sitios web en HTML, CSS y JavaScript."
+    },
+    {
+        "title": "ReactJs",
+        "description": "+2 años de experiencia con ReactJS mayormente en el sector de InsurTech con librearias como Material UI, Storybook y JEST."
+    },
+    
+    {
+        "title": "CMS Developer",
+        "description": "12 años de experiencia en personalizar plantillas y desarollo a medida mayormente con Wordpress y otros CMS como Joomla y Prestashop."
+
+    },
+    {
+        "title": "App Developer",
+        "description": "12 años de experiencia en personalizar plantillas y desarollo a medida mayormente con Wordpress y otros CMS como Joomla y Prestashop."
+
+    }
+
+    ]

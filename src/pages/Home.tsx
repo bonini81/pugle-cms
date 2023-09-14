@@ -1,5 +1,6 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CodeIcon from "@mui/icons-material/Code";
+import Grid from "@mui/material/Grid";
 
 import "../scss/Home.scss";
 import logo from "../assets/header/freelance-desarrolloweb-seo.jpg";
@@ -10,6 +11,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import footerText from "../data/footerLinks.json";
 import heroText from "../data/heroText.json";
+import servicesContent from "../data/servicesContent.json";
 
 const Home = (): JSX.Element => {
   const { copyright } = footerText;
@@ -23,9 +25,6 @@ const Home = (): JSX.Element => {
     },
   };
 
-  const handleClick = () => {
-    console.log("Hello AI tools");
-  };
   return (
     <>
       <Header {...headerProps} />
@@ -36,15 +35,23 @@ const Home = (): JSX.Element => {
         data-testid="homeHero"
       />
       <div className="cards-space-above">
-        <Cards
-          graphic={<CodeIcon style={{ fontSize: "3rem" }} />}
-          cardTitle="ReactJS Developer"
-          cardContent="fsdfsadfsd sfsdfsdfsadfadsf"
-          data-testid="homeCard"
-          colorVariant="primary"
-          cta
-          onClick={handleClick}
-        />
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
+        >
+          {servicesContent.map((services) => (
+            <Grid item xs={2} sm={3} md={3}>
+              <Cards
+                graphic={<CodeIcon style={{ fontSize: "3rem" }} />}
+                cardTitle={services.title}
+                cardContent={services.description}
+                data-testid="homeCard"
+                colorVariant="primary"
+              />
+            </Grid>
+          ))}
+        </Grid>
       </div>
       <div style={{ display: "center", width: 200, margin: "25px" }}>
         <Buttton
