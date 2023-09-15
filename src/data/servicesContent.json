@@ -1,25 +1,25 @@
 [
     {
         "title": "Análisis",
-        "description": "Análisis y estructuración de sitios Web.",
-        "icons": "fas fa-code"
+        "description": "Análisis de requerimientos del negocio, diseño de la solución y estructuración de sitios Web desde 0.",
+        "icons": 0
     },
     {
         "title": "Desarrollo de Sitios Web",
-        "description": "",
-        "icons": "fas fa-code"
+        "description": "12 años de experiencia desarrollando páginas web auto administrables para cliente de Europa, Latam y USA.",
+        "icons": 1
     },
     
     {
         "title": "Desarrollo de Tiendas Online",
-        "description": "12 años de experiencia en personalizar plantillas y desarollo a medida mayormente con Wordpress y otros CMS como Joomla y Prestashop.",
-        "icons": "fas fa-code"
+        "description": "4 años desarrollando tiendas online e integrando con pasarelas de pago, facturación electronica y entrega.",
+        "icons": 2
 
     },
     {
-        "title": "Desarrolllo de Aplicaciones Web",
-        "description": "12 años de experiencia en personalizar plantillas y desarollo a medida mayormente con Wordpress y otros CMS como Joomla y Prestashop.",
-        "icons": "fas fa-code"
+        "title": "Desarrollo de Aplicaciones Web",
+        "description": "Desarrollo de aplicaciones web a medida mayormente tecnologías Javascript y PHP.",
+        "icons": 3
 
     }
 

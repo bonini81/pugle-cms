@@ -1,5 +1,8 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CodeIcon from "@mui/icons-material/Code";
+import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
+import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
+import PsychologyIcon from "@mui/icons-material/Psychology";
 import Grid from "@mui/material/Grid";
 
 import "../scss/Home.scss";
@@ -25,6 +28,23 @@ const Home = (): JSX.Element => {
     },
   };
 
+  const getIconNameCards = (name: number) => {
+    switch (name) {
+      case 0:
+        return <PsychologyIcon style={{ fontSize: "3rem" }} />;
+      case 1:
+        return <ImportantDevicesIcon style={{ fontSize: "3rem" }} />;
+      case 2:
+        return <LocalGroceryStoreIcon style={{ fontSize: "3rem" }} />;
+      case 3:
+        return <CodeIcon style={{ fontSize: "3rem" }} />;
+      default:
+        return "";
+    }
+  };
+
+  <CodeIcon style={{ fontSize: "3rem" }} />;
+
   return (
     <>
       <Header {...headerProps} />
@@ -41,9 +61,9 @@ const Home = (): JSX.Element => {
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
           {servicesContent.map((services) => (
-            <Grid item xs={2} sm={3} md={3}>
+            <Grid item xs={4} sm={2} md={3}>
               <Cards
-                graphic={<CodeIcon style={{ fontSize: "3rem" }} />}
+                graphic={getIconNameCards(services.icons)}
                 cardTitle={services.title}
                 cardContent={services.description}
                 data-testid="homeCard"
