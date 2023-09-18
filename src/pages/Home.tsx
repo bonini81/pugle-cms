@@ -55,13 +55,15 @@ const Home = (): JSX.Element => {
         data-testid="homeHero"
       />
       <div className="cards-space-above">
+        <h1 className="title-text-align">Mis Servicios</h1>
+        <div className="hr-line-width" />
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
           {servicesContent.map((services) => (
-            <Grid item xs={4} sm={2} md={3}>
+            <Grid item xs={12} sm={4} md={3}>
               <Cards
                 graphic={getIconNameCards(services.icons)}
                 cardTitle={services.title}

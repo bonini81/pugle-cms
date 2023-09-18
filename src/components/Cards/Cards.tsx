@@ -42,7 +42,7 @@ const Cards = ({
   }
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card>
       {graphic ? <div className="graphic-div-paddings">{graphic}</div> : ""}
       <CardContent>
         <Typography
