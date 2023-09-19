@@ -14,11 +14,13 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import footerText from "../data/footerLinks.json";
 import heroText from "../data/heroText.json";
+import homeText from "../data/homeText.json";
 import servicesContent from "../data/servicesContent.json";
 
 const Home = (): JSX.Element => {
   const { copyright } = footerText;
   const { subtitle1, subtitle2, title1 } = heroText.titleInfo;
+  const { titleServices, subtitleServices } = homeText.homeContent;
   const headerProps = {
     logo: {
       src: logo,
@@ -55,8 +57,11 @@ const Home = (): JSX.Element => {
         data-testid="homeHero"
       />
       <div className="cards-space-above">
-        <h1 className="title-text-align">Mis Servicios</h1>
+        <h1 className="title-text-align">{titleServices}</h1>
         <div className="hr-line-width" />
+        <div className="cards-description-padding">
+          <p>{subtitleServices}</p>
+        </div>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
