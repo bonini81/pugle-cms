@@ -1,0 +1,24 @@
+@import "../../scss/variables.scss";
+
+.title-text-align {
+    text-align: center;
+    color: $primary-color-blue;
+    font-family: $main-font-oswald;
+    margin: 10px
+}
+
+.hr-line-width {
+    width: 30px;
+    background: $grey-main;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.cards-description-padding {
+    padding: 0 15%;
+    margin-bottom: 30px;
+    color: $grey-light;
+    font-family: $sub-font-roboto;
+}
