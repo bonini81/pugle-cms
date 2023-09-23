@@ -1,6 +1,7 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CodeIcon from "@mui/icons-material/Code";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import Grid from "@mui/material/Grid";
@@ -21,7 +22,12 @@ import servicesContent from "../data/servicesContent.json";
 const Home = (): JSX.Element => {
   const { copyright } = footerText;
   const { subtitle1, subtitle2, title1 } = heroText.titleInfo;
-  const { titleServices, subtitleServices } = homeText.homeContent;
+  const {
+    titleServices,
+    subtitleServices,
+    titleExperience,
+    subTitleExperience,
+  } = homeText.homeContent;
   const headerProps = {
     logo: {
       src: logo,
@@ -45,6 +51,16 @@ const Home = (): JSX.Element => {
         return "";
     }
   };
+  const getIconNameExperience = (name: number) => {
+    switch (name) {
+      case 0:
+        return <LinkedInIcon style={{ fontSize: "3rem" }} />;
+      case 1:
+        return <ImportantDevicesIcon style={{ fontSize: "3rem" }} />;
+      default:
+        return "";
+    }
+  };
 
   <CodeIcon style={{ fontSize: "3rem" }} />;
 
@@ -61,7 +77,7 @@ const Home = (): JSX.Element => {
         <Title
           titleServices={titleServices}
           subtitleServices={subtitleServices}
-          renderSubtitle={false}
+          renderSubtitle
         />
         <Grid
           container
@@ -81,14 +97,36 @@ const Home = (): JSX.Element => {
           ))}
         </Grid>
       </div>
-      <div style={{ display: "center", width: 200, margin: "25px" }}>
-        <Buttton
-          variant="contained"
-          data-testid="homeButton"
-          endIcon={<ArrowForwardIosIcon />}
+      <Title
+        titleServices={titleExperience}
+        subtitleServices={subTitleExperience}
+        renderSubtitle
+      />
+      <div className="cards-space-above">
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          Call to Action
-        </Buttton>
+          <Grid item xs={12} sm={6} md={6}>
+            <Buttton
+              variant="contained"
+              data-testid="homeButton"
+              endIcon={<LinkedInIcon style={{ fontSize: "3rem" }} />}
+            >
+              Call to Action
+            </Buttton>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6}>
+            <Buttton
+              variant="contained"
+              data-testid="homeButton"
+              endIcon={<ArrowForwardIosIcon />}
+            >
+              Call to Action
+            </Buttton>
+          </Grid>
+        </Grid>
       </div>
       <Footer copyright={copyright} />
     </>
