@@ -1,5 +1,5 @@
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CodeIcon from "@mui/icons-material/Code";
+import DownloadIcon from "@mui/icons-material/Download";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
@@ -108,23 +108,40 @@ const Home = (): JSX.Element => {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          <Grid item xs={12} sm={6} md={6}>
-            <Buttton
-              variant="contained"
-              data-testid="homeButton"
-              endIcon={<LinkedInIcon style={{ fontSize: "3rem" }} />}
-            >
-              Call to Action
-            </Buttton>
+          <Grid item xs={12} sm={6} md={4} className="buttons-container-center">
+            <div style={{ width: "300px" }}>
+              <Buttton
+                variant="contained"
+                data-testid="homeButton"
+                endIcon={<LinkedInIcon style={{ fontSize: "3rem" }} />}
+              >
+                Linkedin
+              </Buttton>
+            </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={6}>
-            <Buttton
-              variant="contained"
-              data-testid="homeButton"
-              endIcon={<ArrowForwardIosIcon />}
-            >
-              Call to Action
-            </Buttton>
+
+          <Grid item xs={12} sm={6} md={4} className="buttons-container-center">
+            <div style={{ width: "300px" }}>
+              <Buttton
+                variant="contained"
+                data-testid="homeButton"
+                endIcon={<ImportantDevicesIcon style={{ fontSize: "3rem" }} />}
+              >
+                Portafolio
+              </Buttton>
+            </div>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={4} className="buttons-container-center">
+            <div style={{ width: "300px" }}>
+              <Buttton
+                variant="contained"
+                data-testid="homeButton"
+                endIcon={<ImportantDevicesIcon style={{ fontSize: "3rem" }} />}
+              >
+                Portafolio
+              </Buttton>
+            </div>
           </Grid>
         </Grid>
       </div>
