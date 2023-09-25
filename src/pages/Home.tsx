@@ -1,6 +1,7 @@
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CodeIcon from "@mui/icons-material/Code";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import Grid from "@mui/material/Grid";
@@ -21,7 +22,12 @@ import servicesContent from "../data/servicesContent.json";
 const Home = (): JSX.Element => {
   const { copyright } = footerText;
   const { subtitle1, subtitle2, title1 } = heroText.titleInfo;
-  const { titleServices, subtitleServices } = homeText.homeContent;
+  const {
+    titleServices,
+    subtitleServices,
+    titleExperience,
+    subTitleExperience,
+  } = homeText.homeContent;
   const headerProps = {
     logo: {
       src: logo,
@@ -45,6 +51,18 @@ const Home = (): JSX.Element => {
         return "";
     }
   };
+  const getIconNameExperience = (name: number) => {
+    switch (name) {
+      case 0:
+        return <LinkedInIcon style={{ fontSize: "3rem" }} />;
+      case 1:
+        return <GitHubIcon style={{ fontSize: "3rem" }} />;
+      case 2:
+        return <ImportantDevicesIcon style={{ fontSize: "3rem" }} />;
+      default:
+        return "";
+    }
+  };
 
   <CodeIcon style={{ fontSize: "3rem" }} />;
 
@@ -57,11 +75,11 @@ const Home = (): JSX.Element => {
         subtitle2={subtitle2}
         data-testid="homeHero"
       />
-      <div className="cards-space-above">
+      <section className="cards-space-above">
         <Title
           titleServices={titleServices}
           subtitleServices={subtitleServices}
-          renderSubtitle={false}
+          renderSubtitle
         />
         <Grid
           container
@@ -80,16 +98,42 @@ const Home = (): JSX.Element => {
             </Grid>
           ))}
         </Grid>
-      </div>
-      <div style={{ display: "center", width: 200, margin: "25px" }}>
-        <Buttton
-          variant="contained"
-          data-testid="homeButton"
-          endIcon={<ArrowForwardIosIcon />}
+      </section>
+      <Title
+        titleServices={titleExperience}
+        subtitleServices={subTitleExperience}
+        renderSubtitle
+      />
+      <section className="button-space-sides">
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 12, md: 12 }}
         >
-          Call to Action
-        </Buttton>
-      </div>
+          {homeText.experienceContent.map((experience) => (
+            <Grid
+              item
+              xs={12}
+              sm={4}
+              md={4}
+              className="buttons-container-center"
+            >
+              <div style={{ width: "300px" }}>
+                <Buttton
+                  variant="contained"
+                  data-testid="homeButton"
+                  endIcon={getIconNameExperience(experience.icon)}
+                  onClick={() => {
+                    window.open(experience.link, "_blank");
+                  }}
+                >
+                  {experience.item}
+                </Buttton>
+              </div>
+            </Grid>
+          ))}
+        </Grid>
+      </section>
       <Footer copyright={copyright} />
     </>
   );
