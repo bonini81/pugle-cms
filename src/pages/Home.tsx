@@ -1,5 +1,5 @@
 import CodeIcon from "@mui/icons-material/Code";
-import DownloadIcon from "@mui/icons-material/Download";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
@@ -56,6 +56,8 @@ const Home = (): JSX.Element => {
       case 0:
         return <LinkedInIcon style={{ fontSize: "3rem" }} />;
       case 1:
+        return <GitHubIcon style={{ fontSize: "3rem" }} />;
+      case 2:
         return <ImportantDevicesIcon style={{ fontSize: "3rem" }} />;
       default:
         return "";
@@ -73,7 +75,7 @@ const Home = (): JSX.Element => {
         subtitle2={subtitle2}
         data-testid="homeHero"
       />
-      <div className="cards-space-above">
+      <section className="cards-space-above">
         <Title
           titleServices={titleServices}
           subtitleServices={subtitleServices}
@@ -96,55 +98,42 @@ const Home = (): JSX.Element => {
             </Grid>
           ))}
         </Grid>
-      </div>
+      </section>
       <Title
         titleServices={titleExperience}
         subtitleServices={subTitleExperience}
         renderSubtitle
       />
-      <div className="cards-space-above">
+      <section className="button-space-sides">
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
+          columns={{ xs: 4, sm: 12, md: 12 }}
         >
-          <Grid item xs={12} sm={6} md={4} className="buttons-container-center">
-            <div style={{ width: "300px" }}>
-              <Buttton
-                variant="contained"
-                data-testid="homeButton"
-                endIcon={<LinkedInIcon style={{ fontSize: "3rem" }} />}
-              >
-                Linkedin
-              </Buttton>
-            </div>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={4} className="buttons-container-center">
-            <div style={{ width: "300px" }}>
-              <Buttton
-                variant="contained"
-                data-testid="homeButton"
-                endIcon={<ImportantDevicesIcon style={{ fontSize: "3rem" }} />}
-              >
-                Portafolio
-              </Buttton>
-            </div>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={4} className="buttons-container-center">
-            <div style={{ width: "300px" }}>
-              <Buttton
-                variant="contained"
-                data-testid="homeButton"
-                endIcon={<ImportantDevicesIcon style={{ fontSize: "3rem" }} />}
-              >
-                Portafolio
-              </Buttton>
-            </div>
-          </Grid>
+          {homeText.experienceContent.map((experience) => (
+            <Grid
+              item
+              xs={12}
+              sm={4}
+              md={4}
+              className="buttons-container-center"
+            >
+              <div style={{ width: "300px" }}>
+                <Buttton
+                  variant="contained"
+                  data-testid="homeButton"
+                  endIcon={getIconNameExperience(experience.icon)}
+                  onClick={() => {
+                    window.open(experience.link, "_blank");
+                  }}
+                >
+                  {experience.item}
+                </Buttton>
+              </div>
+            </Grid>
+          ))}
         </Grid>
-      </div>
+      </section>
       <Footer copyright={copyright} />
     </>
   );

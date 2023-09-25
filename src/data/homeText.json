@@ -4,6 +4,24 @@
     "titleServices": "Mis Servicios",
     "subtitleServices": "Trabajo en el mundo digital desde el año 2008. Estudié Marketing Digital y Desarrollo Web en Barcelona y San Sebastián, España, donde también pude trabajar en la industria, en roles de Marketing Digital y desarrollo web. Actualmente voy trabajando por más de 2 años como Desarrollador Frontend con React.js.",
     "titleExperience": "Experiencia",
-    "subTitleExperience": "sfsdfasfs safsdfsfsdf asfsafsdafsdfsf sfasfsfsadfsafsfsdfasd"
-}
+    "subTitleExperience": "Desde el año 2009 en el mundo digital en Ecuador y Europa."
+},
+"experienceContent": [
+    {
+        "item": "Linkedin",
+        "icon": 0,
+        "link": "https://www.linkedin.com/in/andresdominguez81"
+    },
+    {
+        "item": "Github",
+        "icon": 1,
+        "link": "https://github.com/bonini81"
+    },
+    {
+        "item": "Portafolio",
+        "icon": 2,
+        "link": "https://pugle.net/portafolio/"
+    }
+
+]
 }
