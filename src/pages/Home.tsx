@@ -13,11 +13,13 @@ import Cards from "../components/Cards";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import ImageCollage from "../components/ImageCollage";
 import Title from "../components/Title";
 import footerText from "../data/footerLinks.json";
 import heroText from "../data/heroText.json";
 import homeText from "../data/homeText.json";
 import servicesContent from "../data/servicesContent.json";
+import stackGallery from "../data/stackGallery.json";
 
 const Home = (): JSX.Element => {
   const { copyright } = footerText;
@@ -76,6 +78,7 @@ const Home = (): JSX.Element => {
         data-testid="homeHero"
       />
       <section className="cards-space-above">
+        <ImageCollage itemData={stackGallery} />
         <Title
           titleServices={titleServices}
           subtitleServices={subtitleServices}
