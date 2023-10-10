@@ -29,6 +29,7 @@ const Home = (): JSX.Element => {
     subtitleServices,
     titleExperience,
     subTitleExperience,
+    titleGallery,
   } = homeText.homeContent;
   const headerProps = {
     logo: {
@@ -77,13 +78,12 @@ const Home = (): JSX.Element => {
         subtitle2={subtitle2}
         data-testid="homeHero"
       />
+      <Title
+        titleServices={titleServices}
+        subtitleServices={subtitleServices}
+        renderSubtitle
+      />
       <section className="cards-space-above">
-        <ImageCollage itemData={stackGallery} />
-        <Title
-          titleServices={titleServices}
-          subtitleServices={subtitleServices}
-          renderSubtitle
-        />
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
@@ -136,6 +136,10 @@ const Home = (): JSX.Element => {
             </Grid>
           ))}
         </Grid>
+      </section>
+      <Title titleServices={titleGallery} renderSubtitle={false} />
+      <section className="section-gallery-space">
+        <ImageCollage itemData={stackGallery} />
       </section>
       <Footer copyright={copyright} />
     </>

@@ -1,5 +1,6 @@
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
+import Grid from "@mui/material/Grid";
+
+import "./ImageCollage.scss";
 
 export interface ImageCollageProps {
   alt?: string;
@@ -26,20 +27,25 @@ const ImageCollage = ({
   itemData,
 }: ImageCollageProps) => {
   return (
-    <ImageList sx={{ width: 500, height: 450 }} cols={4} rowHeight={150}>
+    <Grid
+      className="grid-gallery-padding"
+      container
+      spacing={{ xs: 2, md: 3 }}
+      columns={{ xs: 4, sm: 3, md: 12 }}
+    >
       {itemData.map((item) => (
-        <ImageListItem key={item.key}>
+        <Grid item xs={6} sm={6} md={2}>
           <img
             srcSet={item.img}
             src={item.img}
             alt={item.title}
             loading="lazy"
-            width="150px"
-            height="150px"
+            width={width}
+            height={height}
           />
-        </ImageListItem>
+        </Grid>
       ))}
-    </ImageList>
+    </Grid>
   );
 };
 
