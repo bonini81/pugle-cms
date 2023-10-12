@@ -139,7 +139,7 @@ const Home = (): JSX.Element => {
       </section>
       <Title titleServices={titleGallery} renderSubtitle={false} />
       <section className="section-gallery-space">
-        <ImageCollage itemData={stackGallery} />
+        <ImageCollage itemData={stackGallery} data-testid="stackGallery" />
       </section>
       <Footer copyright={copyright} />
     </>

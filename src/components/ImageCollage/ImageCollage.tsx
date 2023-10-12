@@ -3,9 +3,8 @@ import Grid from "@mui/material/Grid";
 import "./ImageCollage.scss";
 
 export interface ImageCollageProps {
-  alt?: string;
   src?: string;
-
+  "data-testid": string;
   srcSet?: string;
   width?: string | number;
   height?: string | number;
@@ -15,16 +14,23 @@ export interface ImageCollageProps {
 export interface ImagesStackCollage {
   key: number;
   img: string;
-  title: string;
+  alt: string;
 }
 
+/**
+ * Render the title component.
+ * @param {ImageCollageProps} props - The main Props for the Image Gallery.
+ * @param {ImagesStackCollage} props - The props for each individual image.
+ * @returns {JSX.Element} - The rendered Image Gallery Component.
+ */
+
 const ImageCollage = ({
-  alt,
   src,
   srcSet,
   width,
   height,
   itemData,
+  ...props
 }: ImageCollageProps) => {
   return (
     <Grid
@@ -34,11 +40,11 @@ const ImageCollage = ({
       columns={{ xs: 4, sm: 3, md: 12 }}
     >
       {itemData.map((item) => (
-        <Grid item xs={6} sm={6} md={2}>
+        <Grid item xs={6} sm={6} md={2} data-testid={props["data-testid"]}>
           <img
             srcSet={item.img}
             src={item.img}
-            alt={item.title}
+            alt={item.alt}
             loading="lazy"
             width={width}
             height={height}
