@@ -13,11 +13,13 @@ import Cards from "../components/Cards";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import ImageCollage from "../components/ImageCollage";
 import Title from "../components/Title";
 import footerText from "../data/footerLinks.json";
 import heroText from "../data/heroText.json";
 import homeText from "../data/homeText.json";
 import servicesContent from "../data/servicesContent.json";
+import stackGallery from "../data/stackGallery.json";
 
 const Home = (): JSX.Element => {
   const { copyright } = footerText;
@@ -27,6 +29,7 @@ const Home = (): JSX.Element => {
     subtitleServices,
     titleExperience,
     subTitleExperience,
+    titleGallery,
   } = homeText.homeContent;
   const headerProps = {
     logo: {
@@ -75,12 +78,12 @@ const Home = (): JSX.Element => {
         subtitle2={subtitle2}
         data-testid="homeHero"
       />
+      <Title
+        titleServices={titleServices}
+        subtitleServices={subtitleServices}
+        renderSubtitle
+      />
       <section className="cards-space-above">
-        <Title
-          titleServices={titleServices}
-          subtitleServices={subtitleServices}
-          renderSubtitle
-        />
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
@@ -133,6 +136,10 @@ const Home = (): JSX.Element => {
             </Grid>
           ))}
         </Grid>
+      </section>
+      <Title titleServices={titleGallery} renderSubtitle={false} />
+      <section className="section-gallery-space">
+        <ImageCollage itemData={stackGallery} data-testid="stackGallery" />
       </section>
       <Footer copyright={copyright} />
     </>
