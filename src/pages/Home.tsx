@@ -7,22 +7,18 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import Grid from "@mui/material/Grid";
 
 import "../scss/Home.scss";
-import logo from "../assets/header/freelance-desarrolloweb-seo.jpg";
 import Buttton from "../components/Boton";
 import Cards from "../components/Cards";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ImageCollage from "../components/ImageCollage";
 import Title from "../components/Title";
-import footerText from "../data/footerLinks.json";
 import heroText from "../data/heroText.json";
 import homeText from "../data/homeText.json";
 import servicesContent from "../data/servicesContent.json";
 import stackGallery from "../data/stackGallery.json";
 
 const Home = (): JSX.Element => {
-  const { copyright } = footerText;
+  // const { copyright } = footerText;
   const { subtitle1, subtitle2, title1 } = heroText.titleInfo;
   const {
     titleServices,
@@ -31,14 +27,14 @@ const Home = (): JSX.Element => {
     subTitleExperience,
     titleGallery,
   } = homeText.homeContent;
-  const headerProps = {
+  /**  const headerProps = {
     logo: {
       src: logo,
       alt: "Freelance Front End Developer",
       width: 170,
       height: 90,
     },
-  };
+  }; */
 
   const getIconNameCards = (name: number) => {
     switch (name) {
@@ -71,7 +67,7 @@ const Home = (): JSX.Element => {
 
   return (
     <>
-      <Header {...headerProps} />
+      {/** <Header {...headerProps} /> */}
       <Hero
         subtitle1={subtitle1}
         title1={title1}
@@ -141,7 +137,7 @@ const Home = (): JSX.Element => {
       <section className="section-gallery-space">
         <ImageCollage itemData={stackGallery} data-testid="stackGallery" />
       </section>
-      <Footer copyright={copyright} />
+      {/** <Footer copyright={copyright} /> */}
     </>
   );
 };
