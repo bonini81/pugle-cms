@@ -18,7 +18,6 @@ import servicesContent from "../data/servicesContent.json";
 import stackGallery from "../data/stackGallery.json";
 
 const Home = (): JSX.Element => {
-  // const { copyright } = footerText;
   const { subtitle1, subtitle2, title1 } = heroText.titleInfo;
   const {
     titleServices,
@@ -27,14 +26,6 @@ const Home = (): JSX.Element => {
     subTitleExperience,
     titleGallery,
   } = homeText.homeContent;
-  /**  const headerProps = {
-    logo: {
-      src: logo,
-      alt: "Freelance Front End Developer",
-      width: 170,
-      height: 90,
-    },
-  }; */
 
   const getIconNameCards = (name: number) => {
     switch (name) {

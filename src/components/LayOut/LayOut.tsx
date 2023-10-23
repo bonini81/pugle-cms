@@ -14,7 +14,7 @@ const headerProps = {
     height: 90,
   },
 };
-const LayOut = () => {
+const LayOut = (): JSX.Element => {
   return (
     <>
       <Header {...headerProps} />

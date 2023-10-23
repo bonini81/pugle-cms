@@ -1,0 +1,126 @@
+[
+    {
+        "key": 0,
+        "img": "https://pugle.net/react-images/portafolio/conkreta1.jpg",
+        "alt": "Conkreta Desarrollo Web Portafolio",
+        "title": "Conkreta",
+        "category": "Desarrollo Web",
+        "description": "Desarrollo de la web corporativa de Conkreta SA con el framework de Front End, Bootstrap4.",
+        "linkTo": "https://www.conkreta.com/",
+        "linkToText": "Web:",
+        "hrefTo": "/conkreta"
+
+    },
+    {
+        "key": 1,
+        "img": "https://pugle.net/react-images/portafolio/xchange1-1.jpg",
+        "alt": "Wordpress Plugin Development",
+        "title": "Xchange",
+        "category": "Desarrollo Web",
+        "description": "Desarrollo de la versión 1.0 del Plugin para la pasarela de cobros en linea Xchange.la, básicamente se integro Woocommerce con el Paybox de Xchange para poder hacer cobros con su sistema dentro de WordPress / Woocommerce. El plugin, que actualmente esta en versiones más actualizadas, está dentro del repositorio de WordPress.org.",
+        "linkTo": "https://wordpress.org/plugins/woo-xchange-payments/",
+        "linkToText": "Plugin:",
+        "hrefTo": "/xchange"
+
+    },
+    {
+        "key": 2,
+        "img": "https://pugle.net/react-images/portafolio/portfolio-wup1.jpg",
+        "alt": "Desarrollo Wordpress",
+        "title": "WorkingUp",
+        "category": "Wordpress",
+        "description": "Desarrollo en WordPress para el espacio de CoWorking en Quito, WorkingUp.",
+        "linkTo": "https://workingup.com.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/workingup"
+
+    },
+    {
+        "key": 3,
+        "img": "https://pugle.net/react-images/portafolio/aquatrop1.jpg",
+        "alt": "Desarrollo Wordpress",
+        "title": "Aquatropical",
+        "category": "Wordpress",
+        "description": "Sitio Web realizado en WordPress, con tomas de fotografía aérea y terrestre para la parte gráfica.",
+        "linkTo": "https://aquatropicalsa.com/",
+        "linkToText": "Ver Web",
+        "hrefTo": "/aquatropical"
+
+    },
+    {
+        "key": 4,
+        "img": "https://pugle.net/react-images/portafolio/portafolio4-pipanic.jpg",
+        "alt": "Desarrollo Wordpress",
+        "title": "Pipanic",
+        "category": "Wordpress",
+        "description": "Desarrollo del website corporativo junto con la agencia Notus Digital, que se encargó en la parte de diseño, se usó el CMS, WordPress para el desarrollo web.",
+        "linkTo": "https://www.pipanic.com.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/pipanic"
+    },
+    {
+        "key": 5,
+        "img": "https://pugle.net/react-images/portafolio/movistar1.jpg",
+        "alt": "Desarrollo Web Movistar",
+        "title": "Movistar",
+        "category": "Desarrollo Web",
+        "description": "Desarrollo de un microsite para vender planes y celulares para Movistar. Se desarrollo con Bootstrap4 y una integración via AJAX a su CRM. Se trabajo, en la parte de diseño, conjuntamente con la agencia,  Notus Digital. La landing page  estuvo temporalmente (ya no está vigente) en esta URL,  https://ofertasmovistar.com.ec/ ahora se la puede ver en el enlace en GitHub Pages de abajo.",
+        "linkTo": "https://bonini81.github.io/movistar-promo/",
+        "linkToText": "Web:",
+        "hrefTo": "/movistar"
+    },
+    {
+        "key": 6,
+        "img": "https://pugle.net/react-images/portafolio/roland1.jpg",
+        "alt": "Desarrollo en Wordpress Roland",
+        "title": "Roland",
+        "category": "Desarrollo Wordpress",
+        "description": "Sitio web realizado para Medias Roland con la plantilla the7. Me encargué del proyecto desde el diseño del wireframe en Photoshop a la personalización de la plantilla en WordPress.",
+        "linkTo": "https://www.roland.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/roland"
+    },
+    {
+        "key": 7,
+        "img": "https://pugle.net/react-images/portafolio/cervantes-1.jpg",
+        "alt": "Desarrollo en Wordpress Cervantes",
+        "title": "Colegio Cervantes",
+        "category": "Desarrollo Wordpress",
+        "description": "Sitio web para el Colegio Cervantes en Puembo, realizado con la agencia Notus Digital. Se realizó con el CMS, WordPress.",
+        "linkTo": "https://cervantes.edu.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/cervantes"
+    },{
+        "key": 8,
+        "img": "https://pugle.net/react-images/portafolio/airplane-1.jpg",
+        "alt": "E-Commerce Airplane Mode",
+        "title": "Airplane Mode",
+        "category": "E-Commerce",
+        "description": "E-commerce desarrollado en WordPress, con más de 300 productos, con integración a Paymentez (como pasarela de cobros) y Contifico (facturación electrónica).",
+        "linkTo": "https://www.airplanemode.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/airplanemode"
+    },
+    {
+        "key": 9,
+        "img": "https://pugle.net/react-images/portafolio/whole-wines1.jpg",
+        "alt": "E-Commerce Whole Wines",
+        "title": "Whole Wines",
+        "category": "E-Commerce",
+        "description": "E-commerce desarrollado en WordPress, con más de 100 productos, con integración a Datafast (como pasarela de cobros) y Contifico (facturación electrónico). El diseño de la tienda en Photoshop fue realizado por la agencia digital, Notus.",
+        "linkTo": "https://wholewines.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/wholewines"
+    },
+    {
+        "key": 10,
+        "img": "https://pugle.net/react-images/portafolio/pichincha-vehiculos1.jpg",
+        "alt": "React Seguros Pichincha Vehiculos",
+        "title": "Seguro Vehicular Banco Pichincha",
+        "category": "React.JS",
+        "description": "Plataforma de venta de seguros online de vehicular para banco pichincha, realizado con EVA Insurtech, https://evainsurtech.com/  el centro digital de Nova Seguros (el broker seguros de banco pichincha). La plataforma se hizo con React JS, Material UI, Redux (yo realicé esta parte), back end fue con .NET y el back end con Azure DevOps. Utilizamos metodologías agiles. La plataforma, se puede ver desde este enlace,  https://seguros.pichincha.com/vehiculos pero está actualmente suspendida la plataforma por la ley de protección de datos. Actualmente se ve puede ver en su version de desarrollo en el enlace de abajo.",
+        "linkTo": "https://des-bpichincha-eva.novaecuador.com/vehiculos ",
+        "linkToText": "Web:",
+        "hrefTo": "/seguro-vehicular"
+    },
+    ]
