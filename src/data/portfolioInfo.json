@@ -25,7 +25,7 @@
     },
     {
         "key": 2,
-        "img": "https://pugle.net/react-images/portafolio/portfolio-wup1.jpg",
+        "img": "https://pugle.net/react-images/portafolio/portfolio-wup1-1.jpg",
         "alt": "Desarrollo Wordpress",
         "title": "WorkingUp",
         "category": "Wordpress",
@@ -60,7 +60,7 @@
     },
     {
         "key": 5,
-        "img": "https://pugle.net/react-images/portafolio/movistar1.jpg",
+        "img": "https://pugle.net/react-images/portafolio/portafolio3-movi.jpg",
         "alt": "Desarrollo Web Movistar",
         "title": "Movistar",
         "category": "Desarrollo Web",
@@ -147,7 +147,7 @@
     },
     {
         "key": 13,
-        "img": "https://pugle.net/react-images/portafolio/weekendsout.jpg",
+        "img": "https://pugle.net/react-images/portafolio/weekendsout.png",
         "alt": "Weekends Out",
         "title": "Weekends Out",
         "category": "Desarrollo Web, mantenimiento y estrategias de marketing online con su respectiva implementación.",
@@ -169,7 +169,7 @@
     },
     {
         "key": 15,
-        "img": "https://pugle.net/react-images/portafolio/selecta.jpg",
+        "img": "https://pugle.net/react-images/portafolio/selecta.png",
         "alt": "Selecta Hubspot Web",
         "title": "Selecta",
         "category": "Desarrollo Hubspot",
@@ -180,17 +180,6 @@
     },
     {
         "key": 16,
-        "img": "https://pugle.net/react-images/portafolio/selecta.jpg",
-        "alt": "Selecta Hubspot Web",
-        "title": "Selecta",
-        "category": "Desarrollo Web",
-        "description": "Desarrollo del Blog de una de las mayores empresas de Headhunting en Ecuador, Selecta. El Blog fue desarrollado en el CMS de Hubspot, conjuntamente con agencia HiperEstrategia.",
-        "linkTo": "https://blog.selecta.ec/blog",
-        "linkToText": "Web:",
-        "hrefTo": "/selecta"
-    },
-    {
-        "key": 17,
         "img": "https://pugle.net/react-images/portafolio/edesec.jpg",
         "alt": "Edes Desarrollo Web",
         "title": "Edes",
@@ -201,7 +190,7 @@
         "hrefTo": "/edes"
     }, 
     {
-        "key": 18,
+        "key": 17,
         "img": "https://pugle.net/react-images/portafolio/proyecto111.jpg",
         "alt": "Proyecto Yo Wordpress",
         "title": "Vicepresidencia del Ecuador",
@@ -212,7 +201,7 @@
         "hrefTo": "/proyectoyo"
     }, 
     {
-        "key": 19,
+        "key": 18,
         "img": "https://pugle.net/react-images/portafolio/inmobiliaria.jpg",
         "alt": "Inmobiliaria Pública App Web",
         "title": "Inmobiliaria Pública",
@@ -223,7 +212,7 @@
         "hrefTo": "/inmobiliar"
     },
     {
-        "key": 20,
+        "key": 19,
         "img": "https://pugle.net/react-images/portafolio/budget1.jpg",
         "alt": "Budget Puglin Wordpress",
         "title": "Budget",

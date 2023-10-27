@@ -2,7 +2,7 @@ import Grid from "@mui/material/Grid";
 
 import Cards from "../components/Cards";
 import Title from "../components/Title";
-import servicesContent from "../data/servicesContent.json";
+import portfolioContent from "../data/portfolioInfo.json";
 
 const Portfolio = () => {
   return (
@@ -18,13 +18,14 @@ const Portfolio = () => {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          {servicesContent.map((services) => (
+          {portfolioContent.map((portfolio) => (
             <Grid item xs={12} sm={4} md={3}>
               <Cards
-                cardTitle={services.title}
-                cardContent={services.description}
+                img={portfolio.img}
+                cardTitle={portfolio.title}
                 data-testid="homeCard"
                 colorVariant="primary"
+                cta
               />
             </Grid>
           ))}

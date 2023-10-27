@@ -8,8 +8,9 @@ import "./Cards.scss";
 
 export interface PugleCardProps {
   graphic?: ReactNode;
+  img?: string;
   cardTitle: string;
-  cardContent: string;
+  cardContent?: string;
   "data-testid": string;
   cta?: boolean;
   colorVariant?: "primary" | "grey" | "white";
@@ -18,6 +19,7 @@ export interface PugleCardProps {
 
 const Cards = ({
   cardTitle,
+  img,
   graphic,
   cardContent,
   colorVariant,
@@ -44,6 +46,7 @@ const Cards = ({
   return (
     <Card>
       {graphic ? <div className="graphic-div-paddings">{graphic}</div> : ""}
+      {img ? <img src={img} alt={cardTitle} width="100%" height="200px" /> : ""}
       <CardContent>
         <Typography
           gutterBottom
