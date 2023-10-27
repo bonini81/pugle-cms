@@ -123,4 +123,114 @@
         "linkToText": "Web:",
         "hrefTo": "/seguro-vehicular"
     },
+    {
+        "key": 11,
+        "img": "https://pugle.net/react-images/portafolio/pichincha-sit1.jpg",
+        "alt": "React Seguros Pichincha Salud",
+        "title": "Seguro de Salud Banco Pichincha",
+        "category": "React.JS",
+        "description": "Plataforma de venta de seguros online de salud para banco pichincha, realizado con EVA Insurtech, https://evainsurtech.com/  el centro digital de Nova Seguros (el broker seguros de banco pichincha). La plataforma se hizo con React JS, Material UI, Redux (yo realicé esta parte), back end fue con .NET y el back end con Azure DevOps. Utilizamos metodologías agiles.",
+        "linkTo": "https://seguros.pichincha.com/salud",
+        "linkToText": "Web:",
+        "hrefTo": "/seguro-sit"
+    },
+    {
+        "key": 12,
+        "img": "https://pugle.net/react-images/portafolio/mobifriends.jpg",
+        "alt": "LinkBuilding y SEO para Mobifriends.com",
+        "title": "LinkBuilding y SEO para Mobifriends.com",
+        "category": "SEO",
+        "description": "Colaboración en Barcelona, con la red social para conocer gente y ligar, Mobifriends.com, en el área de SEO y Link Building durante un período de 7 meses.",
+        "linkTo": "https://www.mobifriends.com/",
+        "linkToText": "Cliente:",
+        "hrefTo": "/mobifriends"
+    },
+    {
+        "key": 13,
+        "img": "https://pugle.net/react-images/portafolio/weekendsout.jpg",
+        "alt": "Weekends Out",
+        "title": "Weekends Out",
+        "category": "Desarrollo Web, mantenimiento y estrategias de marketing online con su respectiva implementación.",
+        "description": "Encargado de la parte de Marketing Online de la empresa realizando actividades de SEO/SEM, redes sociales y boletines de prensa, además del desarrollo del portal y red social de la empresa en Joomla y mantenimiento del mismo. La página que creamos en Facebook, Solteros y Solteras en Ecuador tiene actualmente más de 75,000 seguidores. Fuí el encargado de Marketing Onlne por un período de 2 años en mi país Ecuador.",
+        "linkTo": "https://weekendsout.com/",
+        "linkToText": "Cliente:",
+        "hrefTo": "/weekendsout"
+    },
+    {
+        "key": 14,
+        "img": "https://pugle.net/react-images/portafolio/makeupartist.jpg",
+        "alt": "May Makeup Artist Wordpress Web",
+        "title": "May Makeup Artist",
+        "category": "Desarrollo Wordpress",
+        "description": "Web realizada en WordPress con una plantilla premium, para una maquilladora en Suiza.",
+        "linkTo": "https://maynamartinez.ch/",
+        "linkToText": "Cliente:",
+        "hrefTo": "/makeupartist"
+    },
+    {
+        "key": 15,
+        "img": "https://pugle.net/react-images/portafolio/selecta.jpg",
+        "alt": "Selecta Hubspot Web",
+        "title": "Selecta",
+        "category": "Desarrollo Hubspot",
+        "description": "Desarrollo del Blog de una de las mayores empresas de Headhunting en Ecuador, Selecta. El Blog fue desarrollado en el CMS de Hubspot, conjuntamente con agencia HiperEstrategia.",
+        "linkTo": "https://blog.selecta.ec/blog",
+        "linkToText": "Web:",
+        "hrefTo": "/selecta"
+    },
+    {
+        "key": 16,
+        "img": "https://pugle.net/react-images/portafolio/selecta.jpg",
+        "alt": "Selecta Hubspot Web",
+        "title": "Selecta",
+        "category": "Desarrollo Web",
+        "description": "Desarrollo del Blog de una de las mayores empresas de Headhunting en Ecuador, Selecta. El Blog fue desarrollado en el CMS de Hubspot, conjuntamente con agencia HiperEstrategia.",
+        "linkTo": "https://blog.selecta.ec/blog",
+        "linkToText": "Web:",
+        "hrefTo": "/selecta"
+    },
+    {
+        "key": 17,
+        "img": "https://pugle.net/react-images/portafolio/edesec.jpg",
+        "alt": "Edes Desarrollo Web",
+        "title": "Edes",
+        "category": "Desarrollo Web",
+        "description": "Web desarrollada para la Escuela de Negocios de la UTPL: Edes.  Se trabajó conjuntamente con la agencia digital HiperEstrategia y la parte creativa o el diseño fue realizado por la agencia Ogilvy Ecuador.  Pugle estuvo a cargo del desarrollo web en WordPress y otra partes en HubSpot.",
+        "linkTo": "https://edes.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/edes"
+    }, 
+    {
+        "key": 18,
+        "img": "https://pugle.net/react-images/portafolio/proyecto111.jpg",
+        "alt": "Proyecto Yo Wordpress",
+        "title": "Vicepresidencia del Ecuador",
+        "category": "Desarrollo Wordpress",
+        "description": "Proyecto realizada para la Vicepresidencia de la República del Ecuador, parte de la campaña del Proyecto Yo. Este proyecto se realizo inhouse en la Agencia Digital, Awa.ec, el diseño fue dada por la agencia, la parte técnica fue realizado por mi persona y otro colega dentro de Awa con el software.",
+        "linkTo": " https://www.proyectoyo.com/",
+        "linkToText": "Web:",
+        "hrefTo": "/proyectoyo"
+    }, 
+    {
+        "key": 19,
+        "img": "https://pugle.net/react-images/portafolio/inmobiliaria.jpg",
+        "alt": "Inmobiliaria Pública App Web",
+        "title": "Inmobiliaria Pública",
+        "category": "Aplicaciones Web, Desarrollo Web",
+        "description": "Proyecto desarrollado para el portal de subastas de los inmuebles del Gobierno del Ecuador. El portal se lo hizo a nivel de Front End con la librería Bootstrap3 (HTML5, CSS3 y JS) y el back end, con su correspondiente Administrador de Contenidos, en Python. Personalmente estuve en el equipo de Front-End.",
+        "linkTo": " https://www.inmobiliariapublica.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/inmobiliar"
+    },
+    {
+        "key": 20,
+        "img": "https://pugle.net/react-images/portafolio/budget1.jpg",
+        "alt": "Budget Puglin Wordpress",
+        "title": "Budget",
+        "category": "Desarrollo Web, Plugins Wordpress, Wordpress",
+        "description": "Desarrollo de funcionalidades a medida para el sistema de reservas de autos de Budget con el plugin Woocommerce de WordPress.",
+        "linkTo": " https://budget.com.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/budget"
+    }
     ]
