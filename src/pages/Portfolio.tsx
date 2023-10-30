@@ -1,5 +1,6 @@
 import Grid from "@mui/material/Grid";
 
+import "../scss/Portfolio.scss";
 import Cards from "../components/Cards";
 import Title from "../components/Title";
 import portfolioContent from "../data/portfolioInfo.json";
@@ -8,11 +9,11 @@ const Portfolio = () => {
   return (
     <>
       <Title
-        titleServices="Fundillo de Elite"
-        subtitleServices="Desarrollador Frontend"
+        titleServices="Portafolio"
+        subtitleServices="Msc. Andrés Domínguez Bonini"
         renderSubtitle
       />
-      <section>
+      <section className="section-grid-margins">
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
@@ -25,7 +26,9 @@ const Portfolio = () => {
                 cardTitle={portfolio.title}
                 data-testid="homeCard"
                 colorVariant="primary"
-                cta
+                chip
+                cardCategory={portfolio.category}
+                // cta
               />
             </Grid>
           ))}

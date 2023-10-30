@@ -58,7 +58,6 @@ const Home = (): JSX.Element => {
 
   return (
     <>
-      {/** <Header {...headerProps} /> */}
       <Hero
         subtitle1={subtitle1}
         title1={title1}
