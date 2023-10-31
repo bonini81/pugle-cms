@@ -53,27 +53,34 @@ const Cards = ({
       {graphic ? <div className="graphic-div-paddings">{graphic}</div> : ""}
       {img ? <img src={img} alt={cardTitle} width="100%" height="200px" /> : ""}
       <CardContent>
-        <Typography
-          gutterBottom
-          variant="h5"
-          component="div"
-          className={variantClassName}
-          data-testid={props["data-testid"]}
-        >
-          {cardTitle}
-        </Typography>
+        {cta ? (
+          <CardActionArea className="cta-div-paddings" onClick={onClick}>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              className={variantClassName}
+              data-testid={props["data-testid"]}
+            >
+              {cardTitle}
+            </Typography>
+          </CardActionArea>
+        ) : (
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            className={variantClassName}
+            data-testid={props["data-testid"]}
+          >
+            {cardTitle}
+          </Typography>
+        )}
         <Typography variant="body2" color="text.secondary">
           {chip ? <Chip label={cardCategory} variant="filled" /> : ""}
           {cardContent}
         </Typography>
       </CardContent>
-      {cta ? (
-        <CardActionArea className="cta-div-paddings" onClick={onClick}>
-          Ver más
-        </CardActionArea>
-      ) : (
-        ""
-      )}
     </Card>
   );
 };
