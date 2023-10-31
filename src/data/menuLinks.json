@@ -1,7 +1,7 @@
 [
 {
     "menu": "Inicio",
-    "url": "https://pugle.net/"
+    "url": "/"
 },
 {
     "menu": "Sobre mí",
@@ -10,7 +10,7 @@
 
 {
     "menu": "Portafolio",
-    "url": "https://pugle.net/portafolio/"
+    "url": "/portafolio"
 }
 
 ]
