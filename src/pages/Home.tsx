@@ -25,6 +25,8 @@ const Home = (): JSX.Element => {
     titleExperience,
     subTitleExperience,
     titleGallery,
+    titleContact,
+    subTitleContact,
   } = homeText.homeContent;
 
   const getIconNameCards = (name: number) => {
@@ -58,18 +60,20 @@ const Home = (): JSX.Element => {
 
   return (
     <>
-      <Hero
-        subtitle1={subtitle1}
-        title1={title1}
-        subtitle2={subtitle2}
-        data-testid="homeHero"
-      />
-      <Title
-        titleServices={titleServices}
-        subtitleServices={subtitleServices}
-        renderSubtitle
-      />
+      <section>
+        <Hero
+          subtitle1={subtitle1}
+          title1={title1}
+          subtitle2={subtitle2}
+          data-testid="homeHero"
+        />
+      </section>
       <section className="cards-space-above">
+        <Title
+          titleServices={titleServices}
+          subtitleServices={subtitleServices}
+          renderSubtitle
+        />
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
@@ -88,12 +92,12 @@ const Home = (): JSX.Element => {
           ))}
         </Grid>
       </section>
-      <Title
-        titleServices={titleExperience}
-        subtitleServices={subTitleExperience}
-        renderSubtitle
-      />
       <section className="button-space-sides">
+        <Title
+          titleServices={titleExperience}
+          subtitleServices={subTitleExperience}
+          renderSubtitle
+        />
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
@@ -123,11 +127,46 @@ const Home = (): JSX.Element => {
           ))}
         </Grid>
       </section>
-      <Title titleServices={titleGallery} renderSubtitle={false} />
       <section className="section-gallery-space">
+        <Title titleServices={titleGallery} renderSubtitle={false} />
         <ImageCollage itemData={stackGallery} data-testid="stackGallery" />
       </section>
-      {/** <Footer copyright={copyright} /> */}
+
+      <section className="button-space-sides__contact">
+        <Title
+          titleServices={titleContact}
+          renderSubtitle
+          subtitleServices={subTitleContact}
+        />
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 12, md: 12 }}
+        >
+          {homeText.contactButtons.map((button) => (
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={6}
+              className="buttons-container-center"
+            >
+              <div style={{ width: "300px" }}>
+                <Buttton
+                  variant="contained"
+                  data-testid="homeButton"
+                  endIcon={getIconNameExperience(button.icon)}
+                  onClick={() => {
+                    window.open(button.link, "_blank");
+                  }}
+                >
+                  {button.item}
+                </Buttton>
+              </div>
+            </Grid>
+          ))}
+        </Grid>
+      </section>
     </>
   );
 };

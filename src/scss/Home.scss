@@ -13,4 +13,23 @@
     padding-left: 10%;
     padding-right: 10%; 
     margin-bottom: 32px;
+    
+    &__contact {
+        padding-left: 25%;
+        padding-right: 25%;
+        margin-bottom: 32px;
+    }
 }
+
+@media(max-width: 800px) {
+
+    .button-space-sides {
+        
+        &__contact {
+            padding-left: 10%;
+            padding-right: 10%;
+            margin-bottom: 32px;
+        }
+    }
+ 
+ }

@@ -31,7 +31,7 @@ const Header = (props: PugleHeaderProps): JSX.Element => {
       <Container>
         <div className="container-header-wrapper">
           <figure className="logo-image-specs">
-            <a href="https://google.com">{ImageComponent}</a>
+            <a href="/">{ImageComponent}</a>
           </figure>
           <aside className="aside-menu-styles">
             <HeaderMenu />
