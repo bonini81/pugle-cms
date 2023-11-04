@@ -30,14 +30,14 @@
 
     "contactButtons": [
     {
-        "item": "0969078192",
+        "item": "Mi whatsapp",
         "icon": 0,
-        "link": "https://www.linkedin.com/in/andresdominguez81"
+        "link": "https://wa.me/963528723"
     },
     {
         "item": "Mi Correo",
         "icon": 1,
-        "link": "https://github.com/bonini81"
+        "link": "mailto:info@pugle.net"
     }
 
 ]

@@ -1,9 +1,11 @@
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import CodeIcon from "@mui/icons-material/Code";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import PsychologyIcon from "@mui/icons-material/Psychology";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Grid from "@mui/material/Grid";
 
 import "../scss/Home.scss";
@@ -43,6 +45,18 @@ const Home = (): JSX.Element => {
         return "";
     }
   };
+
+  const getIconNameContact = (name: number) => {
+    switch (name) {
+      case 0:
+        return <WhatsAppIcon style={{ fontSize: "3rem" }} />;
+      case 1:
+        return <AlternateEmailIcon style={{ fontSize: "3rem" }} />;
+      default:
+        return "";
+    }
+  };
+
   const getIconNameExperience = (name: number) => {
     switch (name) {
       case 0:
@@ -155,7 +169,7 @@ const Home = (): JSX.Element => {
                 <Buttton
                   variant="contained"
                   data-testid="homeButton"
-                  endIcon={getIconNameExperience(button.icon)}
+                  endIcon={getIconNameContact(button.icon)}
                   onClick={() => {
                     window.open(button.link, "_blank");
                   }}
