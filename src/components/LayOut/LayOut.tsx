@@ -19,7 +19,7 @@ const LayOut = (): JSX.Element => {
     <>
       <Header {...headerProps} />
       <Outlet />
-      <Footer copyright={copyright} />
+      <Footer mainFooter={false} copyright={copyright} />
     </>
   );
 };
