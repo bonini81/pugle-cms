@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 
 import "../scss/Portfolio.scss";
@@ -6,7 +7,9 @@ import Title from "../components/Title";
 import portfolioContent from "../data/portfolioInfo.json";
 
 const Portfolio = () => {
-  return (
+  const navigate = useNavigate();
+
+return (
     <>
       <Title
         titleServices="Portafolio"
@@ -28,7 +31,8 @@ const Portfolio = () => {
                 colorVariant="primary"
                 chip
                 cardCategory={portfolio.category}
-                // cta
+                cta
+                onClick={() => navigate(`/portafolio2/${portfolio.key}`)}
               />
             </Grid>
           ))}
