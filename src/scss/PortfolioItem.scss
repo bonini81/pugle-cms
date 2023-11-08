@@ -1,0 +1,18 @@
+@import "../scss/variables.scss";
+
+.paragraph-description-styles {
+
+    font-size: 13px;
+    color: $grey-light;
+    text-align: justify;
+}
+
+.paragraph-link-styles {
+    text-align: left;
+    font-family: $sub-font-roboto;
+}
+
+.h3-title-align {
+    text-align: left;
+    font-family: $main-font-oswald;
+}
