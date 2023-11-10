@@ -9,7 +9,7 @@ import portfolioContent from "../data/portfolioInfo.json";
 const Portfolio = () => {
   const navigate = useNavigate();
 
-return (
+  return (
     <>
       <Title
         titleServices="Portafolio"
@@ -32,7 +32,7 @@ return (
                 chip
                 cardCategory={portfolio.category}
                 cta
-                onClick={() => navigate(`/portafolio2/${portfolio.key}`)}
+                onClick={() => navigate(`/portafolioItem/${portfolio.key}`)}
               />
             </Grid>
           ))}
