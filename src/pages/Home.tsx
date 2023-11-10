@@ -6,6 +6,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
 import "../scss/Home.scss";
@@ -46,7 +47,7 @@ const Home = (): JSX.Element => {
     }
   };
 
-  const getIconNameContact = (name: number) => {
+  const getIconNameContactMe = (name: number) => {
     switch (name) {
       case 0:
         return <WhatsAppIcon style={{ fontSize: "3rem" }} />;
@@ -88,23 +89,25 @@ const Home = (): JSX.Element => {
           subtitleServices={subtitleServices}
           renderSubtitle
         />
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-        >
-          {servicesContent.map((services) => (
-            <Grid item xs={12} sm={4} md={3}>
-              <Cards
-                graphic={getIconNameCards(services.icons)}
-                cardTitle={services.title}
-                cardContent={services.description}
-                data-testid="homeCard"
-                colorVariant="primary"
-              />
-            </Grid>
-          ))}
-        </Grid>
+        <Container>
+          <Grid
+            container
+            spacing={{ xs: 2, md: 3 }}
+            columns={{ xs: 4, sm: 8, md: 12 }}
+          >
+            {servicesContent.map((services) => (
+              <Grid item xs={12} sm={4} md={3}>
+                <Cards
+                  graphic={getIconNameCards(services.icons)}
+                  cardTitle={services.title}
+                  cardContent={services.description}
+                  data-testid="homeCard"
+                  colorVariant="primary"
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
       </section>
       <section className="button-space-sides">
         <Title
@@ -169,7 +172,7 @@ const Home = (): JSX.Element => {
                 <Buttton
                   variant="contained"
                   data-testid="homeButton"
-                  endIcon={getIconNameContact(button.icon)}
+                  endIcon={getIconNameContactMe(button.icon)}
                   onClick={() => {
                     window.open(button.link, "_blank");
                   }}
