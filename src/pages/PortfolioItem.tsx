@@ -1,4 +1,4 @@
-import { useNavigate,useParams  } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
@@ -11,12 +11,14 @@ const PortfolioItem = (): JSX.Element => {
   const navigate = useNavigate();
 
   const { id } = useParams();
-  const id2 = Number(id);
+  const portfolioItemId = Number(id);
 
-  const portfolioItems = portfolioContent.find((item) => item.key === id2);
+  const portfolioItems = portfolioContent.find(
+    (item) => item.key === portfolioItemId
+  );
 
   return (
-    <section className="section-grid-margins">
+    <section className="section-grid-item-margins">
       <Title
         titleServices={portfolioItems?.title || "Portafolio"}
         renderSubtitle
@@ -27,10 +29,15 @@ const PortfolioItem = (): JSX.Element => {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          <Grid item xs={12} sm={6} md={9}>
-            <img src={portfolioItems?.img} alt={portfolioItems?.alt} />
+          <Grid item xs={12} sm={9} md={9}>
+            <img
+              src={portfolioItems?.img}
+              alt={portfolioItems?.alt}
+              width="100%"
+              height="auto"
+            />
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} sm={3} md={3}>
             <h3 className="h3-title-align">
               Categoría: {portfolioItems?.category}
             </h3>
@@ -43,11 +50,10 @@ const PortfolioItem = (): JSX.Element => {
                 {portfolioItems?.title}
               </a>
             </p>
-            <div style={{ width: "300px" }}>
+            <div style={{ width: "100px" }}>
               <Buttton
                 variant="contained"
                 data-testid="homeButton"
-                // endIcon={getIconNameContactMe(button.icon)}
                 onClick={() => navigate("/portafolio")}
               >
                 Regresar
