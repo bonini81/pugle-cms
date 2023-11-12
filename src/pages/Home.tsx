@@ -12,6 +12,7 @@ import Grid from "@mui/material/Grid";
 import "../scss/Home.scss";
 import Buttton from "../components/Boton";
 import Cards from "../components/Cards";
+import TextField from "../components/CoTextField";
 import Hero from "../components/Hero";
 import ImageCollage from "../components/ImageCollage";
 import Title from "../components/Title";
@@ -183,6 +184,10 @@ const Home = (): JSX.Element => {
             </Grid>
           ))}
         </Grid>
+        <section>
+          <br />
+          <TextField data-testid="homeTextField" variant="outlined" />
+        </section>
       </section>
     </>
   );

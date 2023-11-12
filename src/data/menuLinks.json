@@ -4,13 +4,12 @@
     "url": "/"
 },
 {
-    "menu": "Sobre mí",
-    "url": "https://pugle.net/consultor-freelance/"
-},
-
-{
     "menu": "Portafolio",
     "url": "/portafolio"
+},
+{
+    "menu": "Login",
+    "url": "/login"
 }
 
 ]
