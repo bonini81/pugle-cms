@@ -184,10 +184,6 @@ const Home = (): JSX.Element => {
             </Grid>
           ))}
         </Grid>
-        <section>
-          <br />
-          <TextField data-testid="homeTextField" variant="outlined" />
-        </section>
       </section>
     </>
   );
