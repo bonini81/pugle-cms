@@ -8,7 +8,7 @@ export interface PugleTextFieldProps
 }
 
 const CoTextField = ({
-  variant = "filled",
+  variant = "outlined",
   label = "TextFilled",
   ...props
 }: PugleTextFieldProps): JSX.Element => {
