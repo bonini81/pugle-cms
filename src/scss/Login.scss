@@ -8,8 +8,9 @@
 .login-box-styles {
     width: 300px;
     height: 300px;
-    padding: 0 32px 32px 32px;
-    background-color: #d9d9d8;
+    padding: 0 40px 40px 40px;
+    background-color: #ecece7;
+    box-shadow: 1px 1px 1px 1px #717171;
 }
 
 .login-button-styles {
@@ -21,4 +22,10 @@
 
 .login-field-styles {
     margin-top: 15px !important;
+}
+
+@media(max-width: 800px) { 
+    .main-wrapper-login-box {
+        margin: 25% 10% 40% 10%;
+    }
 }
