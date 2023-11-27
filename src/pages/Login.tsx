@@ -1,5 +1,7 @@
 import { Controller, useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 import "../scss/Login.scss";
 import Button from "../components/Boton";
@@ -11,14 +13,27 @@ const Login = () => {
     password: string;
   }
 
-  const form = useForm<FormValues>({
+  const schema = yup.object().shape({
+    username: yup.string().required("Usuario es requerido."),
+    password: yup
+      .string()
+      .min(4, "Minimo 4 caracteres.")
+      .max(20)
+      .required("Contraseña es requerida."),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm<FormValues>({
+    resolver: yupResolver(schema),
     defaultValues: {
       username: "",
       password: "",
     },
   });
-
-  const { register, handleSubmit, control } = form;
 
   const onSubmit = (data: any) => {
     console.log(data);
@@ -41,6 +56,8 @@ const Login = () => {
                 {...register("username")}
                 {...field}
                 ref={null}
+                error={!!errors.username}
+                helperText={errors.username ? errors.username?.message : ""}
               />
             )}
           />
@@ -56,6 +73,8 @@ const Login = () => {
                 {...register("password")}
                 {...field}
                 ref={null}
+                error={!!errors.password}
+                helperText={errors.password ? errors.password?.message : ""}
               />
             )}
           />
