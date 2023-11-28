@@ -1,6 +1,7 @@
 import { Controller, useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { yupResolver } from "@hookform/resolvers/yup";
+import axios from "axios";
 import * as yup from "yup";
 
 import "../scss/Login.scss";
@@ -35,8 +36,21 @@ const Login = () => {
     },
   });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = async (data: any) => {
     console.log(data);
+    const url = `https://dev.edge-dob.com/wp-json/jwt-auth/v1/token?username=${data.username}&password=${data.password}`;
+    const headers = {
+      "Content-Type": "application/json",
+    };
+    const response = await axios
+      .post(url, { headers })
+      .then((result) => result.data);
+    if (response) {
+      localStorage.setItem("token", response.token);
+      window.location.href = "https://dev.edge-dob.com/";
+    } else {
+      alert("Credenciales incorrectas");
+    }
   };
 
   return (
