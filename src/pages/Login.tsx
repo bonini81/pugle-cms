@@ -1,12 +1,12 @@
 import { Controller, useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { yupResolver } from "@hookform/resolvers/yup";
-import axios from "axios";
 import * as yup from "yup";
 
 import "../scss/Login.scss";
 import Button from "../components/Boton";
 import TextField from "../components/CoTextField";
+import authService from "../services/auth.service";
 
 const Login = () => {
   interface FormValues {
@@ -42,6 +42,22 @@ const Login = () => {
   };
 
   const authToken = async (username: string, password: string) => {
+    try {
+      const response = await authService.postAuthWordpressLogin(
+        username,
+        password
+      );
+      const data = await response.data;
+      localStorage.setItem("token", data.token);
+      window.location.href = "https://dev.edge-dob.com/";
+    } catch (err: any) {
+      console.log(err.response.data);
+      console.log(err.response.status);
+      alert("Credenciales incorrectas");
+    }
+  };
+
+  /**  const authToken = async (username: string, password: string) => {
     const url = `https://dev.edge-dob.com/wp-json/jwt-auth/v1/token?username=${username}&password=${password}`;
     const headers = {
       "Content-Type": "application/json",
@@ -57,7 +73,7 @@ const Login = () => {
       console.log(err.response.status);
       alert("Credenciales incorrectas");
     }
-  };
+  }; */
 
   return (
     <section className="main-wrapper-login-box">
