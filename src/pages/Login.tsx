@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import { Controller, useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -37,7 +38,6 @@ const Login = () => {
   });
 
   const onSubmit = async (data: any) => {
-    console.log(data);
     await authToken(data.username, data.password);
   };
 
@@ -51,29 +51,9 @@ const Login = () => {
       localStorage.setItem("token", data.token);
       window.location.href = "https://dev.edge-dob.com/";
     } catch (err: any) {
-      console.log(err.response.data);
-      console.log(err.response.status);
       alert("Credenciales incorrectas");
     }
   };
-
-  /**  const authToken = async (username: string, password: string) => {
-    const url = `https://dev.edge-dob.com/wp-json/jwt-auth/v1/token?username=${username}&password=${password}`;
-    const headers = {
-      "Content-Type": "application/json",
-    };
-
-    try {
-      const response = await axios.post(url, { headers });
-      const data = await response.data;
-      localStorage.setItem("token", data.token);
-      window.location.href = "https://dev.edge-dob.com/";
-    } catch (err: any) {
-      console.log(err.response.data);
-      console.log(err.response.status);
-      alert("Credenciales incorrectas");
-    }
-  }; */
 
   return (
     <section className="main-wrapper-login-box">
