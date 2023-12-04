@@ -1,18 +1,15 @@
 import TextField, { TextFieldProps } from "@mui/material/TextField";
 
-export interface PugleTextFieldProps
-  extends Omit<TextFieldProps, "defaultValue"> {
+export interface PugleTextFieldProps extends Omit<TextFieldProps, "variant"> {
   variant?: "standard" | "outlined" | "filled";
-  label?: string;
   "data-testid": string;
 }
 
 const CoTextField = ({
   variant = "outlined",
-  label = "TextFilled",
   ...props
 }: PugleTextFieldProps): JSX.Element => {
-  return <TextField fullWidth variant={variant} label={label} {...props} />;
+  return <TextField fullWidth variant={variant} {...props} />;
 };
 
 export default CoTextField;
