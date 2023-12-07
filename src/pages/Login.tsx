@@ -1,5 +1,6 @@
 /* eslint-disable no-alert */
 import { Controller, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { DevTool } from "@hookform/devtools";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -14,6 +15,8 @@ const Login = () => {
     username: string;
     password: string;
   }
+
+  const navigate = useNavigate();
 
   const schema = yup.object().shape({
     username: yup.string().required("Usuario es requerido."),
@@ -49,7 +52,8 @@ const Login = () => {
       );
       const data = await response.data;
       localStorage.setItem("token", data.token);
-      window.location.href = "https://dev.edge-dob.com/";
+      navigate("/backoffice/home");
+      // window.location.href = "https://dev.edge-dob.com/";
     } catch (err: any) {
       alert("Credenciales incorrectas");
     }
