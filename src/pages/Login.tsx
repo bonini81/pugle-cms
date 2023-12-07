@@ -52,8 +52,8 @@ const Login = () => {
       );
       const data = await response.data;
       localStorage.setItem("token", data.token);
-      // insert new route navigate();
-      window.location.href = "https://dev.edge-dob.com/";
+      navigate("/backoffice/home");
+      // window.location.href = "https://dev.edge-dob.com/";
     } catch (err: any) {
       alert("Credenciales incorrectas");
     }
