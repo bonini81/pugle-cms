@@ -10,7 +10,7 @@ import "../scss/Login.scss";
 import Button from "../components/Boton";
 import TextField from "../components/CoTextField";
 import authService from "../services/auth.service";
-import { setCurrentSong } from "../store";
+import { setCurrentToken, setCurrentUser } from "../store";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -55,10 +55,9 @@ const Login = () => {
       );
       const data = await response.data;
       localStorage.setItem("token", data.token);
-      const action = setCurrentSong(data.token);
-      dispatch(action);
+      dispatch(setCurrentUser(data.user_display_name));
+      dispatch(setCurrentToken(data.token));
       navigate("/backoffice/home");
-
     } catch (err: any) {
       alert("Credenciales incorrectas");
     }

@@ -1,33 +1,44 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
-const songSlice = createSlice({
-  name: "song",
+const userSlice = createSlice({
+  name: "user",
   initialState: {
-    currentSong: null,
+    currentUser: null,
   },
   reducers: {
-    setCurrentSong: (state, action) => {
-      state.currentSong = action.payload;
+    setCurrentUser: (state, action) => {
+      state.currentUser = action.payload;
     },
-    clearCurrentSong: (state, action) => {
-      state.currentSong = null;
+    removeUser: (state, action) => {
+      state.currentUser = null;
+    },
+  },
+});
+
+const tokenSlice = createSlice({
+  name: "token",
+  initialState: {
+    currentToken: null,
+  },
+  reducers: {
+    setCurrentToken: (state, action) => {
+      state.currentToken = action.payload;
+    },
+    removeToken: (state, action) => {
+      state.currentToken = null;
     },
   },
 });
 
 const store = configureStore({
   reducer: {
-    songs: songSlice.reducer,
+    logins: userSlice.reducer,
+    tokens: tokenSlice.reducer,
   },
 });
 
-const startingState = store.getState();
-
-console.log("Starting State:");
-console.log(startingState);
-
-const finalState = store.getState();
-console.log(finalState);
+// const startingState = store.getState();
 
 export default store;
-export const { setCurrentSong } = songSlice.actions;
+export const { setCurrentUser, removeUser } = userSlice.actions;
+export const { setCurrentToken, removeToken } = tokenSlice.actions;
