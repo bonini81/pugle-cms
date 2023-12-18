@@ -1,6 +1,13 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
-const userSlice = createSlice({
+import {
+  removeToken,
+  setCurrentToken,
+  tokenReducer,
+} from "./slices/tokenSlice";
+import { removeUser, setCurrentUser, userReducer } from "./slices/userSlice";
+
+/** const userSlice = createSlice({
   name: "user",
   initialState: {
     currentUser: null,
@@ -13,8 +20,9 @@ const userSlice = createSlice({
       state.currentUser = null;
     },
   },
-});
+}); */
 
+/** 
 const tokenSlice = createSlice({
   name: "token",
   initialState: {
@@ -28,17 +36,23 @@ const tokenSlice = createSlice({
       state.currentToken = null;
     },
   },
-});
+}); */
 
 const store = configureStore({
   reducer: {
-    logins: userSlice.reducer,
-    tokens: tokenSlice.reducer,
+    users: userReducer,
+    tokens: tokenReducer,
   },
 });
 
 // const startingState = store.getState();
 
 export default store;
-export const { setCurrentUser, removeUser } = userSlice.actions;
-export const { setCurrentToken, removeToken } = tokenSlice.actions;
+export {
+  removeToken,
+  removeUser,
+  setCurrentToken,
+  setCurrentUser,
+  tokenReducer,
+  userReducer,
+};

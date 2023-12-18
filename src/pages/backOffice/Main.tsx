@@ -13,7 +13,7 @@ const Main = (): JSX.Element => {
 
   useEffect(() => {
     if (
-      dataStore.logins.currentUser === null ||
+      dataStore.users.currentUser === null ||
       tokenLocalStorage !== dataStore.tokens.currentToken ||
       tokenLocalStorage === null
     ) {
@@ -31,7 +31,7 @@ const Main = (): JSX.Element => {
         >
           <Grid item xs={12} sm={6} md={4}>
             <aside className="aside-navbar-styles">
-              Hola, {dataStore.logins.currentUser}
+              Hola, {dataStore.users.currentUser}
             </aside>
           </Grid>
           <Grid item xs={12} sm={6} md={8}>
