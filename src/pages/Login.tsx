@@ -1,5 +1,6 @@
 /* eslint-disable no-alert */
 import { Controller, useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { DevTool } from "@hookform/devtools";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -9,8 +10,10 @@ import "../scss/Login.scss";
 import Button from "../components/Boton";
 import TextField from "../components/CoTextField";
 import authService from "../services/auth.service";
+import { setCurrentToken, setCurrentUser } from "../store";
 
 const Login = () => {
+  const dispatch = useDispatch();
   interface FormValues {
     username: string;
     password: string;
@@ -52,8 +55,9 @@ const Login = () => {
       );
       const data = await response.data;
       localStorage.setItem("token", data.token);
+      dispatch(setCurrentUser(data.user_display_name));
+      dispatch(setCurrentToken(data.token));
       navigate("/backoffice/home");
-      // window.location.href = "https://dev.edge-dob.com/";
     } catch (err: any) {
       alert("Credenciales incorrectas");
     }
