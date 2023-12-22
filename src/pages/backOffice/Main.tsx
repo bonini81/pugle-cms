@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Person2Icon from "@mui/icons-material/Person2";
 import SpeedIcon from "@mui/icons-material/Speed";
+import StorageIcon from "@mui/icons-material/Storage";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
@@ -44,7 +45,15 @@ const Main = (): JSX.Element => {
                 </p>
               </div>
               <div className="aside-navbar-styles__menu">
-                <p>Menu</p>
+                <h3 className="htitle-style-margin">
+                  <StorageIcon /> 
+                  Database Contexts
+                </h3>
+                <ul className="main-list-margin">
+                  <li className="list-item-decoration">About Me</li>
+                  <li className="list-item-decoration">Services</li>
+                  <li className="list-item-decoration">Portfolio</li>
+                </ul>
               </div>
             </aside>
           </Grid>
