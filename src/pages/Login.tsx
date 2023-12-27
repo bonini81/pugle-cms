@@ -108,6 +108,7 @@ const Login = () => {
               data-testid="login"
               type="submit"
               value="Login"
+              disabled
             >
               Enviar
             </Button>

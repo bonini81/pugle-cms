@@ -46,7 +46,10 @@ const Main = (): JSX.Element => {
               </div>
               <div className="aside-navbar-styles__menu">
                 <h3 className="htitle-style-margin">
-                  <StorageIcon /> 
+                  <StorageIcon
+                    className="icon-db-margin"
+                    style={{ fontSize: "1.7rem" }}
+                  />
                   Database Contexts
                 </h3>
                 <ul className="main-list-margin">
@@ -59,7 +62,10 @@ const Main = (): JSX.Element => {
           </Grid>
           <Grid item xs={12} sm={6} md={8} className="grid-item-padding">
             <section className="section-wrrapper-styles">
-              <div>Main</div>
+              <h2>Pugle CMS Homepage</h2>
+              <p>
+                Pugle CMS is a Content Management System for my sidebusiness.{" "}
+              </p>
             </section>
           </Grid>
         </Grid>
