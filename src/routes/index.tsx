@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Portfolio from "../pages/Portfolio";
 import PortfolioItem from "../pages/PortfolioItem";
+import PrivateRoutes from "../utils/PrivateRoutes";
 
 const AppRoutes = () => {
   return (
@@ -16,7 +17,9 @@ const AppRoutes = () => {
           <Route path="/portafolio" element={<Portfolio />} />
           <Route path="/portafolioItem/:id" element={<PortfolioItem />} />
           <Route path="/login" element={<Login />} />
-          <Route path="backoffice/home" element={<BackOfficeMain />} />
+          <Route element={<PrivateRoutes />}>
+            <Route path="backoffice/home" element={<BackOfficeMain />} />
+          </Route>
         </Route>
       </Routes>
     </Router>

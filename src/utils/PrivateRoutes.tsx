@@ -1,6 +1,13 @@
-import { Navigate,Outlet} from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Navigate, Outlet } from "react-router-dom";
+
 const PrivateRoutes = () => {
-  return <div>Private Routes</div>;
+  const dataStore = useSelector((state: any) => state);
+  return dataStore.tokens.currentToken !== null ? (
+    <Outlet />
+  ) : (
+    <Navigate to="/login" />
+  );
 };
 
 export default PrivateRoutes;
