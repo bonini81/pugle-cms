@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import logo from "../../assets/header/freelance-desarrolloweb-seo.jpg";
 import footerText from "../../data/footerLinks.json";
+import menuLinksArrayBackOffice from "../../data/menuLinksBackOffice.json";
 import Footer from "../Footer";
 import Header from "../Header";
 
@@ -13,14 +14,13 @@ const headerProps = {
     width: 170,
     height: 90,
   },
+  menuLinks: menuLinksArrayBackOffice,
 };
 const LayOutBackOffice = (): JSX.Element => {
   return (
     <>
       <Header {...headerProps} />
-      
-      {/** <Outlet /> */}
-
+      <Outlet />
       <Footer mainFooter={false} copyright={copyright} />
     </>
   );

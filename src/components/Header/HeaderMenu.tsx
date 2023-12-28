@@ -2,11 +2,20 @@ import "./Header.scss";
 import MenuMobile from "./MenuMobile";
 import PcLinks from "./PcLinks";
 
-const HeaderMenu = () => {
+interface HeaderMenuProps {
+  HeaderMenuLinks?: MenuLinksObject[];
+}
+
+interface MenuLinksObject {
+  menu: string;
+  url: string;
+}
+
+const HeaderMenu = ({ HeaderMenuLinks }: HeaderMenuProps) => {
   return (
     <nav className="orientation-menu-desktop">
-      <PcLinks />
-      <MenuMobile />
+      <PcLinks HeaderMenuLinksList={HeaderMenuLinks} />
+      <MenuMobile HeaderMenuLinksList={HeaderMenuLinks} />
     </nav>
   );
 };
