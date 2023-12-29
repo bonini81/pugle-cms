@@ -13,14 +13,14 @@ const AppRoutes = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LayOut />}>
+        <Route element={<LayOut />}>
           <Route path="/" element={<Home />} />
           <Route path="/portafolio" element={<Portfolio />} />
           <Route path="/portafolioItem/:id" element={<PortfolioItem />} />
           <Route path="/login" element={<Login />} />
         </Route>
         <Route element={<PrivateRoutes />}>
-          <Route path="/" element={<LayOutBackOffice />}>
+          <Route element={<LayOutBackOffice />}>
             <Route path="backoffice/home" element={<BackOfficeMain />} />
           </Route>
         </Route>

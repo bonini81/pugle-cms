@@ -1,7 +1,9 @@
 [
     {
         "menu": "LogOut",
-        "url": "/login"
+        "url": "/login",
+        "linkId": "logOut",
+        "handleClick": "handleClick"
     }
     
 ]

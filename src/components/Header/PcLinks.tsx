@@ -4,7 +4,6 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 
 import "./Header.scss";
-// import menuLinks from "../../data/menuLinks.json";
 
 type PcLinksProps = {
   HeaderMenuLinksList?: MenuLinks[];

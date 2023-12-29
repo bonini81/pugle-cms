@@ -7,9 +7,6 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 
-// eslint-disable-next-line no-restricted-imports
-// import menuLinks from "../../data/menuLinks.json";
-
 interface MobileLinksProps {
   HeaderMenuLinksList?: MenuLinks[];
 }

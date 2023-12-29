@@ -24,6 +24,15 @@ const Main = (): JSX.Element => {
     }
   }, [dataStore, tokenLocalStorage, navigate]);
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
+
+  document.body
+    .getElementsByClassName("a-link-item")[0]
+    .addEventListener("click", handleLogout);
+
   return (
     <main className="main-wrapper-styles">
       <Container>
