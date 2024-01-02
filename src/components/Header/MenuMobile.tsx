@@ -7,10 +7,15 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 
-// eslint-disable-next-line no-restricted-imports
-import menuLinks from "../../data/menuLinks.json";
+interface MobileLinksProps {
+  HeaderMenuLinksList?: MenuLinks[];
+}
+interface MenuLinks {
+  menu: string;
+  url: string;
+}
 
-const MenuMobile = () => {
+const MenuMobile = ({ HeaderMenuLinksList }: MobileLinksProps) => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const iOS =
@@ -32,15 +37,16 @@ const MenuMobile = () => {
           <CloseIcon onClick={() => setOpenDrawer(false)} />
         </div>
         <List className="burger-wrapper-styles">
-          {menuLinks.map((link, index) => {
-            return (
-              <ListItem key={index} className="li-list-styles">
-                <Link href={link.url} className="a-link-item">
-                  {link.menu}
-                </Link>
-              </ListItem>
-            );
-          })}
+          {HeaderMenuLinksList &&
+            HeaderMenuLinksList.map((link, index) => {
+              return (
+                <ListItem key={index} className="li-list-styles">
+                  <Link href={link.url} className="a-link-item">
+                    {link.menu}
+                  </Link>
+                </ListItem>
+              );
+            })}
         </List>
       </SwipeableDrawer>
       <IconButton

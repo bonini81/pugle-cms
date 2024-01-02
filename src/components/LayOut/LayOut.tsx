@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import logo from "../../assets/header/freelance-desarrolloweb-seo.jpg";
 import footerText from "../../data/footerLinks.json";
+import menuLinksArray from "../../data/menuLinks.json";
 import Footer from "../Footer";
 import Header from "../Header";
 
@@ -13,6 +14,7 @@ const headerProps = {
     width: 170,
     height: 90,
   },
+  menuLinks: menuLinksArray,
 };
 const LayOut = (): JSX.Element => {
   return (
