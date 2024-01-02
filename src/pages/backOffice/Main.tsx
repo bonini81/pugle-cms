@@ -71,7 +71,7 @@ const Main = (): JSX.Element => {
           </Grid>
           <Grid item xs={12} sm={6} md={8} className="grid-item-padding">
             <section className="section-wrrapper-styles">
-              <h2>Pugle CMS Homepage</h2>
+              <h2 className="titleh-h2-padding">Pugle CMS Homepage</h2>
               <p>
                 Pugle CMS is a Content Management System for my sidebusiness.{" "}
               </p>
