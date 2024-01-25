@@ -10,7 +10,8 @@ import "../scss/Login.scss";
 import Button from "../components/Boton";
 import TextField from "../components/CoTextField";
 import authService from "../services/auth.service";
-import { setCurrentToken, setCurrentUser } from "../store";
+// import { setCurrentToken, setCurrentUser } from "../store";
+import { setCurrentUser } from "../store";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -44,19 +45,20 @@ const Login = () => {
   });
 
   const onSubmit = async (data: any) => {
-    await authToken(data.username, data.password);
+    const userData = {
+      username: data.username,
+      password: data.password,
+    };
+    await authToken(userData);
   };
 
-  const authToken = async (username: string, password: string) => {
+  const authToken = async (userData: FormValues) => {
     try {
-      const response = await authService.postAuthWordpressLogin(
-        username,
-        password
-      );
+      const response = await authService.postAuthWordpressLogin(userData);
       const data = await response.data;
-      localStorage.setItem("token", data.token);
+      // localStorage.setItem("token", data.token);
       dispatch(setCurrentUser(data.user_display_name));
-      dispatch(setCurrentToken(data.token));
+      // dispatch(setCurrentToken(data.token));
       navigate("/backoffice/home");
     } catch (err: any) {
       alert("Credenciales incorrectas");
