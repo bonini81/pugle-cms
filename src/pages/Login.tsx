@@ -16,14 +16,14 @@ import { setCurrentUser } from "../store";
 const Login = () => {
   const dispatch = useDispatch();
   interface FormValues {
-    username: string;
+    email: string;
     password: string;
   }
 
   const navigate = useNavigate();
 
   const schema = yup.object().shape({
-    username: yup.string().required("Usuario es requerido."),
+    email: yup.string().required("Usuario es requerido."),
     password: yup
       .string()
       .min(4, "Minimo 4 caracteres.")
@@ -39,14 +39,14 @@ const Login = () => {
   } = useForm<FormValues>({
     resolver: yupResolver(schema),
     defaultValues: {
-      username: "",
+      email: "",
       password: "",
     },
   });
 
   const onSubmit = async (data: any) => {
     const userData = {
-      username: data.username,
+      email: data.email,
       password: data.password,
     };
     await authToken(userData);
@@ -54,10 +54,11 @@ const Login = () => {
 
   const authToken = async (userData: FormValues) => {
     try {
-      const response = await authService.postAuthWordpressLogin(userData);
-      const data = await response.data;
+      await authService.postAuthWordpressLogin(userData);
+      // const response = await authService.postAuthWordpressLogin(userData);
+      // const data = await response.data;
       // localStorage.setItem("token", data.token);
-      dispatch(setCurrentUser(data.user_display_name));
+      dispatch(setCurrentUser(userData.email));
       // dispatch(setCurrentToken(data.token));
       navigate("/backoffice/home");
     } catch (err: any) {
@@ -71,7 +72,7 @@ const Login = () => {
         <h1>Login Pugle CMS</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Controller
-            name="username"
+            name="email"
             control={control}
             defaultValue="Username"
             render={({ field }) => (
@@ -79,11 +80,11 @@ const Login = () => {
                 data-testid="username"
                 className="login-field-styles"
                 label="Username"
-                {...register("username")}
+                {...register("email")}
                 {...field}
                 ref={null}
-                error={!!errors.username}
-                helperText={errors.username ? errors.username?.message : ""}
+                error={!!errors.email}
+                helperText={errors.email ? errors.email?.message : ""}
               />
             )}
           />
