@@ -1,4 +1,4 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Person2Icon from "@mui/icons-material/Person2";
@@ -12,9 +12,9 @@ import "../../scss/BackOfficeHome.scss";
 const Main = (): JSX.Element => {
   const navigate = useNavigate();
   const dataStore = useSelector((state: any) => state);
-  // const tokenLocalStorage = localStorage.getItem("token");
+  const tokenLocalStorage = localStorage.getItem("token");
 
-  /*  useEffect(() => {
+  useEffect(() => {
     if (
       dataStore.users.currentUser === null ||
       tokenLocalStorage !== dataStore.tokens.currentToken ||
@@ -22,7 +22,7 @@ const Main = (): JSX.Element => {
     ) {
       navigate("/login");
     }
-  }, [dataStore, tokenLocalStorage, navigate]); */
+  }, [dataStore, tokenLocalStorage, navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
