@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -23,15 +24,6 @@ const Main = (): JSX.Element => {
       navigate("/login");
     }
   }, [dataStore, tokenLocalStorage, navigate]);
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/login");
-  };
-
-  document.body
-    .getElementsByClassName("a-link-item")[0]
-    .addEventListener("click", handleLogout);
 
   return (
     <main className="main-wrapper-styles">

@@ -4,6 +4,7 @@ import PcLinks from "./PcLinks";
 
 interface HeaderMenuProps {
   HeaderMenuLinks?: MenuLinksObject[];
+  handleClick?: () => void;
 }
 
 interface MenuLinksObject {
@@ -11,10 +12,13 @@ interface MenuLinksObject {
   url: string;
 }
 
-const HeaderMenu = ({ HeaderMenuLinks }: HeaderMenuProps) => {
+const HeaderMenu = ({ HeaderMenuLinks, handleClick }: HeaderMenuProps) => {
   return (
     <nav className="orientation-menu-desktop">
-      <PcLinks HeaderMenuLinksList={HeaderMenuLinks} />
+      <PcLinks
+        HeaderMenuLinksList={HeaderMenuLinks}
+        handleClick={handleClick}
+      />
       <MenuMobile HeaderMenuLinksList={HeaderMenuLinks} />
     </nav>
   );

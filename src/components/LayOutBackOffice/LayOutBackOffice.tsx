@@ -6,6 +6,10 @@ import menuLinksArrayBackOffice from "../../data/menuLinksBackOffice.json";
 import Footer from "../Footer";
 import Header from "../Header";
 
+const handleLogout = () => {
+  localStorage.removeItem("token");
+};
+
 const { copyright } = footerText;
 const headerProps = {
   logo: {
@@ -15,7 +19,13 @@ const headerProps = {
     height: 90,
   },
   menuLinks: menuLinksArrayBackOffice,
+  onClick: handleLogout,
 };
+
+/** document.body
+.getElementsByClassName("a-link-item")[0]
+.addEventListener("click", handleLogout2); */
+
 const LayOutBackOffice = (): JSX.Element => {
   return (
     <>
