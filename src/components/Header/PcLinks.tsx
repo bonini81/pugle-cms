@@ -5,24 +5,35 @@ import ListItem from "@mui/material/ListItem";
 
 import "./Header.scss";
 
-type PcLinksProps = {
+interface PcLinksProps {
   HeaderMenuLinksList?: MenuLinks[];
-};
+  handleClick?: () => void;
+}
 interface MenuLinks {
   menu: string;
   url: string;
 }
 
-const PcLinks = ({ HeaderMenuLinksList }: PcLinksProps) => {
+const PcLinks = ({ HeaderMenuLinksList, handleClick }: PcLinksProps) => {
   return (
     <List className="menu-wrapper-styles">
       {HeaderMenuLinksList &&
         HeaderMenuLinksList.map((link, index) => {
           return (
             <ListItem key={index} className="li-list-styles">
-              <Link href={link.url} className="a-link-item">
-                {link.menu}
-              </Link>
+              {!handleClick ? (
+                <Link href={link.url} className="a-link-item">
+                  {link.menu}
+                </Link>
+              ) : (
+                <Link
+                  href={link.url}
+                  className="a-link-item"
+                  onClick={handleClick}
+                >
+                  {link.menu}
+                </Link>
+              )}
             </ListItem>
           );
         })}

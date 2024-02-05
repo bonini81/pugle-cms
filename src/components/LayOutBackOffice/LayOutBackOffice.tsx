@@ -6,6 +6,11 @@ import menuLinksArrayBackOffice from "../../data/menuLinksBackOffice.json";
 import Footer from "../Footer";
 import Header from "../Header";
 
+const handleLogout = () => {
+  localStorage.removeItem("token");
+  // Next step clear Redux Store
+};
+
 const { copyright } = footerText;
 const headerProps = {
   logo: {
@@ -15,7 +20,9 @@ const headerProps = {
     height: 90,
   },
   menuLinks: menuLinksArrayBackOffice,
+  onClick: handleLogout,
 };
+
 const LayOutBackOffice = (): JSX.Element => {
   return (
     <>

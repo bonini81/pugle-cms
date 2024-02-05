@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -11,27 +12,24 @@ import "../../scss/BackOfficeHome.scss";
 
 const Main = (): JSX.Element => {
   const navigate = useNavigate();
-  const dataStore = useSelector((state: any) => state);
+  const dataStorUsers = useSelector((state: any) => state.users);
+  const dataStoreTokens = useSelector((state: any) => state.tokens);
   const tokenLocalStorage = localStorage.getItem("token");
 
   useEffect(() => {
     if (
-      dataStore.users.currentUser === null ||
-      tokenLocalStorage !== dataStore.tokens.currentToken ||
+      dataStorUsers.currentUser === null ||
+      tokenLocalStorage !== dataStoreTokens.currentToken ||
       tokenLocalStorage === null
     ) {
       navigate("/login");
     }
-  }, [dataStore, tokenLocalStorage, navigate]);
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/login");
-  };
-
-  document.body
-    .getElementsByClassName("a-link-item")[0]
-    .addEventListener("click", handleLogout);
+  }, [
+    dataStoreTokens.currentToken,
+    dataStorUsers.currentUser,
+    tokenLocalStorage,
+    navigate,
+  ]);
 
   return (
     <main className="main-wrapper-styles">
@@ -50,7 +48,7 @@ const Main = (): JSX.Element => {
                 </p>
                 <p>
                   Hola, <Person2Icon className="mui-icons-align" />{" "}
-                  {dataStore.users.currentUser}
+                  {dataStorUsers.currentUser}
                 </p>
               </div>
               <div className="aside-navbar-styles__menu">

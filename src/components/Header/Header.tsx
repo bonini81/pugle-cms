@@ -6,6 +6,7 @@ import HeaderMenu from "./HeaderMenu";
 export interface PugleHeaderProps {
   logo: Partial<LogoProps>;
   menuLinks?: MenuLinksObject[];
+  onClick?: () => void;
 }
 
 interface MenuLinksObject {
@@ -40,7 +41,10 @@ const Header = (props: PugleHeaderProps): JSX.Element => {
             <a href="/">{ImageComponent}</a>
           </figure>
           <aside className="aside-menu-styles">
-            <HeaderMenu HeaderMenuLinks={props.menuLinks} />
+            <HeaderMenu
+              HeaderMenuLinks={props.menuLinks}
+              handleClick={props.onClick}
+            />
           </aside>
         </div>
       </Container>
