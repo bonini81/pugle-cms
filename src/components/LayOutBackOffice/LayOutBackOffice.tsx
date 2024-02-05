@@ -8,6 +8,7 @@ import Header from "../Header";
 
 const handleLogout = () => {
   localStorage.removeItem("token");
+  // Next step clear Redux Store
 };
 
 const { copyright } = footerText;
@@ -21,10 +22,6 @@ const headerProps = {
   menuLinks: menuLinksArrayBackOffice,
   onClick: handleLogout,
 };
-
-/** document.body
-.getElementsByClassName("a-link-item")[0]
-.addEventListener("click", handleLogout2); */
 
 const LayOutBackOffice = (): JSX.Element => {
   return (
