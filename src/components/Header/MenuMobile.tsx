@@ -9,13 +9,14 @@ import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 
 interface MobileLinksProps {
   HeaderMenuLinksList?: MenuLinks[];
+  handleClick?: () => void;
 }
 interface MenuLinks {
   menu: string;
   url: string;
 }
 
-const MenuMobile = ({ HeaderMenuLinksList }: MobileLinksProps) => {
+const MenuMobile = ({ HeaderMenuLinksList, handleClick }: MobileLinksProps) => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const iOS =
@@ -41,9 +42,19 @@ const MenuMobile = ({ HeaderMenuLinksList }: MobileLinksProps) => {
             HeaderMenuLinksList.map((link, index) => {
               return (
                 <ListItem key={index} className="li-list-styles">
-                  <Link href={link.url} className="a-link-item">
-                    {link.menu}
-                  </Link>
+                  {!handleClick ? (
+                    <Link href={link.url} className="a-link-item">
+                      {link.menu}
+                    </Link>
+                  ) : (
+                    <Link
+                      href={link.url}
+                      className="a-link-item"
+                      onClick={handleClick}
+                    >
+                      {link.menu}
+                    </Link>
+                  )}
                 </ListItem>
               );
             })}

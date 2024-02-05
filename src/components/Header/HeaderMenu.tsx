@@ -19,7 +19,10 @@ const HeaderMenu = ({ HeaderMenuLinks, handleClick }: HeaderMenuProps) => {
         HeaderMenuLinksList={HeaderMenuLinks}
         handleClick={handleClick}
       />
-      <MenuMobile HeaderMenuLinksList={HeaderMenuLinks} />
+      <MenuMobile
+        HeaderMenuLinksList={HeaderMenuLinks}
+        handleClick={handleClick}
+      />
     </nav>
   );
 };
