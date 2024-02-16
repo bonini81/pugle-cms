@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import Person2Icon from "@mui/icons-material/Person2";
 import SpeedIcon from "@mui/icons-material/Speed";
 import StorageIcon from "@mui/icons-material/Storage";
@@ -9,6 +9,7 @@ import Grid from "@mui/material/Grid";
 import logo from "../../assets/header/freelance-desarrolloweb-seo.jpg";
 import footerText from "../../data/footerLinks.json";
 import menuLinksArrayBackOffice from "../../data/menuLinksBackOffice.json";
+import Button from "../Boton";
 import Footer from "../Footer";
 import Header from "../Header";
 
@@ -31,6 +32,8 @@ const headerProps = {
 
 const LayOutBackOffice = (): JSX.Element => {
   const dataStorUsers = useSelector((state: any) => state.users);
+  const navigate = useNavigate();
+
 
   return (
     <>
@@ -63,9 +66,38 @@ const LayOutBackOffice = (): JSX.Element => {
                     Database Contexts
                   </h3>
                   <ul className="main-list-margin">
-                    <li className="list-item-decoration">About Me</li>
-                    <li className="list-item-decoration">Services</li>
-                    <li className="list-item-decoration">Portfolio</li>
+                    <li className="list-item-decoration">
+                      {" "}
+                      <Button
+                        onClick={() => navigate("/backoffice/home")}
+                        variant="text"
+                        data-testid="testPortfolio"
+                      >
+                        Home
+                      </Button>
+                    </li>
+                    <li className="list-item-decoration">
+                      <Button variant="text" data-testid="testPortfolio">
+                        About Me
+                      </Button>
+                    </li>
+                    <li className="list-item-decoration">
+                      <Button variant="text" data-testid="testPortfolio">
+                        Services
+                      </Button>
+                    </li>
+                    <li className="list-item-decoration">
+                      <Button
+                        onClick={() => navigate("/backoffice/portfolio")}
+                        variant="text"
+                        data-testid="testPortfolio"
+                        disableRipple
+                        disableFocusRipple
+                        disableElevation
+                      >
+                        Portfolio
+                      </Button>
+                    </li>
                   </ul>
                 </div>
               </aside>
