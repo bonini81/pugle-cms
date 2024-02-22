@@ -11,13 +11,13 @@ import portfolioService from "../../services/portfolio.service";
 const Portfolio = () => {
   const schema = yup.object().shape({
     category: yup.string().required("La categoria es requerida."),
-    image: yup.string().required("La imagen es requerida."),
     title: yup.string().required("El título es requerido."),
     alt: yup.string().required("El texto alt en la imagen es requerido."),
     description: yup.string().required("La descripcion es requerida."),
     linkTo: yup.string().required("El enlace hacia es requerida."),
     linkToText: yup.string().required("El texto del enlace es requerido."),
     hrefTo: yup.string().required("El enlace hacia es requerida."),
+   // image: yup.string().required("El enlace hacia es requerida."),
   });
 
   const {
@@ -27,19 +27,57 @@ const Portfolio = () => {
     formState: { errors },
   } = useForm<PortfolioItem>({
     resolver: yupResolver(schema),
-    defaultValues: {
-      category: "",
-      title: "",
-      image: "",
-      alt: "",
-      description: "",
-      linkTo: "",
-      linkToText: "",
-      hrefTo: "",
-    },
   });
 
   const onSubmit = async (data: any) => {
+    // event.preventDefault();
+
+  
+   /* const data2 = {
+      image: formData.get("image"),
+      alt: formData.get("alt"),
+      title: formData.get("title"),
+      category: formData.get("category"),
+      description: formData.get("description"),
+      linkTo: formData.get("linkTo"),
+      linkToText: formData.get("linkToText"),
+      hrefTo: formData.get(" hrefTo"),
+    }; 
+ const userData = {
+      image: data.image,
+      alt: data.alt,
+      title: data.title,
+      category: data.category,
+      description: data.description,
+      linkTo: data.linkTo,
+      linkToText: data.linkToText,
+      hrefTo: data.hrefTo,
+  }
+/*
+      formData.append("image", data.image);
+    formData.append("alt", data.alt);
+    formData.append("title", data.title);
+    formData.append("category", data.category);
+    formData.append("description", data.description);
+    formData.append("linkTo", data.linkTo);
+    formData.append("linkToText", data.linkToText);
+    formData.append("hrefTo", data.hrefTo);
+    }; */
+
+    const formData = new FormData();
+   
+    formData.append("image", data.image);
+    formData.append("alt", data.alt);
+    formData.append("title", data.title);
+    formData.append("category", data.category);
+    formData.append("description", data.description);
+    formData.append("linkTo", data.linkTo);
+    formData.append("linkToText", data.linkToText);
+    formData.append("hrefTo", data.hrefTo);
+
+    console.log("formData: ");
+    console.log(formData);
+
     const userData = {
       image: data.image,
       alt: data.alt,
@@ -50,15 +88,20 @@ const Portfolio = () => {
       linkToText: data.linkToText,
       hrefTo: data.hrefTo,
     };
-    await portfolioUpload(userData);
+
+    console.log("userData: ");
+    console.log(userData);
+
+    await portfolioUpload(formData);
   };
 
-  const portfolioUpload = async (userData: PortfolioItem) => {
+  // const portfolioUpload = async ( userData: PortfolioItem) => {
+  const portfolioUpload = async (formData: any) => {
     try {
-      await portfolioService.postPortfolioContent(userData);
+      await portfolioService.postPortfolioContent(formData);
       alert("Portfolio uploaded successfully");
     } catch (err: any) {
-      alert("Credenciales incorrectas");
+      alert("Portfolio upload failed");
     }
   };
 
@@ -154,18 +197,17 @@ const Portfolio = () => {
           <Controller
             name="image"
             control={control}
-            defaultValue="Upload Portfolio Cover Image"
             render={({ field }) => (
               <TextField
                 data-testid="portfolio-category"
                 className="portfolio-field-styles"
                 variant="outlined"
-                // type="file"
+                type="file"
                 {...register("image")}
                 {...field}
                 ref={null}
-                error={!!errors.image}
-                helperText={errors.image ? errors.image?.message : ""}
+                // error={!!errors.image}
+              // helperText={errors.image ? errors.image?.message : ""}
               />
             )}
           />

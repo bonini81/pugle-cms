@@ -1,5 +1,5 @@
 export interface PortfolioItem {
-  image: string;
+  image?: File | null;
   alt: string;
   title: string;
   category: string;
