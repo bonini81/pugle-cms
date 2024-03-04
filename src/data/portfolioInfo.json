@@ -6,7 +6,7 @@
         "title": "Conkreta",
         "category": "Desarrollo Web",
         "description": "Desarrollo de la web corporativa de Conkreta SA con el framework de Front End, Bootstrap4.",
-        "linkTo": "https://www.conkreta.com/",
+        "linkTo": "https://www.conkreta.com.ec/",
         "linkToText": "Web:",
         "hrefTo": "/conkreta"
 
@@ -119,7 +119,7 @@
         "title": "Seguro Vehicular Banco Pichincha",
         "category": "React.JS",
         "description": "Plataforma de venta de seguros online de vehicular para banco pichincha, realizado con EVA Insurtech, https://evainsurtech.com/  el centro digital de Nova Seguros (el broker seguros de banco pichincha). La plataforma se hizo con React JS, Material UI, Redux (yo realicé esta parte), back end fue con .NET y el back end con Azure DevOps. Utilizamos metodologías agiles. La plataforma, se puede ver desde este enlace,  https://seguros.pichincha.com/vehiculos pero está actualmente suspendida la plataforma por la ley de protección de datos. Actualmente se ve puede ver en su version de desarrollo en el enlace de abajo.",
-        "linkTo": "https://des-bpichincha-eva.novaecuador.com/vehiculos ",
+        "linkTo": "https://des-bpichincha-eva.novaecuador.com/vehiculos",
         "linkToText": "Web:",
         "hrefTo": "/seguro-vehicular"
     },
@@ -207,7 +207,7 @@
         "title": "Inmobiliaria Pública",
         "category": "Aplicaciones Web, Desarrollo Web",
         "description": "Proyecto desarrollado para el portal de subastas de los inmuebles del Gobierno del Ecuador. El portal se lo hizo a nivel de Front End con la librería Bootstrap3 (HTML5, CSS3 y JS) y el back end, con su correspondiente Administrador de Contenidos, en Python. Personalmente estuve en el equipo de Front-End.",
-        "linkTo": " https://www.inmobiliariapublica.ec/",
+        "linkTo": "https://www.inmobiliariapublica.ec/",
         "linkToText": "Web:",
         "hrefTo": "/inmobiliar"
     },

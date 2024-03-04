@@ -17,7 +17,7 @@ const Portfolio = () => {
     linkTo: yup.string().required("El enlace hacia es requerida."),
     linkToText: yup.string().required("El texto del enlace es requerido."),
     hrefTo: yup.string().required("El enlace hacia es requerida."),
-   // image: yup.string().required("El enlace hacia es requerida."),
+    image: yup.string().required("El enlace hacia es requerida."),
   });
 
   const {
@@ -30,42 +30,8 @@ const Portfolio = () => {
   });
 
   const onSubmit = async (data: any) => {
-    // event.preventDefault();
+    /** const formData = new FormData();
 
-  
-   /* const data2 = {
-      image: formData.get("image"),
-      alt: formData.get("alt"),
-      title: formData.get("title"),
-      category: formData.get("category"),
-      description: formData.get("description"),
-      linkTo: formData.get("linkTo"),
-      linkToText: formData.get("linkToText"),
-      hrefTo: formData.get(" hrefTo"),
-    }; 
- const userData = {
-      image: data.image,
-      alt: data.alt,
-      title: data.title,
-      category: data.category,
-      description: data.description,
-      linkTo: data.linkTo,
-      linkToText: data.linkToText,
-      hrefTo: data.hrefTo,
-  }
-/*
-      formData.append("image", data.image);
-    formData.append("alt", data.alt);
-    formData.append("title", data.title);
-    formData.append("category", data.category);
-    formData.append("description", data.description);
-    formData.append("linkTo", data.linkTo);
-    formData.append("linkToText", data.linkToText);
-    formData.append("hrefTo", data.hrefTo);
-    }; */
-
-    const formData = new FormData();
-   
     formData.append("image", data.image);
     formData.append("alt", data.alt);
     formData.append("title", data.title);
@@ -73,10 +39,7 @@ const Portfolio = () => {
     formData.append("description", data.description);
     formData.append("linkTo", data.linkTo);
     formData.append("linkToText", data.linkToText);
-    formData.append("hrefTo", data.hrefTo);
-
-    console.log("formData: ");
-    console.log(formData);
+    formData.append("hrefTo", data.hrefTo); */
 
     const userData = {
       image: data.image,
@@ -89,16 +52,16 @@ const Portfolio = () => {
       hrefTo: data.hrefTo,
     };
 
-    console.log("userData: ");
-    console.log(userData);
+    // console.log("userData: ");
+    // console.log(userData);
 
-    await portfolioUpload(formData);
+    await portfolioUpload(userData);
   };
 
-  // const portfolioUpload = async ( userData: PortfolioItem) => {
-  const portfolioUpload = async (formData: any) => {
+  const portfolioUpload = async (userData: PortfolioItem) => {
+    // const portfolioUpload = async (formData: any) => {
     try {
-      await portfolioService.postPortfolioContent(formData);
+      await portfolioService.postPortfolioContent(userData);
       alert("Portfolio uploaded successfully");
     } catch (err: any) {
       alert("Portfolio upload failed");
@@ -109,12 +72,11 @@ const Portfolio = () => {
     <section className="section-wrrapper-styles">
       <h2 className="titleh-h2-padding">Portfolio Upload Page</h2>
       <p>Page to Upload Portfolio Content</p>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
         <div className="portfolio-field-styles">
           <Controller
             name="title"
             control={control}
-            defaultValue="Portfolio Category Title"
             render={({ field }) => (
               <TextField
                 data-testid="portfolio-title"
@@ -134,7 +96,6 @@ const Portfolio = () => {
           <Controller
             name="description"
             control={control}
-            defaultValue="Portfolio Description"
             render={({ field }) => (
               <TextField
                 data-testid="portfolio-description"
@@ -157,7 +118,6 @@ const Portfolio = () => {
           <Controller
             name="alt"
             control={control}
-            defaultValue="Image Alt Text"
             render={({ field }) => (
               <TextField
                 data-testid="portfolio-category"
@@ -177,7 +137,6 @@ const Portfolio = () => {
           <Controller
             name="category"
             control={control}
-            defaultValue="Portfolio Category Title"
             render={({ field }) => (
               <TextField
                 data-testid="portfolio-category"
@@ -202,12 +161,13 @@ const Portfolio = () => {
                 data-testid="portfolio-category"
                 className="portfolio-field-styles"
                 variant="outlined"
-                type="file"
+                label="Portfolio Image URL"
+                // type="file"
                 {...register("image")}
                 {...field}
                 ref={null}
-                // error={!!errors.image}
-              // helperText={errors.image ? errors.image?.message : ""}
+                error={!!errors.image}
+                helperText={errors.image ? errors.image?.message : ""}
               />
             )}
           />
