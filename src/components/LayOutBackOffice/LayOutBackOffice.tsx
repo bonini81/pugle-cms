@@ -6,6 +6,7 @@ import StorageIcon from "@mui/icons-material/Storage";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
+import "../../scss/LayoutBackOffice.scss";
 import logo from "../../assets/header/freelance-desarrolloweb-seo.jpg";
 import footerText from "../../data/footerLinks.json";
 import menuLinksArrayBackOffice from "../../data/menuLinksBackOffice.json";
@@ -33,7 +34,6 @@ const headerProps = {
 const LayOutBackOffice = (): JSX.Element => {
   const dataStorUsers = useSelector((state: any) => state.users);
   const navigate = useNavigate();
-
 
   return (
     <>
@@ -72,17 +72,26 @@ const LayOutBackOffice = (): JSX.Element => {
                         onClick={() => navigate("/backoffice/home")}
                         variant="text"
                         data-testid="testPortfolio"
+                        className={{ root: "button-text-styles" }}
                       >
                         Home
                       </Button>
                     </li>
                     <li className="list-item-decoration">
-                      <Button variant="text" data-testid="testPortfolio">
+                      <Button
+                        variant="text"
+                        data-testid="testPortfolio"
+                        className={{ root: "button-text-styles" }}
+                      >
                         About Me
                       </Button>
                     </li>
                     <li className="list-item-decoration">
-                      <Button variant="text" data-testid="testPortfolio">
+                      <Button
+                        variant="text"
+                        data-testid="testPortfolio"
+                        className={{ root: "button-text-styles" }}
+                      >
                         Services
                       </Button>
                     </li>

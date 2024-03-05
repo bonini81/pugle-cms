@@ -1,0 +1,9 @@
+@import "../scss/variables.scss";
+
+button.button-text-styles {
+    color: $grey-main !important;
+    font-family: $main-font-oswald !important;
+    &:hover {
+    color: $primary-color-blue !important;    
+    }
+}
