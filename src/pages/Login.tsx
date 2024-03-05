@@ -95,6 +95,7 @@ const Login = () => {
               <TextField
                 data-testid="password"
                 label="Password"
+                type="password"
                 className="login-field-styles"
                 {...register("password")}
                 {...field}

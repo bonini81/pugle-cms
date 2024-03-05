@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LayOut from "../components/LayOut";
 import LayOutBackOffice from "../components/LayOutBackOffice";
 import BackOfficeMain from "../pages/backOffice/Main";
+import PortfolioBackOffice from "../pages/backOffice/Portfolio";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Portfolio from "../pages/Portfolio";
@@ -21,6 +22,10 @@ const AppRoutes = () => {
         </Route>
         <Route element={<PrivateRoutes />}>
           <Route element={<LayOutBackOffice />}>
+            <Route
+              path="backoffice/portfolio"
+              element={<PortfolioBackOffice />}
+            />
             <Route path="backoffice/home" element={<BackOfficeMain />} />
           </Route>
         </Route>
