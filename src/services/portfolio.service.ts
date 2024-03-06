@@ -14,6 +14,12 @@ const postPortfolioContent = (data: PortfolioItem) => {
   return axios.post(url, data);
 };
 
+const getPortfolioContent = () => {
+  const url = `${urlBase}/portfolioContent`;
+  return axios.get(url);
+};
+
 export default {
   postPortfolioContent,
+  getPortfolioContent,
 };

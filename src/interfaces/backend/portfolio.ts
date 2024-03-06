@@ -8,4 +8,5 @@ export interface PortfolioItem {
   linkTo: string;
   linkToText: string;
   hrefTo: string;
+  key?: number;
 }
