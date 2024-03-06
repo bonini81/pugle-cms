@@ -10,6 +10,7 @@ import portfolioService from "../../services/portfolio.service";
 
 const Portfolio = () => {
   const schema = yup.object().shape({
+    key: yup.number().required("La key del portafolio es requerida."),
     category: yup.string().required("La categoria es requerida."),
     title: yup.string().required("El título es requerido."),
     alt: yup.string().required("El texto alt en la imagen es requerido."),
@@ -17,7 +18,7 @@ const Portfolio = () => {
     linkTo: yup.string().required("El enlace hacia es requerida."),
     linkToText: yup.string().required("El texto del enlace es requerido."),
     hrefTo: yup.string().required("El enlace hacia es requerida."),
-    image: yup.string().required("El enlace hacia es requerida."),
+    img: yup.string().required("El enlace hacia es requerida."),
   });
 
   const {
@@ -42,7 +43,8 @@ const Portfolio = () => {
     formData.append("hrefTo", data.hrefTo); */
 
     const userData = {
-      image: data.image,
+      key: data.key,
+      img: data.img,
       alt: data.alt,
       title: data.title,
       category: data.category,
@@ -73,6 +75,25 @@ const Portfolio = () => {
       <h2 className="titleh-h2-padding">Portfolio Upload Page</h2>
       <p>Page to Upload Portfolio Content</p>
       <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
+        <div className="portfolio-field-styles">
+          <Controller
+            name="key"
+            control={control}
+            render={({ field }) => (
+              <TextField
+                data-testid="portfolio-key"
+                className="portfolio-field-styles"
+                label="Portfolio Key"
+                variant="outlined"
+                {...register("title")}
+                {...field}
+                ref={null}
+                error={!!errors.key}
+                helperText={errors.key ? errors.key?.message : ""}
+              />
+            )}
+          />
+        </div>
         <div className="portfolio-field-styles">
           <Controller
             name="title"
@@ -154,7 +175,7 @@ const Portfolio = () => {
         </div>
         <div className="portfolio-field-styles">
           <Controller
-            name="image"
+            name="img"
             control={control}
             render={({ field }) => (
               <TextField
@@ -163,11 +184,11 @@ const Portfolio = () => {
                 variant="outlined"
                 label="Portfolio Image URL"
                 // type="file"
-                {...register("image")}
+                {...register("img")}
                 {...field}
                 ref={null}
-                error={!!errors.image}
-                helperText={errors.image ? errors.image?.message : ""}
+                error={!!errors.img}
+                helperText={errors.img ? errors.img?.message : ""}
               />
             )}
           />

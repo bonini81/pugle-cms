@@ -46,17 +46,18 @@ const Portfolio = () => {
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
           {portfolioData &&
-            portfolioData.portfolioContent.map((portfolio, key) => (
+            portfolioData.portfolioContent.map((portfolio, index) => (
               <Grid item xs={12} sm={4} md={3}>
                 <Cards
-                  img={portfolio.image}
+                  key={index}
+                  img={portfolio.img}
                   cardTitle={portfolio.title}
-                  data-testid="homeCard"
+                  data-testid="portfolioCard"
                   colorVariant="primary"
                   chip
                   cardCategory={portfolio.category}
                   cta
-                  onClick={() => navigate(`/portafolioItem/${portfolio.title}`)}
+                  onClick={() => navigate(`/portafolioItem/${portfolio.key}`)}
                 />
               </Grid>
             ))}

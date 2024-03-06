@@ -4,6 +4,7 @@ import { PortfolioItem } from "../interfaces/backend/portfolio";
 
 const urlBase = "http://localhost:5000/api";
 
+
 /* const headers = {
   "Content-Type": "multipart/form-data",
 }; */
@@ -19,7 +20,13 @@ const getPortfolioContent = () => {
   return axios.get(url);
 };
 
+const getPortfolioContentByTitle = (title: string) => {
+  const url = `${urlBase}/portfolioContent/item/${title}`;
+  return axios.get(url);
+};
+
 export default {
   postPortfolioContent,
   getPortfolioContent,
+  getPortfolioContentByTitle,
 };

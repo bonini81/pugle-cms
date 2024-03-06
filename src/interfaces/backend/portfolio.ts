@@ -1,6 +1,6 @@
 export interface PortfolioItem {
-  // image?: File | null;
-  image: string;
+  // img?: File | null;
+  img: string;
   alt: string;
   title: string;
   category: string;
@@ -8,5 +8,5 @@ export interface PortfolioItem {
   linkTo: string;
   linkToText: string;
   hrefTo: string;
-  key?: number;
+  key: number;
 }
