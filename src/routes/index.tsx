@@ -17,7 +17,7 @@ const AppRoutes = () => {
         <Route element={<LayOut />}>
           <Route path="/" element={<Home />} />
           <Route path="/portafolio" element={<Portfolio />} />
-          <Route path="/portafolioItem/:id" element={<PortfolioItem />} />
+          <Route path="/portafolioItem/:key" element={<PortfolioItem />} />
           <Route path="/login" element={<Login />} />
         </Route>
         <Route element={<PrivateRoutes />}>
