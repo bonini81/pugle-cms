@@ -9,3 +9,34 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.ul-item-styles {
+    list-style: none;
+    padding: 0;
+    
+}
+
+.menu-ul-item-styles {
+    list-style: none;
+    text-align: left;
+}
+
+ul.ul-item-styles li {
+    display: inline;
+}
+
+button.portfolio-btn-styles {
+    width: 140px !important;
+}
+
+button.portfolio-btn-delete-styles {
+    width: 150px !important;
+}
+
+button.portfolio-delete-btn-styles {
+    width: 10px !important;
+}
+
+.mui-icons-align__portfolio {
+    vertical-align: middle;
+}

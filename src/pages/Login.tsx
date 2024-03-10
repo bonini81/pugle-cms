@@ -57,7 +57,7 @@ const Login = () => {
       const response = await authService.postAuthWordpressLogin(userData);
       const data = await response.data;
       localStorage.setItem("token", data.token);
-      dispatch(setCurrentUser(data.email));
+      dispatch(setCurrentUser(data.name));
       dispatch(setCurrentToken(data.token));
       navigate("/backoffice/home");
     } catch (err: any) {
