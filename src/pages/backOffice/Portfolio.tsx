@@ -362,7 +362,7 @@ const Portfolio = () => {
                     data-testid="button-delete"
                     onClick={() => deletePortfolioItem(String(item.key))}
                     className={{
-                      root: "portfolio-btn-styles",
+                      root: "portfolio-delete-btn-styles",
                     }}
                   >
                     <HighlightOffIcon className="mui-icons-align__portfolio" />
