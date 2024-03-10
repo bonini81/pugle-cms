@@ -53,7 +53,6 @@ const Portfolio = () => {
     formData.append("hrefTo", data.hrefTo); */
 
     const userData = {
-      key: data.key,
       img: data.img,
       alt: data.alt,
       title: data.title,
@@ -62,6 +61,7 @@ const Portfolio = () => {
       linkTo: data.linkTo,
       linkToText: data.linkToText,
       hrefTo: data.hrefTo,
+      key: data.key,
     };
 
     // console.log("userData: ");
@@ -109,6 +109,18 @@ const Portfolio = () => {
     }
   };
 
+  const deletePortfolioItem = async (key: string) => {
+    try {
+      await portfolioService.deletePortfolioContentByKey(key);
+      alert("Portfolio Item Deleted");
+      const response =  await portfolioService.getPortfolioContent();
+      const portfolioItems = await response.data.portfolioContent;
+      setPortfolioContentData(portfolioItems);
+    } catch (err: any) {
+      console.log(err);
+    }
+  };
+
   return (
     <section className="section-wrrapper-styles">
       <h2 className="titleh-h2-padding">Portfolio CRUD Page</h2>
@@ -144,7 +156,6 @@ const Portfolio = () => {
       {openPortfolio ? (
         <form
           onSubmit={handleSubmit(onSubmit)}
-          encType="multipart/form-data"
           data-testid="portfolio-form"
           className="open-portfolio-styles"
         >
@@ -345,7 +356,17 @@ const Portfolio = () => {
             {portfolioContentData &&
               portfolioContentData.map((item, index) => (
                 <li key={index}>
-                  {item.title} <HighlightOffIcon className="mui-icons-align__portfolio" />
+                  {item.title}
+                  <Button
+                    variant="text"
+                    data-testid="button-delete"
+                    onClick={() => deletePortfolioItem(String(item.key))}
+                    className={{
+                      root: "portfolio-btn-styles",
+                    }}
+                  >
+                    <HighlightOffIcon className="mui-icons-align__portfolio" />
+                  </Button>
                 </li>
               ))}
           </ul>

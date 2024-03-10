@@ -25,8 +25,14 @@ const getPortfolioContentByTitle = (title: string) => {
   return axios.get(url);
 };
 
+const deletePortfolioContentByKey = (key: string) => {
+  const url = `${urlBase}/portfolioContent/item-delete/${key}`;
+  return axios.delete(url);
+};
+
 export default {
   postPortfolioContent,
   getPortfolioContent,
   getPortfolioContentByTitle,
+  deletePortfolioContentByKey,
 };
