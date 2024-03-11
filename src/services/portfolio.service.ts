@@ -30,9 +30,15 @@ const deletePortfolioContentByKey = (key: string) => {
   return axios.delete(url);
 };
 
+const patchPortfolioContentByKey = (key: string, data: PortfolioItem) => {
+  const url = `${urlBase}/portfolioContent/item-update/${key}`;
+  return axios.patch(url, data);
+};
+
 export default {
   postPortfolioContent,
   getPortfolioContent,
   getPortfolioContentByTitle,
   deletePortfolioContentByKey,
+  patchPortfolioContentByKey,
 };

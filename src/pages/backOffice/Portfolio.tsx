@@ -48,9 +48,9 @@ const Portfolio = () => {
     resolver: yupResolver(schema),
   });
 
+  // https://stackoverflow.com/questions/60276510/how-to-make-react-hook-form-work-with-multiple-forms-in-one-page
   const onSubmit = async (data: any) => {
     /** const formData = new FormData();
-
     formData.append("image", data.image);
     formData.append("alt", data.alt);
     formData.append("title", data.title);
@@ -85,6 +85,30 @@ const Portfolio = () => {
       alert("Portfolio uploaded successfully");
     } catch (err: any) {
       alert("Portfolio upload failed");
+    }
+  };
+
+  const onSubmitEdit = async (data: any) => {
+    const userDataPatch = {
+      img: data.img,
+      alt: data.alt,
+      title: data.title,
+      category: data.category,
+      description: data.description,
+      linkTo: data.linkTo,
+      linkToText: data.linkToText,
+      hrefTo: data.hrefTo,
+      key: data.key,
+    };
+    portfolioUpdate(userDataPatch.key, userDataPatch);
+  };
+
+  const portfolioUpdate = async (key: string, userDataPatch: PortfolioItem) => {
+    try {
+      await portfolioService.patchPortfolioContentByKey(key, userDataPatch);
+      alert("Portfolio updated successfully");
+    } catch (err: any) {
+      alert("Portfolio update failed");
     }
   };
 
@@ -450,7 +474,7 @@ const Portfolio = () => {
       )}
       {editPortfolioContentItem ? (
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(onSubmitEdit)}
           data-testid="portfolio-form"
           className="open-portfolio-styles"
         >
