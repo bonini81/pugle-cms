@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools";
 import { yupResolver } from "@hookform/resolvers/yup";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
@@ -14,6 +15,20 @@ import { PortfolioItem } from "../../interfaces/backend/portfolio";
 import portfolioService from "../../services/portfolio.service";
 
 const Portfolio = () => {
+  // usecallback react or useMemo Check it out
+
+  const inititalStatePortfolioItem = {
+    key: 0,
+    img: "",
+    alt: "",
+    title: "",
+    category: "",
+    description: "",
+    linkTo: "",
+    linkToText: "",
+    hrefTo: "",
+  };
+
   const [openPortfolio, setOpenPortfolio] = useState<boolean>(false);
   const [openDeletePortfolio, setOpenDeletePortfolio] =
     useState<boolean>(false);
@@ -21,7 +36,7 @@ const Portfolio = () => {
     PortfolioItem[] | null
   >(null);
   const [portfolioContentItem, setPortfolioContentItem] =
-    useState<PortfolioItem | null>(null);
+    useState<PortfolioItem | null>(inititalStatePortfolioItem);
   const [editPortfolioContent, setEditPortfolioContent] =
     useState<boolean>(false);
   const [editPortfolioContentItem, setEditPortfolioContentItem] =
@@ -112,11 +127,13 @@ const Portfolio = () => {
     }
   };
 
-  const handlePortfolioClick = () => {
+  const handleAddPortfolioClick = () => {
     if (!openPortfolio) {
+      setPortfolioContentItem(inititalStatePortfolioItem);
       setOpenPortfolio(true);
       setOpenDeletePortfolio(false);
       setEditPortfolioContent(false);
+      setEditPortfolioContentItem(false);
     } else {
       setOpenPortfolio(false);
     }
@@ -125,8 +142,10 @@ const Portfolio = () => {
   const handleDeletePortfolioClick = () => {
     if (!openDeletePortfolio) {
       setOpenDeletePortfolio(true);
+      setEditPortfolioContent(false);
       setOpenPortfolio(false);
       setEditPortfolioContent(false);
+      setEditPortfolioContentItem(false);
       getPortfolioContentApi();
     } else {
       setOpenDeletePortfolio(false);
@@ -138,6 +157,7 @@ const Portfolio = () => {
       setEditPortfolioContent(true);
       setOpenDeletePortfolio(false);
       setOpenPortfolio(false);
+      setEditPortfolioContentItem(false);
       getPortfolioContentApi();
     } else {
       setEditPortfolioContent(false);
@@ -171,15 +191,16 @@ const Portfolio = () => {
     try {
       const response = await portfolioService.getPortfolioContentByTitle(key);
       const portfolioItem = await response.data;
+      setPortfolioContentItem(null);
       setPortfolioContentItem(portfolioItem);
       setEditPortfolioContentItem(true);
-      console.log("portfolioItem");
-      console.log(portfolioContentItem?.category);
     } catch (err: any) {
-      console.log(err);
       alert("Portfolio Item Not Found");
     }
   };
+
+  console.log("portfolioContentItem:");
+  console.log(portfolioContentItem);
 
   return (
     <section className="section-wrrapper-styles">
@@ -191,7 +212,7 @@ const Portfolio = () => {
           <Button
             data-testid="portfolio-item-btn"
             variant="text"
-            onClick={() => handlePortfolioClick()}
+            onClick={() => handleAddPortfolioClick()}
             className={{
               root: "portfolio-btn-styles",
             }}
@@ -678,6 +699,7 @@ const Portfolio = () => {
       ) : (
         ""
       )}
+      <DevTool control={control} />
     </section>
   );
 };
