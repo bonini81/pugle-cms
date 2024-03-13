@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { DevTool } from "@hookform/devtools";
@@ -6,40 +6,21 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
-import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import * as yup from "yup";
 
-import "../../scss/PortfolioBackOffice.scss";
 import Button from "../../components/Boton";
 import TextField from "../../components/CoTextField";
 import { PortfolioItem } from "../../interfaces/backend/portfolio";
 import portfolioService from "../../services/portfolio.service";
 
-const Portfolio = () => {
-  // usecallback react or useMemo Check it out
-
-  const inititalStatePortfolioItem = {
-    key: 0,
-    img: "",
-    alt: "",
-    title: "",
-    category: "",
-    description: "",
-    linkTo: "",
-    linkToText: "",
-    hrefTo: "",
-  };
-
-  const [openPortfolio, setOpenPortfolio] = useState<boolean>(false);
-  const [openDeletePortfolio, setOpenDeletePortfolio] =
-    useState<boolean>(false);
+const PortfolioEditItem = () => {
   const [portfolioContentData, setPortfolioContentData] = useState<
     PortfolioItem[] | null
   >(null);
   const [portfolioContentItem, setPortfolioContentItem] =
-    useState<PortfolioItem | null>(inititalStatePortfolioItem);
+    useState<PortfolioItem | null>(null);
   const [editPortfolioContent, setEditPortfolioContent] =
-    useState<boolean>(false);
+    useState<boolean>(true);
   const [editPortfolioContentItem, setEditPortfolioContentItem] =
     useState<boolean>(false);
 
@@ -60,49 +41,24 @@ const Portfolio = () => {
   const {
     register,
     handleSubmit,
+    reset,
     control,
     formState: { errors },
   } = useForm<PortfolioItem>({
     resolver: yupResolver(schema),
   });
 
-  // https://stackoverflow.com/questions/60276510/how-to-make-react-hook-form-work-with-multiple-forms-in-one-page
-  const onSubmit = async (data: any) => {
-    /** const formData = new FormData();
-    formData.append("image", data.image);
-    formData.append("alt", data.alt);
-    formData.append("title", data.title);
-    formData.append("category", data.category);
-    formData.append("description", data.description);
-    formData.append("linkTo", data.linkTo);
-    formData.append("linkToText", data.linkToText);
-    formData.append("hrefTo", data.hrefTo); */
+  useEffect(() => {
+    getPortfolioContentApi();
+  }, []);
 
-    const userData = {
-      img: data.img,
-      alt: data.alt,
-      title: data.title,
-      category: data.category,
-      description: data.description,
-      linkTo: data.linkTo,
-      linkToText: data.linkToText,
-      hrefTo: data.hrefTo,
-      key: data.key,
-    };
-
-    // console.log("userData: ");
-    // console.log(userData);
-
-    await portfolioUpload(userData);
-  };
-
-  const portfolioUpload = async (userData: PortfolioItem) => {
-    // const portfolioUpload = async (formData: any) => {
+  const getPortfolioContentApi = async () => {
     try {
-      await portfolioService.postPortfolioContent(userData);
-      alert("Portfolio uploaded successfully");
+      const response = await portfolioService.getPortfolioContent();
+      const portfolioItems = await response.data.portfolioContent;
+      setPortfolioContentData(portfolioItems);
     } catch (err: any) {
-      alert("Portfolio upload failed");
+      console.log(err);
     }
   };
 
@@ -130,66 +86,6 @@ const Portfolio = () => {
     }
   };
 
-  const handleAddPortfolioClick = () => {
-    if (!openPortfolio) {
-      setPortfolioContentItem(inititalStatePortfolioItem);
-      setOpenPortfolio(true);
-      setOpenDeletePortfolio(false);
-      setEditPortfolioContent(false);
-      setEditPortfolioContentItem(false);
-    } else {
-      setOpenPortfolio(false);
-    }
-  };
-
-  const handleDeletePortfolioClick = () => {
-    if (!openDeletePortfolio) {
-      setOpenDeletePortfolio(true);
-      setEditPortfolioContent(false);
-      setOpenPortfolio(false);
-      setEditPortfolioContent(false);
-      setEditPortfolioContentItem(false);
-      getPortfolioContentApi();
-    } else {
-      setOpenDeletePortfolio(false);
-    }
-  };
-
-  const handleEditPortfolioClick = () => {
-
-    if (!editPortfolioContent) {
-      setEditPortfolioContent(true);
-      setOpenDeletePortfolio(false);
-      setOpenPortfolio(false);
-      setEditPortfolioContentItem(false);
-      getPortfolioContentApi();
-    } else {
-      setEditPortfolioContent(false);
-    }
-  };
-
-  const getPortfolioContentApi = async () => {
-    try {
-      const response = await portfolioService.getPortfolioContent();
-      const portfolioItems = await response.data.portfolioContent;
-      setPortfolioContentData(portfolioItems);
-    } catch (err: any) {
-      console.log(err);
-    }
-  };
-
-  const deletePortfolioItem = async (key: string) => {
-    try {
-      await portfolioService.deletePortfolioContentByKey(key);
-      alert("Portfolio Item Deleted");
-      const response = await portfolioService.getPortfolioContent();
-      const portfolioItems = await response.data.portfolioContent;
-      setPortfolioContentData(portfolioItems);
-    } catch (err: any) {
-      console.log(err);
-    }
-  };
-
   const getPortfolioItem = async (key: string) => {
     setEditPortfolioContent(false);
     try {
@@ -203,8 +99,11 @@ const Portfolio = () => {
     }
   };
 
-  console.log("portfolioContentItem:");
-  console.log(portfolioContentItem);
+  const handleClickEditOtherItem = () => {
+    setEditPortfolioContentItem(false);
+    reset();
+    setEditPortfolioContent(true);
+  }
 
   return (
     <section className="section-wrrapper-styles">
@@ -252,227 +151,6 @@ const Portfolio = () => {
           </Button>
         </li>
       </ul>
-      {openPortfolio ? (
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          data-testid="portfolio-form"
-          className="open-portfolio-styles"
-        >
-          <div className="portfolio-field-styles">
-            <Controller
-              name="key"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  data-testid="portfolio-key"
-                  className="portfolio-field-styles"
-                  label="Portfolio Key"
-                  variant="outlined"
-                  {...register("title")}
-                  {...field}
-                  ref={null}
-                  error={!!errors.key}
-                  helperText={errors.key ? errors.key?.message : ""}
-                />
-              )}
-            />
-          </div>
-          <div className="portfolio-field-styles">
-            <Controller
-              name="title"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  data-testid="portfolio-title"
-                  className="portfolio-field-styles"
-                  label="Portfolio Category Title"
-                  variant="outlined"
-                  {...register("title")}
-                  {...field}
-                  ref={null}
-                  error={!!errors.title}
-                  helperText={errors.title ? errors.title?.message : ""}
-                />
-              )}
-            />
-          </div>
-          <div className="portfolio-field-styles">
-            <Controller
-              name="description"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  data-testid="portfolio-description"
-                  label="Portfolio Description"
-                  variant="outlined"
-                  multiline
-                  rows={3}
-                  {...register("description")}
-                  {...field}
-                  ref={null}
-                  error={!!errors.description}
-                  helperText={
-                    errors.description ? errors.description?.message : ""
-                  }
-                />
-              )}
-            />
-          </div>
-          <div className="portfolio-field-styles">
-            <Controller
-              name="alt"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  data-testid="portfolio-category"
-                  className="portfolio-field-styles"
-                  label="Image Alt Text"
-                  variant="outlined"
-                  {...register("alt")}
-                  {...field}
-                  ref={null}
-                  error={!!errors.alt}
-                  helperText={errors.alt ? errors.alt?.message : ""}
-                />
-              )}
-            />
-          </div>
-          <div className="portfolio-field-styles">
-            <Controller
-              name="category"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  data-testid="portfolio-category"
-                  className="portfolio-field-styles"
-                  label="Portfolio Category Title"
-                  variant="outlined"
-                  {...register("category")}
-                  {...field}
-                  ref={null}
-                  error={!!errors.category}
-                  helperText={errors.category ? errors.category?.message : ""}
-                />
-              )}
-            />
-          </div>
-          <div className="portfolio-field-styles">
-            <Controller
-              name="img"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  data-testid="portfolio-category"
-                  className="portfolio-field-styles"
-                  variant="outlined"
-                  label="Portfolio Image URL"
-                  // type="file"
-                  {...register("img")}
-                  {...field}
-                  ref={null}
-                  error={!!errors.img}
-                  helperText={errors.img ? errors.img?.message : ""}
-                />
-              )}
-            />
-          </div>
-          <div className="portfolio-field-styles">
-            <Controller
-              name="linkTo"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  data-testid="portfolio-linkto"
-                  className="portfolio-field-styles"
-                  variant="outlined"
-                  {...register("linkTo")}
-                  {...field}
-                  ref={null}
-                  label="Portfolio Link to Project"
-                  error={!!errors.linkTo}
-                  helperText={errors.linkTo ? errors.linkTo?.message : ""}
-                />
-              )}
-            />
-          </div>
-          <div className="portfolio-field-styles">
-            <Controller
-              name="linkToText"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  data-testid="portfolio-linkto"
-                  className="portfolio-field-styles"
-                  variant="outlined"
-                  {...register("linkToText")}
-                  {...field}
-                  ref={null}
-                  label="Portfolio Link Text"
-                  error={!!errors.linkToText}
-                  helperText={
-                    errors.linkToText ? errors.linkToText?.message : ""
-                  }
-                />
-              )}
-            />
-          </div>
-          <div className="portfolio-field-styles">
-            <Controller
-              name="hrefTo"
-              control={control}
-              render={({ field }) => (
-                <TextField
-                  data-testid="portfolio-linkto"
-                  className="portfolio-field-styles"
-                  variant="outlined"
-                  {...register("hrefTo")}
-                  {...field}
-                  ref={null}
-                  label="Portfolio Item Page Link"
-                  error={!!errors.hrefTo}
-                  helperText={errors.hrefTo ? errors.hrefTo?.message : ""}
-                />
-              )}
-            />
-          </div>
-          <div className="button-form-styles">
-            <Button
-              variant="contained"
-              data-testid="login"
-              type="submit"
-              value="Login"
-            >
-              Enviar
-            </Button>
-          </div>
-        </form>
-      ) : (
-        ""
-      )}
-      {openDeletePortfolio ? (
-        <article>
-          <ul className="menu-ul-item-styles">
-            {portfolioContentData &&
-              portfolioContentData.map((item, index) => (
-                <li key={index}>
-                  {item.title}
-                  <Button
-                    variant="text"
-                    data-testid="button-delete"
-                    onClick={() => deletePortfolioItem(String(item.key))}
-                    className={{
-                      root: "portfolio-delete-btn-styles",
-                    }}
-                  >
-                    <HighlightOffIcon className="mui-icons-align__portfolio" />
-                  </Button>
-                </li>
-              ))}
-          </ul>
-        </article>
-      ) : (
-        ""
-      )}
 
       {editPortfolioContent ? (
         <article>
@@ -700,7 +378,16 @@ const Portfolio = () => {
               Enviar
             </Button>
           </div>
+          <Button
+            variant="text"
+            data-testid="login"
+            value="Login"
+            onClick={handleClickEditOtherItem}
+          >
+            Editar Otro Item
+          </Button>
         </form>
+          
       ) : (
         ""
       )}
@@ -709,4 +396,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default PortfolioEditItem;
