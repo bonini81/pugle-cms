@@ -4,7 +4,7 @@
 }
 
 .button-form-styles {
-    width: 100px;
+    width: 120px;
     margin: 15px 0;
     margin-left: auto;
     margin-right: auto;
@@ -16,10 +16,14 @@
     
 }
 
-.menu-ul-item-styles {
-    list-style: none;
+ul.menu-ul-item-styles {
+   list-style: none;
     text-align: left;
 }
+
+ol.menu-ul-item-styles {
+     text-align: left;
+ }
 
 ul.ul-item-styles li {
     display: inline;
@@ -31,6 +35,10 @@ button.portfolio-btn-styles {
 
 button.portfolio-btn-delete-styles {
     width: 150px !important;
+}
+
+button.portfolio-btn-edit-styles {
+    width: 135px !important;
 }
 
 button.portfolio-delete-btn-styles {

@@ -4,6 +4,9 @@ import LayOut from "../components/LayOut";
 import LayOutBackOffice from "../components/LayOutBackOffice";
 import BackOfficeMain from "../pages/backOffice/Main";
 import PortfolioBackOffice from "../pages/backOffice/Portfolio";
+import PortfolioAddItem from "../pages/backOffice/PortfolioAddItem";
+import PortfolioDeleteItem from "../pages/backOffice/PortfolioDeleteItem";
+import PortfolioEditItem from "../pages/backOffice/PortfolioEditItem";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Portfolio from "../pages/Portfolio";
@@ -25,6 +28,18 @@ const AppRoutes = () => {
             <Route
               path="backoffice/portfolio"
               element={<PortfolioBackOffice />}
+            />
+            <Route
+              path="backoffice/portfolio-additem"
+              element={<PortfolioAddItem />}
+            />
+            <Route
+              path="backoffice/portfolio-delete-item"
+              element={<PortfolioDeleteItem />}
+            />
+            <Route
+              path="backoffice/portfolio-edit-item"
+              element={<PortfolioEditItem />}
             />
             <Route path="backoffice/home" element={<BackOfficeMain />} />
           </Route>
