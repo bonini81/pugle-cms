@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { DevTool } from "@hookform/devtools";
@@ -6,7 +5,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
-// import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import * as yup from "yup";
 
 import "../../scss/PortfolioBackOffice.scss";
@@ -16,19 +14,6 @@ import { PortfolioItem } from "../../interfaces/backend/portfolio";
 import portfolioService from "../../services/portfolio.service";
 
 const PortfolioAddItem = () => {
-  const [openPortfolio, setOpenPortfolio] = useState<boolean>(false);
-  const [openDeletePortfolio, setOpenDeletePortfolio] =
-    useState<boolean>(false);
-  const [portfolioContentData, setPortfolioContentData] = useState<
-    PortfolioItem[] | null
-  >(null);
-  const [portfolioContentItem, setPortfolioContentItem] =
-    useState<PortfolioItem | null>(null);
-  const [editPortfolioContent, setEditPortfolioContent] =
-    useState<boolean>(false);
-  const [editPortfolioContentItem, setEditPortfolioContentItem] =
-    useState<boolean>(false);
-
   const navigate = useNavigate();
 
   const schema = yup.object().shape({

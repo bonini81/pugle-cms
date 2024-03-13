@@ -41,22 +41,6 @@ const PortfolioDeleteItem = () => {
     }
   };
 
- // const getPortfolioItem = async (key: string) => {
-    //  setEditPortfolioContent(false);
-   // try {
-     // const response = await portfolioService.getPortfolioContentByTitle(key);
-     // const portfolioItem = await response.data;
-      // setPortfolioContentItem(null);
-      //  setPortfolioContentItem(portfolioItem);
-      // setEditPortfolioContentItem(true);
-  //  } catch (err: any) {
-    //  alert("Portfolio Item Not Found");
-   // }
-  // };
-
-  // console.log("portfolioContentItem:");
-  // console.log(portfolioContentItem);
-
   return (
     <section className="section-wrrapper-styles">
       <h2 className="titleh-h2-padding">Portfolio CRUD Page</h2>
@@ -103,7 +87,7 @@ const PortfolioDeleteItem = () => {
         </li>
       </ul>
       <article>
-        <ul className="menu-ul-item-styles">
+        <ol className="menu-ul-item-styles">
           {portfolioContentData &&
             portfolioContentData.map((item, index) => (
               <li key={index}>
@@ -120,7 +104,7 @@ const PortfolioDeleteItem = () => {
                 </Button>
               </li>
             ))}
-        </ul>
+        </ol>
       </article>
     </section>
   );

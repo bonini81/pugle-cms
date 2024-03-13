@@ -16,10 +16,14 @@
     
 }
 
-.menu-ul-item-styles {
-    list-style: none;
+ul.menu-ul-item-styles {
+   list-style: none;
     text-align: left;
 }
+
+ol.menu-ul-item-styles {
+     text-align: left;
+ }
 
 ul.ul-item-styles li {
     display: inline;

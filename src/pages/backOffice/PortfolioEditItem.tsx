@@ -115,7 +115,6 @@ const PortfolioEditItem = () => {
           <Button
             data-testid="portfolio-item-btn"
             variant="text"
-            // onClick={() => handleAddPortfolioClick()}
             onClick={() => navigate("/backoffice/portfolio-additem")}
             className={{
               root: "portfolio-btn-styles",
