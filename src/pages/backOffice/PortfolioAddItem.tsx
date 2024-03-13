@@ -46,10 +46,22 @@ const PortfolioAddItem = () => {
   const {
     register,
     handleSubmit,
+    reset,
     control,
     formState: { errors },
   } = useForm<PortfolioItem>({
     resolver: yupResolver(schema),
+    defaultValues: {
+      img: "",
+      alt: "",
+      title: "",
+      category: "",
+      description: "",
+      linkTo: "",
+      linkToText: "",
+      hrefTo: "",
+      key: undefined,
+    },
   });
 
   const onSubmit = async (data: any) => {
@@ -86,6 +98,7 @@ const PortfolioAddItem = () => {
     try {
       await portfolioService.postPortfolioContent(userData);
       alert("Portfolio uploaded successfully");
+      reset();
     } catch (err: any) {
       alert("Portfolio upload failed");
     }
@@ -151,7 +164,7 @@ const PortfolioAddItem = () => {
                 className="portfolio-field-styles"
                 label="Portfolio Key"
                 variant="outlined"
-                {...register("title")}
+                {...register("key")}
                 {...field}
                 ref={null}
                 error={!!errors.key}

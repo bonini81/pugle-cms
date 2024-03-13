@@ -103,7 +103,7 @@ const PortfolioEditItem = () => {
     setEditPortfolioContentItem(false);
     reset();
     setEditPortfolioContent(true);
-  }
+  };
 
   return (
     <section className="section-wrrapper-styles">
@@ -193,7 +193,7 @@ const PortfolioEditItem = () => {
                   className="portfolio-field-styles"
                   label="Portfolio Key"
                   variant="outlined"
-                  {...register("title")}
+                  {...register("key")}
                   {...field}
                   ref={null}
                   error={!!errors.key}
@@ -375,7 +375,7 @@ const PortfolioEditItem = () => {
               type="submit"
               value="Login"
             >
-              Enviar
+              Actualizar
             </Button>
           </div>
           <Button
@@ -387,7 +387,6 @@ const PortfolioEditItem = () => {
             Editar Otro Item
           </Button>
         </form>
-          
       ) : (
         ""
       )}
