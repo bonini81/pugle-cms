@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import { DevTool } from "@hookform/devtools";
 import { yupResolver } from "@hookform/resolvers/yup";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import * as yup from "yup";
 
 import Button from "../../components/Boton";
 import TextField from "../../components/CoTextField";
+import Modal from "../../components/Modal";
+import NavPortfolio from "../../components/NavPortfolio";
 import { PortfolioItem } from "../../interfaces/backend/portfolio";
 import portfolioService from "../../services/portfolio.service";
 
@@ -23,8 +22,8 @@ const PortfolioEditItem = () => {
     useState<boolean>(true);
   const [editPortfolioContentItem, setEditPortfolioContentItem] =
     useState<boolean>(false);
-
-  const navigate = useNavigate();
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [descriptionModal, setDescriptionModal] = useState<string>("");
 
   const schema = yup.object().shape({
     key: yup.number().required("La key del portafolio es requerida."),
@@ -58,7 +57,8 @@ const PortfolioEditItem = () => {
       const portfolioItems = await response.data.portfolioContent;
       setPortfolioContentData(portfolioItems);
     } catch (err: any) {
-      console.log(err);
+      setDescriptionModal("There was an error while fetching portfolio data");
+      setShowModal(true);
     }
   };
 
@@ -80,9 +80,11 @@ const PortfolioEditItem = () => {
   const portfolioUpdate = async (key: string, userDataPatch: PortfolioItem) => {
     try {
       await portfolioService.patchPortfolioContentByKey(key, userDataPatch);
-      alert("Portfolio updated successfully");
+      setDescriptionModal("Portfolio updated successfully");
+      setShowModal(true);
     } catch (err: any) {
-      alert("Portfolio update failed");
+      setDescriptionModal("Portfolio update failed");
+      setShowModal(true);
     }
   };
 
@@ -95,7 +97,8 @@ const PortfolioEditItem = () => {
       setPortfolioContentItem(portfolioItem);
       setEditPortfolioContentItem(true);
     } catch (err: any) {
-      alert("Portfolio Item Not Found");
+      setDescriptionModal("Portfolio Item Not Found");
+      setShowModal(true);
     }
   };
 
@@ -105,51 +108,15 @@ const PortfolioEditItem = () => {
     setEditPortfolioContent(true);
   };
 
+  const modalCloseHandler = () => {
+    setShowModal(false);
+  };
+
   return (
     <section className="section-wrrapper-styles">
       <h2 className="titleh-h2-padding">Portfolio CRUD Page</h2>
       <p>Page to Manage Portfolio Page</p>
-      <ul className="ul-item-styles">
-        <li>
-          <AddCircleIcon className="mui-icons-align__portfolio" />
-          <Button
-            data-testid="portfolio-item-btn"
-            variant="text"
-            onClick={() => navigate("/backoffice/portfolio-additem")}
-            className={{
-              root: "portfolio-btn-styles",
-            }}
-          >
-            Add Portfolio Item
-          </Button>
-        </li>
-        <li>
-          <DeleteForeverIcon className="mui-icons-align__portfolio" />
-          <Button
-            data-testid="portfolio-item-btn"
-            variant="text"
-            onClick={() => navigate("/backoffice/portfolio-delete-item")}
-            className={{
-              root: "portfolio-btn-delete-styles",
-            }}
-          >
-            Delete Portfolio Item
-          </Button>
-        </li>
-        <li>
-          <EditIcon className="mui-icons-align__portfolio" />
-          <Button
-            data-testid="portfolio-item-btn"
-            variant="text"
-            onClick={() => navigate("/backoffice/portfolio-edit-item")}
-            className={{
-              root: "portfolio-btn-edit-styles",
-            }}
-          >
-            Edit Portfolio Item
-          </Button>
-        </li>
-      </ul>
+      <NavPortfolio />
 
       {editPortfolioContent ? (
         <article>
@@ -390,6 +357,13 @@ const PortfolioEditItem = () => {
         ""
       )}
       <DevTool control={control} />
+      <Modal
+        title="Portfolio Upload Status"
+        description={descriptionModal}
+        button="Close"
+        show={showModal}
+        handleClose={modalCloseHandler}
+      />
     </section>
   );
 };
