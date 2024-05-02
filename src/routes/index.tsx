@@ -7,6 +7,7 @@ import PortfolioBackOffice from "../pages/backOffice/Portfolio";
 import PortfolioAddItem from "../pages/backOffice/PortfolioAddItem";
 import PortfolioDeleteItem from "../pages/backOffice/PortfolioDeleteItem";
 import PortfolioEditItem from "../pages/backOffice/PortfolioEditItem";
+import UserBackOffice from "../pages/backOffice/User";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Portfolio from "../pages/Portfolio";
@@ -25,6 +26,7 @@ const AppRoutes = () => {
         </Route>
         <Route element={<PrivateRoutes />}>
           <Route element={<LayOutBackOffice />}>
+            <Route path="backoffice/user" element={<UserBackOffice />} />
             <Route
               path="backoffice/portfolio"
               element={<PortfolioBackOffice />}

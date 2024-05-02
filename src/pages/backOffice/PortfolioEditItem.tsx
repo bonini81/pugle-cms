@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { DevTool } from "@hookform/devtools";
 import { yupResolver } from "@hookform/resolvers/yup";
 import EditIcon from "@mui/icons-material/Edit";
@@ -7,12 +8,13 @@ import * as yup from "yup";
 
 import Button from "../../components/Boton";
 import TextField from "../../components/CoTextField";
+import CRUDNav from "../../components/CRUDNav";
 import Modal from "../../components/Modal";
-import NavPortfolio from "../../components/NavPortfolio";
 import { PortfolioItem } from "../../interfaces/backend/portfolio";
 import portfolioService from "../../services/portfolio.service";
 
 const PortfolioEditItem = () => {
+  const navigate = useNavigate();
   const [portfolioContentData, setPortfolioContentData] = useState<
     PortfolioItem[] | null
   >(null);
@@ -116,7 +118,14 @@ const PortfolioEditItem = () => {
     <section className="section-wrrapper-styles">
       <h2 className="titleh-h2-padding">Portfolio CRUD Page</h2>
       <p>Page to Manage Portfolio Page</p>
-      <NavPortfolio />
+      <CRUDNav
+        contextName="Portfolio"
+        handleClickAddItem={() => navigate("/backoffice/portfolio-additem")}
+        handleClickEditItem={() => navigate("/backoffice/portfolio-edit-item")}
+        handleClickDeleteItem={() =>
+          navigate("/backoffice/portfolio-delete-item")
+        }
+      />
 
       {editPortfolioContent ? (
         <article>

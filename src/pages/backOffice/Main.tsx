@@ -29,7 +29,7 @@ const Main = (): JSX.Element => {
   return (
     <section className="section-wrrapper-styles">
       <h2 className="titleh-h2-padding">Pugle CMS Homepage</h2>
-      <p>Pugle CMS is a Content Management System for my sidebusiness. </p>
+      <p>Pugle CMS is a Content Management System for my sidebusiness.</p>
     </section>
   );
 };

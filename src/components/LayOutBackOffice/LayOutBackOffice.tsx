@@ -107,6 +107,18 @@ const LayOutBackOffice = (): JSX.Element => {
                         Portfolio
                       </Button>
                     </li>
+                    <li className="list-item-decoration">
+                      <Button
+                        onClick={() => navigate("/backoffice/user")}
+                        variant="text"
+                        data-testid="testPortfolio"
+                        disableRipple
+                        disableFocusRipple
+                        disableElevation
+                      >
+                        Usuarios
+                      </Button>
+                    </li>
                   </ul>
                 </div>
               </aside>
