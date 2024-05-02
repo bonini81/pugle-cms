@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 
 import Button from "../../components/Boton";
+import CRUDNav from "../../components/CRUDNav";
 import Modal from "../../components/Modal";
-import NavPortfolio from "../../components/NavPortfolio";
 import { PortfolioItem } from "../../interfaces/backend/portfolio";
 import portfolioService from "../../services/portfolio.service";
 
 const PortfolioDeleteItem = () => {
+  const navigate = useNavigate();
   const [portfolioContentData, setPortfolioContentData] = useState<
     PortfolioItem[] | null
   >(null);
@@ -50,7 +52,14 @@ const PortfolioDeleteItem = () => {
     <section className="section-wrrapper-styles">
       <h2 className="titleh-h2-padding">Portfolio CRUD Page</h2>
       <p>Page to Manage Portfolio Page</p>
-      <NavPortfolio />
+      <CRUDNav
+        contextName="Portfolio"
+        handleClickAddItem={() => navigate("/backoffice/portfolio-additem")}
+        handleClickEditItem={() => navigate("/backoffice/portfolio-edit-item")}
+        handleClickDeleteItem={() =>
+          navigate("/backoffice/portfolio-delete-item")
+        }
+      />
       <article>
         <ol className="menu-ul-item-styles">
           {portfolioContentData &&

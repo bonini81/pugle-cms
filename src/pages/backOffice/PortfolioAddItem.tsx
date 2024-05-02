@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { DevTool } from "@hookform/devtools";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -7,12 +8,13 @@ import * as yup from "yup";
 import "../../scss/PortfolioBackOffice.scss";
 import Button from "../../components/Boton";
 import TextField from "../../components/CoTextField";
+import CRUDNav from "../../components/CRUDNav";
 import Modal from "../../components/Modal";
-import NavPortfolio from "../../components/NavPortfolio";
 import { PortfolioItem } from "../../interfaces/backend/portfolio";
 import portfolioService from "../../services/portfolio.service";
 
 const PortfolioAddItem = () => {
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState<boolean>(false);
   const [descriptionModal, setDescriptionModal] = useState<string>("");
 
@@ -99,7 +101,14 @@ const PortfolioAddItem = () => {
     <section className="section-wrrapper-styles">
       <h2 className="titleh-h2-padding">Portfolio CRUD Page</h2>
       <p>Page to Manage Portfolio Page</p>
-      <NavPortfolio />
+      <CRUDNav
+        contextName="Portfolio"
+        handleClickAddItem={() => navigate("/backoffice/portfolio-additem")}
+        handleClickEditItem={() => navigate("/backoffice/portfolio-edit-item")}
+        handleClickDeleteItem={() =>
+          navigate("/backoffice/portfolio-delete-item")
+        }
+      />
       <form
         onSubmit={handleSubmit(onSubmit)}
         data-testid="portfolio-form"

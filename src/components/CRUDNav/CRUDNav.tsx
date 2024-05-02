@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
@@ -6,9 +5,19 @@ import EditIcon from "@mui/icons-material/Edit";
 import "../../scss/NavPortfolio.scss";
 import Button from "../Boton";
 
-const NavPortfolio = () => {
-  const navigate = useNavigate();
+interface CRUDNavProps {
+  handleClickAddItem?: () => void;
+  handleClickDeleteItem?: () => void;
+  handleClickEditItem?: () => void;
+  contextName: string;
+}
 
+const CRUDNav = ({
+  handleClickAddItem,
+  handleClickDeleteItem,
+  handleClickEditItem,
+  contextName,
+}: CRUDNavProps) => {
   return (
     <nav>
       <ul className="ul-item-styles">
@@ -17,12 +26,12 @@ const NavPortfolio = () => {
           <Button
             data-testid="portfolio-item-btn"
             variant="text"
-            onClick={() => navigate("/backoffice/portfolio-additem")}
+            onClick={handleClickAddItem}
             className={{
               root: "portfolio-btn-styles",
             }}
           >
-            Add Portfolio Item
+            Add {contextName} Item
           </Button>
         </li>
         <li>
@@ -30,12 +39,12 @@ const NavPortfolio = () => {
           <Button
             data-testid="portfolio-item-btn"
             variant="text"
-            onClick={() => navigate("/backoffice/portfolio-delete-item")}
+            onClick={handleClickDeleteItem}
             className={{
               root: "portfolio-btn-delete-styles",
             }}
           >
-            Delete Portfolio Item
+            Delete {contextName} Item
           </Button>
         </li>
         <li>
@@ -43,12 +52,12 @@ const NavPortfolio = () => {
           <Button
             data-testid="portfolio-item-btn"
             variant="text"
-            onClick={() => navigate("/backoffice/portfolio-edit-item")}
+            onClick={handleClickEditItem}
             className={{
               root: "portfolio-btn-edit-styles",
             }}
           >
-            Edit Portfolio Item
+            Edit {contextName} Item
           </Button>
         </li>
       </ul>
@@ -56,4 +65,4 @@ const NavPortfolio = () => {
   );
 };
 
-export default NavPortfolio;
+export default CRUDNav;
