@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { UserLogin } from "../interfaces/backend/user";
 
-const urlBase = "http://localhost:5000/api";
+const urlBase = process.env.REACT_APP_BACKEND_URL;
 
 const headers = {
   "Content-Type": "application/json",
