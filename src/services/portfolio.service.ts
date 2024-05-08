@@ -2,8 +2,7 @@ import axios from "axios";
 
 import { PortfolioItem } from "../interfaces/backend/portfolio";
 
-const urlBase = "http://localhost:5000/api";
-
+const urlBase = process.env.REACT_APP_BACKEND_URL;
 
 /* const headers = {
   "Content-Type": "multipart/form-data",
