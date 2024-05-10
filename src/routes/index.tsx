@@ -3,17 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import LayOut from "../components/LayOut";
 import Spinner from "../components/Spinner";
-// import LayOutBackOffice from "../components/LayOutBackOffice";
-import BackOfficeMain from "../pages/backOffice/Main";
 import PortfolioBackOffice from "../pages/backOffice/Portfolio";
 import PortfolioAddItem from "../pages/backOffice/PortfolioAddItem";
 import PortfolioDeleteItem from "../pages/backOffice/PortfolioDeleteItem";
 import PortfolioEditItem from "../pages/backOffice/PortfolioEditItem";
 import UserBackOffice from "../pages/backOffice/User";
-/**  import Home from "../pages/Home";
-import Login from "../pages/Login";
-import Portfolio from "../pages/Portfolio";
-import PortfolioItem from "../pages/PortfolioItem"; */
 import PrivateRoutes from "../utils/PrivateRoutes";
 
 const LayOutBackOffice = lazy(() => import("../components/LayOutBackOffice"));
@@ -21,6 +15,7 @@ const Home = lazy(() => import("../pages/Home"));
 const Login = lazy(() => import("../pages/Login"));
 const Portfolio = lazy(() => import("../pages/Portfolio"));
 const PortfolioItem = lazy(() => import("../pages/PortfolioItem"));
+const BackOfficeMain = lazy(() => import("../pages/backOffice/Main"));
 
 const AppRoutes = () => {
   return (
