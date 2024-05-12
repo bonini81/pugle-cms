@@ -19,8 +19,8 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 }));
 interface ModalPugleProps {
   title?: string;
-  description?: string;
-  button?: string;
+  description: string;
+  button: string;
   show: boolean;
   handleClose?: () => void;
 }

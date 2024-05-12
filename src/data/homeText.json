@@ -23,7 +23,7 @@
     {
         "item": "Portafolio",
         "icon": 2,
-        "link": "https://pugle.net/portafolio/"
+        "link": "/portafolio/"
     }
 
 ],
@@ -32,7 +32,7 @@
     {
         "item": "Mi whatsapp",
         "icon": 0,
-        "link": "https://wa.me/969078192"
+        "link": "https://wa.me/+593969078192"
     },
     {
         "item": "Mi Correo",

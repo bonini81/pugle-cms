@@ -75,7 +75,7 @@ const Footer = (props: PugleFooterProps): JSX.Element => {
         <Container>
           <div className="wrapper-sub-footer">
             <div className="sub-footer-area">{copyright}</div>
-            <div className="sub-footer-area2">info@pugle.net | 0969078192</div>
+            <div className="sub-footer-area2">info@pugle.net</div>
           </div>
         </Container>
       </article>
