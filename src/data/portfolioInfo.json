@@ -1,7 +1,7 @@
 [
     {
         "key": 0,
-        "img": "https://pugle.net/react-images/portafolio/conkreta1.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/conkreta1.jpg",
         "alt": "Conkreta Desarrollo Web Portafolio",
         "title": "Conkreta",
         "category": "Desarrollo Web",
@@ -13,7 +13,7 @@
     },
     {
         "key": 1,
-        "img": "https://pugle.net/react-images/portafolio/xchange1-1.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/xchange1-1.jpg",
         "alt": "Wordpress Plugin Development",
         "title": "Xchange",
         "category": "Desarrollo Web",
@@ -25,7 +25,7 @@
     },
     {
         "key": 2,
-        "img": "https://pugle.net/react-images/portafolio/portfolio-wup1-1.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/portfolio-wup1-1.jpg",
         "alt": "Desarrollo Wordpress",
         "title": "WorkingUp",
         "category": "Desarrollo Wordpress",
@@ -37,7 +37,7 @@
     },
     {
         "key": 3,
-        "img": "https://pugle.net/react-images/portafolio/aquatrop1.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/aquatrop1.jpg",
         "alt": "Desarrollo Wordpress",
         "title": "Aquatropical",
         "category": "Desarrollo Wordpress",
@@ -49,7 +49,7 @@
     },
     {
         "key": 4,
-        "img": "https://pugle.net/react-images/portafolio/portafolio4-pipanic.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/portafolio4-pipanic.jpg",
         "alt": "Desarrollo Wordpress",
         "title": "Pipanic",
         "category": "Desarrollo Wordpress",
@@ -60,7 +60,7 @@
     },
     {
         "key": 5,
-        "img": "https://pugle.net/react-images/portafolio/portafolio3-movi.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/portafolio3-movi.jpg",
         "alt": "Desarrollo Web Movistar",
         "title": "Movistar",
         "category": "Desarrollo Web",
@@ -71,7 +71,7 @@
     },
     {
         "key": 6,
-        "img": "https://pugle.net/react-images/portafolio/roland1.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/roland1.jpg",
         "alt": "Desarrollo en Wordpress Roland",
         "title": "Roland",
         "category": "Desarrollo Wordpress",
@@ -82,7 +82,7 @@
     },
     {
         "key": 7,
-        "img": "https://pugle.net/react-images/portafolio/cervantes-1.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/cervantes-1.jpg",
         "alt": "Desarrollo en Wordpress Cervantes",
         "title": "Colegio Cervantes",
         "category": "Desarrollo Wordpress",
@@ -92,7 +92,7 @@
         "hrefTo": "/cervantes"
     },{
         "key": 8,
-        "img": "https://pugle.net/react-images/portafolio/airplane-1.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/airplane-1.jpg",
         "alt": "E-Commerce Airplane Mode",
         "title": "Airplane Mode",
         "category": "E-Commerce",
@@ -103,7 +103,7 @@
     },
     {
         "key": 9,
-        "img": "https://pugle.net/react-images/portafolio/whole-wines1.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/whole-wines1.jpg",
         "alt": "E-Commerce Whole Wines",
         "title": "Whole Wines",
         "category": "E-Commerce",
@@ -114,7 +114,7 @@
     },
     {
         "key": 10,
-        "img": "https://pugle.net/react-images/portafolio/pichincha-vehiculos1.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/pichincha-vehiculos1.jpg",
         "alt": "React Seguros Pichincha Vehiculos",
         "title": "Seguro Vehicular Banco Pichincha",
         "category": "React.JS",
@@ -125,7 +125,7 @@
     },
     {
         "key": 11,
-        "img": "https://pugle.net/react-images/portafolio/pichincha-sit1.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/pichincha-sit1.jpg",
         "alt": "React Seguros Pichincha Salud",
         "title": "Seguro de Salud Banco Pichincha",
         "category": "React.JS",
@@ -136,7 +136,7 @@
     },
     {
         "key": 12,
-        "img": "https://pugle.net/react-images/portafolio/mobifriends.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/mobifriends.jpg",
         "alt": "LinkBuilding y SEO para Mobifriends.com",
         "title": "LinkBuilding y SEO para Mobifriends.com",
         "category": "SEO",
@@ -147,7 +147,7 @@
     },
     {
         "key": 13,
-        "img": "https://pugle.net/react-images/portafolio/weekendsout.png",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/weekendsout.png",
         "alt": "Weekends Out",
         "title": "Weekends Out",
         "category": "Desarrollo Web, Marketing Online",
@@ -158,7 +158,7 @@
     },
     {
         "key": 14,
-        "img": "https://pugle.net/react-images/portafolio/makeupartist.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/makeupartist.jpg",
         "alt": "May Makeup Artist Wordpress Web",
         "title": "May Makeup Artist",
         "category": "Desarrollo Wordpress",
@@ -169,7 +169,7 @@
     },
     {
         "key": 15,
-        "img": "https://pugle.net/react-images/portafolio/selecta.png",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/selecta.png",
         "alt": "Selecta Hubspot Web",
         "title": "Selecta",
         "category": "Desarrollo Hubspot",
@@ -180,7 +180,7 @@
     },
     {
         "key": 16,
-        "img": "https://pugle.net/react-images/portafolio/edesec.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/edesec.jpg",
         "alt": "Edes Desarrollo Web",
         "title": "Edes",
         "category": "Desarrollo Web",
@@ -191,7 +191,7 @@
     }, 
     {
         "key": 17,
-        "img": "https://pugle.net/react-images/portafolio/proyecto111.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/proyecto111.jpg",
         "alt": "Proyecto Yo Wordpress",
         "title": "Vicepresidencia del Ecuador",
         "category": "Desarrollo Wordpress",
@@ -202,7 +202,7 @@
     }, 
     {
         "key": 18,
-        "img": "https://pugle.net/react-images/portafolio/inmobiliaria.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/inmobiliaria.jpg",
         "alt": "Inmobiliaria Pública App Web",
         "title": "Inmobiliaria Pública",
         "category": "Aplicaciones Web, Desarrollo Web",
@@ -213,7 +213,7 @@
     },
     {
         "key": 19,
-        "img": "https://pugle.net/react-images/portafolio/budget1.jpg",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/budget1.jpg",
         "alt": "Budget Puglin Wordpress",
         "title": "Budget",
         "category": "Plugins Wordpress",

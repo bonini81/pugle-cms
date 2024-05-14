@@ -1,67 +1,73 @@
 [
     {
         "key": 0,
-        "img": "https://pugle.net/react-images/html.webp",
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/html.webp",
         "alt": "Html stack"
     },
     {
         "key": 1,
-        "img": "https://pugle.net/react-images/css.webp",
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/css.webp",
         "alt": "Css stack"
     },
     
     {
         "key": 2,
-        "img": "https://pugle.net/react-images/js.webp",
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/js.webp",
         "alt": "Js tack"
     },
     
     {
         "key": 3,
-        "img": "https://pugle.net/react-images/react.webp",
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/react.webp",
         "alt": "MYSQL Stack"
     },
     
     {
         "key": 4,
-        "img": "https://pugle.net/react-images/php.webp",
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/php.webp",
         "alt": "HTML Stack"
     },
     
     {
         "key": 5,
-        "img": "https://pugle.net/react-images/jquery.webp",
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/jquery.webp",
         "alt": "HTML Stack"
     },
     
     {
         "key": 6,
-        "img": "https://pugle.net/react-images/git.webp",
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/git.webp",
         "alt": "HTML Stack"
     },
     
     {
         "key": 7,
-        "img": "https://pugle.net/react-images/nodejs.webp",
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/nodejs.webp",
         "alt": "HTML Stack"
     },
     
     {
         "key": 8,
-        "img": "https://pugle.net/react-images/mysql.webp",
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/mysql.webp",
         "alt": "HTML Stack"
     },
     
     {
         "key": 9,
-        "img": "https://pugle.net/react-images/sql.webp",
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/sql.webp",
         "alt": "HTML Stack"
     },
     
     {
         "key": 10,
-        "img": "https://pugle.net/react-images/wordpress.webp",
-        "alt": "HTML Stack"
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/wordpress.webp",
+        "alt": "Wordpress"
+    },
+    
+    {
+        "key": 11,
+        "img": "https://desarrollo.whiteholedata.com/toolbox-logos/mongodb.webp",
+        "alt": "MongoDb"
     }
     
     ]
