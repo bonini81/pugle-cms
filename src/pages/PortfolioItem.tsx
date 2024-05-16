@@ -71,12 +71,14 @@ const PortfolioItem = (): JSX.Element => {
             <p className="paragraph-description-styles">
               {portfolioItem?.description}
             </p>
+            <br />
             <p className="paragraph-link-styles">
               <strong>Web:</strong>{" "}
               <a href={portfolioItem?.linkTo} target="_blank" rel="noreferrer">
                 {portfolioItem?.title}
               </a>
             </p>
+            <br />
             <div style={{ width: "100px" }}>
               <Buttton
                 variant="contained"
