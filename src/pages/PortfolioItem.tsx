@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -7,46 +6,12 @@ import "../scss/PortfolioItem.scss";
 import Buttton from "../components/Boton";
 import Title from "../components/Title";
 import portfolioContent from "../data/portfolioInfo.json";
-// import portfolioService from "../services/portfolio.service";
 
 const PortfolioItem = (): JSX.Element => {
   const navigate = useNavigate();
 
-  /* interface PortfolioItemTypes {
-    title: string;
-    img: string;
-    description: string;
-    category: string;
-    linkTo: string;
-    alt: string;
-    linkToText: string;
-    hrefTo: string;
-    key: string;
-  } */
-
-  // const [portfolioItem, setPortfolioItem] = useState<PortfolioItemTypes>();
-
-  /* const { key } = useParams();
-  const portfolioItemTitle = String(key); */
-
   const { key } = useParams();
   const portfolioItemId = Number(key);
-
-  /* useEffect(() => {
-    if (!portfolioItemTitle) {
-      navigate("/");
-    } else {
-      getPortfolioItem(portfolioItemTitle);
-    }
-  }, [portfolioItemTitle, navigate]);
-
-  const getPortfolioItem = async (titlePortfolio: string) => {
-    const response = await portfolioService.getPortfolioContentByTitle(
-      titlePortfolio
-    );
-    const portfolioItemData = await response.data;
-    setPortfolioItem(portfolioItemData);
-  }; */
 
   const portfolioItem = portfolioContent.find(
     (item) => item.key === portfolioItemId

@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 
@@ -6,33 +5,8 @@ import "../scss/Portfolio.scss";
 import Cards from "../components/Cards";
 import Title from "../components/Title";
 import portfolioInfo from "../data/portfolioInfo.json";
-// import { PortfolioItem } from "../interfaces/backend/portfolio";
-// import portfolioService from "../services/portfolio.service";
 
 const Portfolio = () => {
-  /* interface PortfolioArray {
-    portfolioContent: PortfolioItem[];
-  } */
-
-  /* const [portfolioData, setPortfolioContent] =
-    useState<PortfolioArray | null>(); */
-
-  /* useEffect(() => {
-    getPortfolioContentApi();
-  }, []); */
-
-  /* const getPortfolioContentApi = async () => {
-    try {
-      const response = await portfolioService.getPortfolioContent();
-      const portfolioItems = await response.data;
-      setPortfolioContent(portfolioItems);
-    } catch (err: any) {
-      Const hello2 = JSON.parse(hello);
-      setPortfolioContent(hello);
-     alert("Portfolio content not found!");
-    }
-  }; */
-
   const navigate = useNavigate();
 
   return (
