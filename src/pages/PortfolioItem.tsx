@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -6,12 +6,13 @@ import Grid from "@mui/material/Grid";
 import "../scss/PortfolioItem.scss";
 import Buttton from "../components/Boton";
 import Title from "../components/Title";
-import portfolioService from "../services/portfolio.service";
+import portfolioContent from "../data/portfolioInfo.json";
+// import portfolioService from "../services/portfolio.service";
 
 const PortfolioItem = (): JSX.Element => {
   const navigate = useNavigate();
 
-  interface PortfolioItemTypes {
+  /* interface PortfolioItemTypes {
     title: string;
     img: string;
     description: string;
@@ -21,14 +22,17 @@ const PortfolioItem = (): JSX.Element => {
     linkToText: string;
     hrefTo: string;
     key: string;
-  }
+  } */
 
-  const [portfolioItem, setPortfolioItem] = useState<PortfolioItemTypes>();
+  // const [portfolioItem, setPortfolioItem] = useState<PortfolioItemTypes>();
+
+  /* const { key } = useParams();
+  const portfolioItemTitle = String(key); */
 
   const { key } = useParams();
-  const portfolioItemTitle = String(key);
+  const portfolioItemId = Number(key);
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (!portfolioItemTitle) {
       navigate("/");
     } else {
@@ -42,7 +46,11 @@ const PortfolioItem = (): JSX.Element => {
     );
     const portfolioItemData = await response.data;
     setPortfolioItem(portfolioItemData);
-  };
+  }; */
+
+  const portfolioItem = portfolioContent.find(
+    (item) => item.key === portfolioItemId
+  );
 
   return (
     <section className="section-grid-item-margins">
