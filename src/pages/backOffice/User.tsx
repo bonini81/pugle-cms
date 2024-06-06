@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 import "../../scss/UserBackOffice.scss";
 import CRUDNav from "../../components/CRUDNav";
 
 const User = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="section-wrrapper-styles">
       <h2 className="titleh-h2-padding">User CRUD Page</h2>
@@ -10,7 +14,7 @@ const User = () => {
         contextName="User"
         handleClickAddItem={() => {}}
         handleClickEditItem={() => {}}
-        handleClickDeleteItem={() => {}}
+        handleClickDeleteItem={() => navigate("/backoffice/user/user-delete")}
       />
     </section>
   );
