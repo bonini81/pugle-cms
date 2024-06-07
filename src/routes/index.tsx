@@ -8,7 +8,7 @@ import PortfolioAddItem from "../pages/backOffice/PortfolioAddItem";
 import PortfolioDeleteItem from "../pages/backOffice/PortfolioDeleteItem";
 import PortfolioEditItem from "../pages/backOffice/PortfolioEditItem";
 import UserBackOffice from "../pages/backOffice/User";
-import UserDelete from "../pages/backOffice/Users/UserDelete";
+import UserDelete from "../pages/backOffice/Users/UserDeleteItem";
 import PrivateRoutes from "../utils/PrivateRoutes";
 
 const LayOutBackOffice = lazy(() => import("../components/LayOutBackOffice"));
