@@ -218,8 +218,41 @@
         "title": "Budget",
         "category": "Plugins Wordpress",
         "description": "Desarrollo de funcionalidades a medida para el sistema de reservas de autos de Budget con el plugin Woocommerce de WordPress.",
-        "linkTo": " https://budget.com.ec/",
+        "linkTo": "https://budget.com.ec/",
         "linkToText": "Web:",
         "hrefTo": "/budget"
+    },
+    {
+        "key": 20,
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/white-hole.png",
+        "alt": "White Hole Data Web",
+        "title": "White Hole Data",
+        "category": "Desarrollo Wordpress",
+        "description": "Sitio web corporativo para una empresa Española de Fintech, desarrollo a medida en Wordpress con imagen corporativa incluída con un diseñador web de prestigio.",
+        "linkTo": "https://www.whiteholedata.com/",
+        "linkToText": "Web:",
+        "hrefTo": "/white-hole-data"
+    },
+    {
+        "key": 21,
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/mallElJardin1.png",
+        "alt": "Portfolio",
+        "title": "Mall El Jardin",
+        "category": "Desarrollo Wordpress",
+        "description": "Ayudé a terminar la web del mall a una reconocida agencia de marketing digital en Quito. La web estaba hecha con elementor y algunas personalizaciones avanzadas en PHP.",
+        "linkTo": "https://malleljardin.com.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/mall-jardin"
+    },
+    {
+        "key": 22,
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/ejecutivos-banco.png",
+        "alt": "Seguro Vehicular Ejecutivos Banco",
+        "title": "Seguro Vehicular Ejecutivos Banco",
+        "category": "React.JS",
+        "description": "Plataforma de venta de seguros online de vehicular para los ejecutivos del banco pichincha, realizado con EVA Insurtech, https://evainsurtech.com/ el centro digital de Nova Seguros (el broker seguros de banco pichincha). La plataforma se hizo con React JS, Material UI, Redux , Tailwind, Typescript, Storybook, JEST, React Testing Library (yo realicé la parte de Frontend), back end fue con .NET, REST API y el back end con Azure DevOps. Utilizamos metodologías agiles.",
+        "linkTo": "https://seguros.pichincha.com/ejecutivosBP/venta",
+        "linkToText": "Web:",
+        "hrefTo": "/seguro-vehicular-ejecutivos"
     }
     ]
