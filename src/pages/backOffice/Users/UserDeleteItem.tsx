@@ -39,7 +39,7 @@ const UserDeleteItem = () => {
       <h2 className="titleh-h2-padding">User DELETE</h2>
       <p>Page to Delete Users</p>
       <CRUDNav
-        contextName="Portfolio"
+        contextName="User"
         handleClickAddItem={() => navigate("/backoffice/portfolio-additem")}
         handleClickEditItem={() => navigate("/backoffice/portfolio-edit-item")}
         handleClickDeleteItem={() =>
@@ -51,7 +51,7 @@ const UserDeleteItem = () => {
           {usersData &&
             usersData.map((item, index) => (
               <li key={index}>
-                {item.id}
+                {item.name}
                 <Button
                   variant="text"
                   data-testid="button-delete"
