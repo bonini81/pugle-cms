@@ -14,6 +14,6 @@ const User = () => {
       />
     </section>
   );
-}
+};
 
 export default User;
