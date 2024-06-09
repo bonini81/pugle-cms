@@ -40,11 +40,9 @@ const UserDeleteItem = () => {
       <p>Page to Delete Users</p>
       <CRUDNav
         contextName="User"
-        handleClickAddItem={() => navigate("/backoffice/portfolio-additem")}
-        handleClickEditItem={() => navigate("/backoffice/portfolio-edit-item")}
-        handleClickDeleteItem={() =>
-          navigate("/backoffice/portfolio-delete-item")
-        }
+        handleClickAddItem={() => navigate("/backoffice/user/add-user")}
+        handleClickEditItem={() => navigate("/backoffice/user/edit-user")}
+        handleClickDeleteItem={() => navigate("/backoffice/user/delete-user")}
       />
       <article>
         <ol className="menu-ul-item-styles">
@@ -55,7 +53,7 @@ const UserDeleteItem = () => {
                 <Button
                   variant="text"
                   data-testid="button-delete"
-                  // onClick={() => deletePortfolioItem(String(item.key))}
+                  // onClick={() => deleteUser(String(item.name))}
                   className={{
                     root: "portfolio-delete-btn-styles",
                   }}

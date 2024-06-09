@@ -8,7 +8,9 @@ import PortfolioAddItem from "../pages/backOffice/PortfolioAddItem";
 import PortfolioDeleteItem from "../pages/backOffice/PortfolioDeleteItem";
 import PortfolioEditItem from "../pages/backOffice/PortfolioEditItem";
 import UserBackOffice from "../pages/backOffice/User";
-import UserDelete from "../pages/backOffice/Users/UserDeleteItem";
+import AddUser from "../pages/backOffice/Users/UserAddItem";
+import DeleteUser from "../pages/backOffice/Users/UserDeleteItem";
+import EditUser from "../pages/backOffice/Users/UserEditItem";
 import PrivateRoutes from "../utils/PrivateRoutes";
 
 const LayOutBackOffice = lazy(() => import("../components/LayOutBackOffice"));
@@ -49,9 +51,11 @@ const AppRoutes = () => {
                 element={<PortfolioEditItem />}
               />
               <Route
-                path="backoffice/user/user-delete"
-                element={<UserDelete />}
+                path="backoffice/user/delete-user"
+                element={<DeleteUser />}
               />
+              <Route path="backoffice/user/add-user" element={<AddUser />} />
+              <Route path="backoffice/user/edit-user" element={<EditUser />} />
               <Route path="backoffice/home" element={<BackOfficeMain />} />
             </Route>
           </Route>
