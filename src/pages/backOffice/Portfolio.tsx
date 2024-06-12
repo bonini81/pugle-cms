@@ -9,7 +9,7 @@ const Portfolio = () => {
   return (
     <section className="section-wrrapper-styles">
       <h2 className="titleh-h2-padding">Portfolio CRUD Page</h2>
-      <p>Page to Manage Portfolio Page</p>
+      <p>Page to Manage Portfolio Page.</p>
       <CRUDNav
         contextName="Portfolio"
         handleClickAddItem={() => navigate("/backoffice/portfolio-additem")}
@@ -18,6 +18,9 @@ const Portfolio = () => {
           navigate("/backoffice/portfolio-delete-item")
         }
       />
+      <p>
+        <strong>Pick a CRUD option.</strong>
+      </p>
     </section>
   );
 };
