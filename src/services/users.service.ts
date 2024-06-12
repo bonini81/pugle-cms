@@ -9,6 +9,12 @@ const getUsersBackOffice = () => {
   return axios.get(url);
 };
 
+const deleteUserByKey = (key: string) => {
+  const url = `${urlBase}/users/user-delete/${key}`;
+  return axios.delete(url);
+};
+
 export default {
   getUsersBackOffice,
+  deleteUserByKey,
 };

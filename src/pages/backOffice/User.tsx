@@ -16,6 +16,9 @@ const User = () => {
         handleClickEditItem={() => navigate("/backoffice/user/edit-user")}
         handleClickDeleteItem={() => navigate("/backoffice/user/delete-user")}
       />
+      <p>
+        <strong>Pick a CRUD option.</strong>
+      </p>
     </section>
   );
 };

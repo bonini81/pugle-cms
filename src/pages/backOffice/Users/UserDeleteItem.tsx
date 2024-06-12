@@ -29,6 +29,20 @@ const UserDeleteItem = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [descriptionModal, setDescriptionModal] = useState<string>("");
 
+  const handleDeleteUser = async (key: string) => {
+    try {
+      await getUsersService.deleteUserByKey(key);
+      setDescriptionModal("User deleted successfully");
+      setShowModal(true);
+      const response = await getUsersService.getUsersBackOffice();
+      const getUserData = await response.data.users;
+      setUsersData(getUserData);
+    } catch (err: any) {
+      setDescriptionModal("There was an error while deleting user");
+      setShowModal(true);
+    }
+  };
+
   const navigate = useNavigate();
   const modalCloseHandler = () => {
     setShowModal(false);
@@ -53,7 +67,7 @@ const UserDeleteItem = () => {
                 <Button
                   variant="text"
                   data-testid="button-delete"
-                  // onClick={() => deleteUser(String(item.name))}
+                  onClick={() => handleDeleteUser(String(item.name))}
                   className={{
                     root: "portfolio-delete-btn-styles",
                   }}
