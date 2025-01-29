@@ -23,3 +23,10 @@ button.cta-div-paddings {
     font-size: 1em;
     
 }
+
+.card-uniform-height {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }

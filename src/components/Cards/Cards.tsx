@@ -49,7 +49,7 @@ const Cards = ({
   }
 
   return (
-    <Card>
+    <Card className="card-uniform-height">
       {graphic ? <div className="graphic-div-paddings">{graphic}</div> : ""}
       {img ? <img src={img} alt={cardTitle} width="100%" height="200px" /> : ""}
       <CardContent>
