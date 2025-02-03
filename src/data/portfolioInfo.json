@@ -1,14 +1,14 @@
 [
     {  
-    "key": 0,
-    "img": "https://desarrollo.whiteholedata.com/portafolio-pug/osu.jpeg",
-    "alt": "Osu",
-    "title": "Ohio State University",
-    "category": "Desarrollo Wordpress",
-    "description": "Proyecto de Desarrollo en Wordpress a medida. Se creo una plantilla desde 0 en base de Underscores. Se crearon bloques a medida para el builder default de Wordpress que es Gutenberg con ACF Pro, React y PHP.",
-    "linkTo": "https://online.osu.edu/",
-    "linkToText": "Web:",
-    "hrefTo": "/osu"
+        "key": 0,
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/osu.jpeg",
+        "alt": "Osu",
+        "title": "Ohio State University",
+        "category": "Desarrollo Wordpress",
+        "description": "Proyecto de Desarrollo en Wordpress a medida. Se creo una plantilla desde 0 en base de Underscores. Se crearon bloques a medida para el builder default de Wordpress que es Gutenberg con ACF Pro, React y PHP.",
+        "linkTo": "https://online.osu.edu/",
+        "linkToText": "Web:",
+        "hrefTo": "/osu"
     },
 
     {
@@ -35,29 +35,31 @@
         "hrefTo": "/workingup"
 
     },
+
     {
         "key": 3,
-        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/aquatrop1.jpg",
-        "alt": "Desarrollo Wordpress",
-        "title": "Aquatropical",
-        "category": "Desarrollo Wordpress",
-        "description": "Sitio Web realizado en WordPress, con tomas de fotografía aérea y terrestre para la parte gráfica.",
-        "linkTo": "https://aquatropicalsa.com/",
-        "linkToText": "Ver Web",
-        "hrefTo": "/aquatropical"
-
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/mfr-rating.png",
+        "alt": "MFR Rating",
+        "title": "MFR Rating",
+        "category": "Desarrollo Wordpress y SEO",
+        "description": "Creación de nuevos features dentro del sitio web realizado en Wordpress y optimizacion SEO del portal a nivel de un grupo keywords a posicionar en los resultados de búsqueda en Google en diferentes idiomas ya que es una consultora Internacional.",
+        "linkTo": "https://www.mf-rating.com/es/",
+        "linkToText": "Web:",
+        "hrefTo": "/mfrating"
     },
+
     {
         "key": 4,
-        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/portafolio4-pipanic.jpg",
-        "alt": "Desarrollo Wordpress",
-        "title": "Pipanic",
-        "category": "Desarrollo Wordpress",
-        "description": "Desarrollo del website corporativo junto con la agencia Notus Digital, que se encargó en la parte de diseño, se usó el CMS, WordPress para el desarrollo web.",
-        "linkTo": "https://www.pipanic.com.ec/",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/selva.jpg",
+        "alt": "Selva Web",
+        "title": "Selvalegre",
+        "category": "Desarrollo Wordpress y Performance Optimization",
+        "description": "Creación de nuevos features dentro del sitio web realizado en Wordpress con Elementor PRO. Tambien se realiazó una optimización a nivel de performance (velocidad de carga), accesibilidad y SEO.",
+        "linkTo": "https://selvalegre.com.ec/",
         "linkToText": "Web:",
-        "hrefTo": "/pipanic"
+        "hrefTo": "/selva"
     },
+
     {
         "key": 5,
         "img": "https://desarrollo.whiteholedata.com/portafolio-pug/portafolio3-movi.jpg",
@@ -145,17 +147,20 @@
         "linkToText": "Cliente:",
         "hrefTo": "/mobifriends"
     },
+  
     {
         "key": 13,
-        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/weekendsout.png",
-        "alt": "Weekends Out",
-        "title": "Weekends Out",
-        "category": "Desarrollo Web, Marketing Online",
-        "description": "Encargado de la parte de Marketing Online de la empresa realizando actividades de SEO/SEM, redes sociales y boletines de prensa, además del desarrollo del portal y red social de la empresa en Joomla y mantenimiento del mismo. La página que creamos en Facebook, Solteros y Solteras en Ecuador tiene actualmente más de 75,000 seguidores. Fuí el encargado de Marketing Onlne por un período de 2 años en mi país Ecuador.",
-        "linkTo": "https://weekendsout.com/",
-        "linkToText": "Cliente:",
-        "hrefTo": "/weekendsout"
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/mallElJardin1.png",
+        "alt": "Portfolio",
+        "title": "Mall El Jardin",
+        "category": "Desarrollo Wordpress",
+        "description": "Ayudé a terminar la web del mall a una reconocida agencia de marketing digital en Quito. La web estaba hecha con elementor y algunas personalizaciones avanzadas en PHP.",
+        "linkTo": "https://malleljardin.com.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/mall-jardin"
     },
+
+
     {
         "key": 14,
         "img": "https://desarrollo.whiteholedata.com/portafolio-pug/makeupartist.jpg",
@@ -249,14 +254,14 @@
 
     {
         "key": 22,
-        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/mallElJardin1.png",
-        "alt": "Portfolio",
-        "title": "Mall El Jardin",
-        "category": "Desarrollo Wordpress",
-        "description": "Ayudé a terminar la web del mall a una reconocida agencia de marketing digital en Quito. La web estaba hecha con elementor y algunas personalizaciones avanzadas en PHP.",
-        "linkTo": "https://malleljardin.com.ec/",
-        "linkToText": "Web:",
-        "hrefTo": "/mall-jardin"
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/weekendsout.png",
+        "alt": "Weekends Out",
+        "title": "Weekends Out",
+        "category": "Desarrollo Web, Marketing Online",
+        "description": "Encargado de la parte de Marketing Online de la empresa realizando actividades de SEO/SEM, redes sociales y boletines de prensa, además del desarrollo del portal y red social de la empresa en Joomla y mantenimiento del mismo. La página que creamos en Facebook, Solteros y Solteras en Ecuador tiene actualmente más de 75,000 seguidores. Fuí el encargado de Marketing Onlne por un período de 2 años en mi país Ecuador.",
+        "linkTo": "https://weekendsout.com/",
+        "linkToText": "Cliente:",
+        "hrefTo": "/weekendsout"
     },
 
     {
@@ -281,20 +286,32 @@
         "linkTo": "https://protegen.alexxia.com.ec/",
         "linkToText": "Web:",
         "hrefTo": "/protegen"
-    }
+    },
 
-    ,
-
+    
     {
         "key": 25,
-        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/selva.jpg",
-        "alt": "Selva Web",
-        "title": "Selva Alegre",
-        "category": "Desarrollo Wordpress y Performance Optimization",
-        "description": "Creación de nuevos features dentro del sitio web realizado en Wordpress con Elementor PRO. Tambien se realiazó una optimización a nivel de performance (velocidad de carga), accesibilidad y SEO.",
-        "linkTo": "https://selvalegre.com.ec/",
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/portafolio4-pipanic.jpg",
+        "alt": "Desarrollo Wordpress",
+        "title": "Pipanic",
+        "category": "Desarrollo Wordpress",
+        "description": "Desarrollo del website corporativo junto con la agencia Notus Digital, que se encargó en la parte de diseño, se usó el CMS, WordPress para el desarrollo web.",
+        "linkTo": "https://www.pipanic.com.ec/",
         "linkToText": "Web:",
-        "hrefTo": "/selva"
+        "hrefTo": "/pipanic"
+    },
+
+    {
+        "key": 26,
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/aquatrop1.jpg",
+        "alt": "Desarrollo Wordpress",
+        "title": "Aquatropical",
+        "category": "Desarrollo Wordpress",
+        "description": "Sitio Web realizado en WordPress, con tomas de fotografía aérea y terrestre para la parte gráfica.",
+        "linkTo": "https://aquatropicalsa.com/",
+        "linkToText": "Ver Web",
+        "hrefTo": "/aquatropical"
+
     }
 
     ]

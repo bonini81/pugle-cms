@@ -7,7 +7,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
 import "../../scss/LayoutBackOffice.scss";
-import logo from "../../assets/header/freelance-desarrolloweb-seo.jpg";
+import logo from "../../assets/header/freelance-desarrolloweb-seo.png";
 import footerText from "../../data/footerLinks.json";
 import menuLinksArrayBackOffice from "../../data/menuLinksBackOffice.json";
 import Button from "../Boton";
