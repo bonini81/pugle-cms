@@ -19,11 +19,11 @@ const StaticPortfolio = () => {
       <section className="section-grid-margins">
         <Grid
           container
-          spacing={{ xs: 2, md: 3 }}
+          spacing={{ xs: 2, md: 5 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
           {portfolioInfo.map((portfolio, index) => (
-            <Grid item xs={12} sm={4} md={4}>
+            <Grid item xs={12} sm={4} md={3}>
               <Cards
                 key={index}
                 img={portfolio.img}

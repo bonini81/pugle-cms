@@ -216,7 +216,7 @@
         "img": "https://desarrollo.whiteholedata.com/portafolio-pug/budget1.jpg",
         "alt": "Budget Puglin Wordpress",
         "title": "Budget",
-        "category": "Plugins Wordpress",
+        "category": "Wodpress Plugin Dev",
         "description": "Desarrollo de funcionalidades a medida para el sistema de reservas de autos de Budget con el plugin Woocommerce de WordPress.",
         "linkTo": " https://budget.com.ec/",
         "linkToText": "Web:",
@@ -269,6 +269,32 @@
         "linkTo": "https://www.conkreta.com.ec/",
         "linkToText": "Web:",
         "hrefTo": "/conkreta"
+    },
+
+    {
+        "key": 24,
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/protegen-web.jpg",
+        "alt": "Protegen",
+        "title": "Protegen",
+        "category": "Desarrollo Wordpress",
+        "description": "Desarrollo en Wordpress con la plantilla the7 y personalizaciones avanzadas en la plantilla.",
+        "linkTo": "https://protegen.alexxia.com.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/protegen"
+    }
+
+    ,
+
+    {
+        "key": 25,
+        "img": "https://desarrollo.whiteholedata.com/portafolio-pug/selva.jpg",
+        "alt": "Selva Web",
+        "title": "Selva Alegre",
+        "category": "Desarrollo Wordpress y Performance Optimization",
+        "description": "Desarrollo en Wordpress.",
+        "linkTo": "https://selvalegre.com.ec/",
+        "linkToText": "Web:",
+        "hrefTo": "/selva"
     }
 
     ]
