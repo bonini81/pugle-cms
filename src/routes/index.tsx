@@ -17,6 +17,8 @@ const LayOutBackOffice = lazy(() => import("../components/LayOutBackOffice"));
 const Home = lazy(() => import("../pages/Home"));
 const Login = lazy(() => import("../pages/Login"));
 const Portfolio = lazy(() => import("../pages/Portfolio"));
+const StaticPortfolio = lazy(() => import("../pages/StaticPortfolio"));
+const StaticPortfolioItem = lazy(() => import("../pages/StaticPortfolioItem"));
 const PortfolioItem = lazy(() => import("../pages/PortfolioItem"));
 const BackOfficeMain = lazy(() => import("../pages/backOffice/Main"));
 
@@ -27,8 +29,13 @@ const AppRoutes = () => {
         <Routes>
           <Route element={<LayOut />}>
             <Route path="/" element={<Home />} />
-            <Route path="/portafolio" element={<Portfolio />} />
-            <Route path="/portafolioItem/:key" element={<PortfolioItem />} />
+            <Route path="/portafolio2" element={<Portfolio />} />
+            <Route path="/portafolio" element={<StaticPortfolio />} />
+            <Route path="/portafolioItem2/:key" element={<PortfolioItem />} />
+            <Route
+              path="/portafolioItem/:key"
+              element={<StaticPortfolioItem />}
+            />
             <Route path="/login" element={<Login />} />
           </Route>
           <Route element={<PrivateRoutes />}>
