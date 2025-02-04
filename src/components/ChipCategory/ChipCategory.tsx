@@ -1,6 +1,7 @@
 import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+
+import "./ChipCategory.scss";
 
 export interface ChipCategoryProps {
   "data-testid": string;
@@ -11,7 +12,7 @@ export interface ChipCategoryProps {
 
 const ChipCategory = ({
   label,
-  variant = "outlined",
+  variant,
   onClick,
   ...props
 }: ChipCategoryProps) => {
@@ -21,16 +22,15 @@ const ChipCategory = ({
   };
 
   return (
-    <Stack direction="row" spacing={1}>
-      <Typography variant="body2" color="text.secondary">
+    <Typography variant="body2" color="text.secondary">
         <Chip
+          className="chip__margin-right"
           data-testid={props["data-testid"]}
           label={label}
           variant={variant}
           onClick={handleClick}
-        />
+      />
       </Typography>
-    </Stack>
   );
 };
 

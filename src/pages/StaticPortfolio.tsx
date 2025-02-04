@@ -25,7 +25,7 @@ const StaticPortfolio = () => {
           spacing={{ xs: 2, md: 5 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-                <ChipCategory
+        <ChipCategory
           label="Todos"
           variant="outlined"
           data-testid="Portfolio Chip"
