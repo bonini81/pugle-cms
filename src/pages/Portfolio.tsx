@@ -42,7 +42,7 @@ const Portfolio = () => {
       <section className="section-grid-margins">
         <Grid
           container
-          spacing={{ xs: 2, md: 3 }}
+          spacing={{ xs: 2, md: 5 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
           {portfolioData &&
