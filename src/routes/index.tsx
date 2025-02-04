@@ -29,8 +29,8 @@ const AppRoutes = () => {
         <Routes>
           <Route element={<LayOut />}>
             <Route path="/" element={<Home />} />
-            <Route path="/portafolio" element={<Portfolio />} />
-            <Route path="/portafolio2" element={<StaticPortfolio />} />
+            <Route path="/portafolio2" element={<Portfolio />} />
+            <Route path="/portafolio" element={<StaticPortfolio />} />
             <Route path="/portafolioItem/:key" element={<PortfolioItem />} />
             <Route
               path="/portafolioItem2/:key"

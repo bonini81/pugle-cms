@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 
+import ChipCategory from "components/ChipCategory";
+
 import "../scss/Portfolio.scss";
 import Cards from "../components/Cards";
 import Title from "../components/Title";
@@ -17,11 +19,28 @@ const StaticPortfolio = () => {
         renderSubtitle
       />
       <section className="section-grid-margins">
+  
         <Grid
           container
           spacing={{ xs: 2, md: 5 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
+                <ChipCategory
+          label="Todos"
+          variant="outlined"
+          data-testid="Portfolio Chip"
+        />
+        <ChipCategory
+          label="Diseño"
+          variant="outlined"
+          data-testid="Portfolio Chip"
+          />
+
+         <ChipCategory
+          label="Desarrollo"
+          variant="filled"
+          data-testid="Portfolio Chip"
+          />
           {portfolioInfo.map((portfolio, index) => (
             <Grid item xs={12} sm={4} md={3}>
               <Cards
