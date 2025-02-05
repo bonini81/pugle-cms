@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 
+import ChipCategory from "components/ChipCategory";
+
 import "../scss/Portfolio.scss";
 import Cards from "../components/Cards";
 import Title from "../components/Title";
@@ -16,6 +18,8 @@ const Portfolio = () => {
   const [portfolioData, setPortfolioContent] =
     useState<PortfolioArray | null>();
 
+  const [categories, setCategories] = useState<string[]>([]);
+
   useEffect(() => {
     getPortfolioContentApi();
   }, []);
@@ -23,8 +27,18 @@ const Portfolio = () => {
   const getPortfolioContentApi = async () => {
     try {
       const response = await portfolioService.getPortfolioContent();
-      const portfolioItems = await response.data;
+      const portfolioItems: PortfolioArray = await response.data;
       setPortfolioContent(portfolioItems);
+
+      // Extract unique categories
+      const uniqueCategories: string[] = [
+        ...new Set(
+          portfolioItems.portfolioContent.map(
+            (item: PortfolioItem) => item.category
+          )
+        ),
+      ];
+      setCategories(uniqueCategories);
     } catch (err: any) {
       alert("Portfolio content not found!");
     }
@@ -40,6 +54,22 @@ const Portfolio = () => {
         renderSubtitle
       />
       <section className="section-grid-margins">
+        <Grid
+          container
+          columns={{ xs: 4, sm: 8, md: 12 }}
+          className="grid-chip-margins"
+        >
+          {categories.map((category, index) => (
+            <Grid item xs={6} sm={4} md={2}>
+              <ChipCategory
+                key={index}
+                label={category}
+                variant="outlined"
+                data-testid="Portfolio Chip"
+              />
+            </Grid>
+          ))}
+        </Grid>
         <Grid
           container
           spacing={{ xs: 2, md: 5 }}

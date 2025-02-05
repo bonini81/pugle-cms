@@ -16,21 +16,20 @@ const ChipCategory = ({
   onClick,
   ...props
 }: ChipCategoryProps) => {
-
   const handleClick = () => {
     console.info("You clicked the Chip.");
   };
 
   return (
     <Typography variant="body2" color="text.secondary">
-        <Chip
-          className="chip__margin-right"
-          data-testid={props["data-testid"]}
-          label={label}
-          variant={variant}
-          onClick={handleClick}
+      <Chip
+        className="chip__margin-right"
+        data-testid={props["data-testid"]}
+        label={label}
+        variant={variant}
+        onClick={handleClick}
       />
-      </Typography>
+    </Typography>
   );
 };
 
